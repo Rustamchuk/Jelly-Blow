@@ -11,41 +11,80 @@ public class ArmStretcher : MonoBehaviour
     [SerializeField] private float _maxScale = 10;
 
     private bool _right = true;
-    private bool _stretchAccess = true;
+    private bool _stretchAccess = false;
+    private bool _startForCheck = false;
+    private bool _startForStretch = false;
 
     private void Update()
     {
-        if (_stretchAccess)
+        if (Input.GetMouseButtonDown(0))
         {
+            _stretchAccess = true;
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            if (!_startForCheck)
+                StartCoroutine(WaitToCheckTap());
+        }
+        else if (Input.GetMouseButtonUp(0) && _stretchAccess)
+        {
+            if (_startForStretch)
+                return;
+
             if (_right)
-                StretchArm(_armR);
+                StartCoroutine(StretchArm(_armR));
             else
-                StretchArm(_armL);
+                StartCoroutine(StretchArm(_armL));
         }
     }
 
-    private void StretchArm(Arm arm)
+    private IEnumerator StretchArm(Arm arm)
     {
-        if (Input.GetMouseButton(0) && arm.transform.localScale.z <= _maxScale)
+        _startForStretch = true;
+        arm.RewriteAttacking(true);
+
+        while (_startForStretch)
         {
-            arm.transform.localScale = new Vector3(arm.transform.localScale.x + _speedStrecth / 10 * Time.deltaTime,
-                arm.transform.localScale.y + _speedStrecth / 10 * Time.deltaTime, arm.transform.localScale.z + _speedStrecth * Time.deltaTime);
+            if (arm.transform.localScale.z <= _maxScale)
+            {
+                arm.transform.localScale = new Vector3(arm.transform.localScale.x + _speedStrecth / 10 * Time.deltaTime,
+                    arm.transform.localScale.y + _speedStrecth / 10 * Time.deltaTime, arm.transform.localScale.z + _speedStrecth * Time.deltaTime);
 
-            arm.transform.position += arm.transform.forward * _speedMove * Time.deltaTime;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            _armL.transform.localScale = _armL.StartSize;
-            _armL.transform.position = _armL.StartPos.position;
-
-            _armR.transform.localScale = _armR.StartSize;
-            _armR.transform.position = _armR.StartPos.position;
-
-            if (_right)
-                _right = false;
+                arm.transform.position += arm.transform.forward * _speedMove * Time.deltaTime;
+            }
             else
-                _right = true;
+            {
+                _armL.transform.localScale = _armL.StartSize;
+                _armL.transform.position = _armL.StartPos.position;
+
+                _armR.transform.localScale = _armR.StartSize;
+                _armR.transform.position = _armR.StartPos.position;
+
+                if (_right)
+                    _right = false;
+                else
+                    _right = true;
+
+                _startForStretch = false;
+                arm.RewriteAttacking(false);
+            }
+
+            yield return null;
         }
+    }
+
+    private IEnumerator WaitToCheckTap()
+    {
+        _startForCheck = true;
+
+        yield return new WaitForSeconds(0.2f);
+
+        if (Input.GetMouseButton(0))
+        {
+            _stretchAccess = false;
+        }
+
+        _startForCheck = false;
     }
 
     public void RewriteAccess(bool access)
