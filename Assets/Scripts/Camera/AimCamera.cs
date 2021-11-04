@@ -7,7 +7,7 @@ public class AimCamera : MonoBehaviour
     [SerializeField] private float _rotateSpeed;
     [SerializeField] private float _maxAngleX;
     [SerializeField] private float _maxAngleY;
-    [SerializeField] private ArmStretcher _armStretcher;
+    [SerializeField] private CameraMover _cameraMover;
 
     private bool _firstTouch = true;
     private float _rotationX;
@@ -27,19 +27,15 @@ public class AimCamera : MonoBehaviour
         _maxAnglesY.Add(_maxAngleY);
     }
 
-    private void RewriteRot()
-    {
-        _rotationX = transform.rotation.eulerAngles.y;
-        _rotationY = -transform.rotation.eulerAngles.x;
-
-        if (_rotationX > 180)
-            _rotationX -= 360;
-        if (-_rotationY > 180)
-            _rotationY -= 360;
-    }
-
     private void Update()
     {
+        if (_cameraMover.Moving)
+        {
+            _rotationX = 0;
+            _rotationY = 0;
+            return;
+        }
+
         if (Input.GetMouseButton(0))
             _clicking = true;
         else if (Input.GetMouseButtonUp(0))
