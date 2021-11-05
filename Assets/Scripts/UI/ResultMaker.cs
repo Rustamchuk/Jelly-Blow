@@ -13,8 +13,8 @@ public class ResultMaker : MonoBehaviour
     [SerializeField] private GameObject _click;
     //[SerializeField] private float _waitSeconds = 2;
 
-    //public event Action WonLevel;
-    //public event Action FailLevel;
+    public event Action WonLevel;
+    public event Action FailLevel;
 
     public int SpentTime => _spentTime;
 
@@ -37,7 +37,7 @@ public class ResultMaker : MonoBehaviour
 
         _spentTime = (int)Time.timeSinceLevelLoad;
 
-        //WonLevel.Invoke();
+        WonLevel.Invoke();
         _won = true;
 
         _victory.SetActive(true);
@@ -51,7 +51,7 @@ public class ResultMaker : MonoBehaviour
 
         _spentTime = (int)Time.timeSinceLevelLoad;
 
-        //FailLevel.Invoke();
+        FailLevel.Invoke();
         _lost = true;
 
         _fail.SetActive(true);
