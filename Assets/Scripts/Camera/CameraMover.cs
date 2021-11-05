@@ -28,4 +28,6 @@ public class CameraMover : MonoBehaviour
 
         StopMove.Invoke();
     }
+
+    public void RewriteMoving(bool state) { _moving = state; }
 }
