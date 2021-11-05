@@ -22,14 +22,15 @@ public class LevelChanger : MonoBehaviour
     private bool _gameStarted = false;
     private int _lastScene;
 
-    private void Awake()
+    private void Start()
     {
-        //StartCoroutine(WaitActivate());
+        Debug.Log("lll");
+        StartCoroutine(WaitActivate());
     }
 
     public void Restart()
     {
-        //RestartedLevel.Invoke();
+        RestartedLevel.Invoke();
 
         if (_nextLevelName == 0)
             _nextLevelName += 1;
@@ -84,7 +85,9 @@ public class LevelChanger : MonoBehaviour
 
     private IEnumerator WaitActivate()
     {
+        Debug.Log("ok");
         yield return new WaitForSeconds(2);
+        Debug.Log("okllll");
 
         if (!_gameStarted)
             StartedGame.Invoke();
