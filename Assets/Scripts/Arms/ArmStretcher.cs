@@ -15,6 +15,13 @@ public class ArmStretcher : MonoBehaviour
     private bool _stretchAccess = false;
     private bool _startForCheck = false;
     private bool _startForStretch = false;
+    private bool _touched = false;
+
+    private void Awake()
+    {
+        _armL.Touched += ArmTouched;
+        _armR.Touched += ArmTouched;
+    }
 
     private void Update()
     {
@@ -49,19 +56,22 @@ public class ArmStretcher : MonoBehaviour
 
         while (_startForStretch)
         {
-            if (arm.transform.localScale.z <= _maxScale)
+            if (arm.ArmObject.transform.localScale.z <= _maxScale && !_touched)
             {
-                arm.transform.localScale = new Vector3(arm.transform.localScale.x + _speedStrecth / 10 * Time.deltaTime,
-                    arm.transform.localScale.y + _speedStrecth / 10 * Time.deltaTime, arm.transform.localScale.z + _speedStrecth * Time.deltaTime);
+                //arm.transform.localScale = new Vector3(arm.transform.localScale.x + _speedStrecth / 10 * Time.deltaTime,
+                //arm.transform.localScale.y + _speedStrecth / 10 * Time.deltaTime, arm.transform.localScale.z + _speedStrecth * Time.deltaTime);
+
+                arm.ArmObject.transform.localScale = new Vector3(arm.ArmObject.transform.localScale.x, arm.ArmObject.transform.localScale.y, 
+                    arm.ArmObject.transform.localScale.z + _speedStrecth * Time.deltaTime);
 
                 arm.transform.position += arm.transform.forward * _speedMove * Time.deltaTime;
             }
             else
             {
-                _armL.transform.localScale = _armL.StartSize;
+                _armL.ArmObject.transform.localScale = _armL.StartSize;
                 _armL.transform.position = _armL.StartPos.position;
 
-                _armR.transform.localScale = _armR.StartSize;
+                _armR.ArmObject.transform.localScale = _armR.StartSize;
                 _armR.transform.position = _armR.StartPos.position;
 
                 if (_right)
@@ -70,11 +80,21 @@ public class ArmStretcher : MonoBehaviour
                     _right = true;
 
                 _startForStretch = false;
+                _touched = false;
                 arm.RewriteAttacking(false);
             }
 
             yield return null;
         }
+    }
+
+    private void ArmTouched() { StartCoroutine(StopStretch()); }
+
+    private IEnumerator StopStretch()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        _touched = true;
     }
 
     private IEnumerator WaitToCheckTap()

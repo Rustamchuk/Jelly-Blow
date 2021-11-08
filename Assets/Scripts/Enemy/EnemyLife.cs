@@ -31,16 +31,21 @@ public class EnemyLife : MonoBehaviour
     {
         if (_alive)
         {
-            if (other.gameObject.TryGetComponent(out Arm arm) && _health == 1)
+            if (other.gameObject.TryGetComponent(out Arm arm))
             {
-                if (arm.Attacking == false)
+                if (!arm.Attacking)
                     return;
 
-                MakeHall(arm);
+                arm.TouchedTrigger();
 
-                _alive = false;
-                _animator.SetTrigger(_end);
-                Dead.Invoke();
+                if (_health == 1)
+                {
+                    MakeHall(arm);
+
+                    _alive = false;
+                    _animator.SetTrigger(_end);
+                    Dead.Invoke();
+                }
             }
 
             _health--;

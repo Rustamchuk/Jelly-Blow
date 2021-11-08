@@ -24,7 +24,6 @@ public class LevelChanger : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("lll");
         StartCoroutine(WaitActivate());
     }
 
@@ -85,9 +84,7 @@ public class LevelChanger : MonoBehaviour
 
     private IEnumerator WaitActivate()
     {
-        Debug.Log("ok");
         yield return new WaitForSeconds(2);
-        Debug.Log("okllll");
 
         if (!_gameStarted)
             StartedGame.Invoke();
