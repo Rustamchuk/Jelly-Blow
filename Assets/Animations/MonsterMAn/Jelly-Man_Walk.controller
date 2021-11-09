@@ -45,9 +45,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 1.0717261
+  m_TransitionDuration: 0.4759193
   m_TransitionOffset: 0
-  m_ExitTime: 3.0374367e-10
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -86,7 +86,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ManHit
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4493808425247330626}
@@ -100,7 +100,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: b369ecdc84d39854ab109fcd433d8291, type: 3}
+  m_Motion: {fileID: 7400000, guid: cf4aed4fb4a346b4cbd216a26f0baa8e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -256,7 +256,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 8e014be2dcf344c4ca310aacbac5f76c, type: 3}
+  m_Motion: {fileID: 7400000, guid: 834a397f2bcab3245bc786395ba960f1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -279,9 +279,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.91985536
+  m_TransitionDuration: 0.47074857
   m_TransitionOffset: 0
-  m_ExitTime: 0.0000000073132314
+  m_ExitTime: 0.000000005338784
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

@@ -8,8 +8,9 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private int _health;
     [SerializeField] private GameObject _hall;
     [SerializeField] private Animator _animator;
-    [SerializeField] private float _hitDuration = 1.2f;
+    [SerializeField] private GameObject _fatherObj;
 
+    private float _hitDuration = 0;
     private bool _alive = false;
     private const string _walk = "Walk";
     private const string _hit = "Hit";
@@ -62,7 +63,7 @@ public class EnemyLife : MonoBehaviour
     {
         var hall = Instantiate(_hall);
         hall.transform.position = arm.transform.position;
-        hall.transform.parent = gameObject.transform;
+        hall.transform.parent = _fatherObj.transform;
     }
 
     private IEnumerator WaitHitAnim()
