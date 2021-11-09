@@ -539,8 +539,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7166364, y: 0.8437151, z: 0.8247739}
-  m_Center: {x: 0.011088014, y: 0.41829652, z: -0.087613046}
+  m_Size: {x: 0.7166364, y: 0.8437151, z: 0.85343885}
+  m_Center: {x: 0.011088014, y: 0.41829652, z: -0.07328056}
 --- !u!114 &5290880292303249371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   _health: 3
   _hall: {fileID: 1232897403012211015, guid: 7f41029227c26444488e9a699d5cf792, type: 3}
   _animator: {fileID: 1731192319473427063}
-  _hitDuration: 1.2
+  _fatherObj: {fileID: 8169380070140969449}
 --- !u!114 &5290880292303249370
 MonoBehaviour:
   m_ObjectHideFlags: 0
