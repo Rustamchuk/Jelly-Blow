@@ -78,7 +78,7 @@ public class ArmStretcher : MonoBehaviour
                     _right = false;
                 else
                     _right = true;
-
+                Debug.Log(_touched);
                 _startForStretch = false;
                 _touched = false;
                 arm.RewriteAttacking(false);
@@ -92,7 +92,7 @@ public class ArmStretcher : MonoBehaviour
 
     private IEnumerator StopStretch()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0);
 
         _touched = true;
     }
