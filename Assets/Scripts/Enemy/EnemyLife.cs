@@ -10,7 +10,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private GameObject _fatherObj;
 
-    private float _hitDuration = 0;
+    private float _hitDuration = 0.7f;
     private bool _alive = false;
     private const string _walk = "Walk";
     private const string _hit = "Hit";
