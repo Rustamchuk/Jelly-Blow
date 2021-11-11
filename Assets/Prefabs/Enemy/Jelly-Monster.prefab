@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 5290880292303249369}
   - component: {fileID: 5290880292303249371}
   - component: {fileID: 5290880292303249370}
+  - component: {fileID: 7262616713317511374}
   m_Layer: 0
   m_Name: Jelly-Monster
   m_TagString: Untagged
@@ -539,8 +540,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7166364, y: 0.8437151, z: 0.85343885}
-  m_Center: {x: 0.011088014, y: 0.41829652, z: -0.07328056}
+  m_Size: {x: 0.7166364, y: 0.8437151, z: 0.91077983}
+  m_Center: {x: 0.011088014, y: 0.41829652, z: -0.04461007}
 --- !u!114 &5290880292303249371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,10 +554,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0433ccf3ea3916a4ea01c0aa4395cfbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 4
+  _holeGap: 2
   _hall: {fileID: 1232897403012211015, guid: 7f41029227c26444488e9a699d5cf792, type: 3}
   _animator: {fileID: 1731192319473427063}
-  _fatherObj: {fileID: 8169380070140969449}
+  _fatherObj: {fileID: 4123484815992311451}
 --- !u!114 &5290880292303249370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +574,19 @@ MonoBehaviour:
   _target: {fileID: 0}
   _speed: 0.5
   _life: {fileID: 5290880292303249371}
+--- !u!65 &7262616713317511374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5020829989333148343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7166364, y: 0.8437151, z: 0.15551028}
+  m_Center: {x: 0.011088014, y: 0.41829652, z: -0.42224485}
 --- !u!1 &5432456447453636253
 GameObject:
   m_ObjectHideFlags: 0
