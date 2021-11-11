@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     [SerializeField] private int _health;
+    [SerializeField] private int _holeGap;
     [SerializeField] private GameObject _hall;
     [SerializeField] private Animator _animator;
     [SerializeField] private GameObject _fatherObj;
@@ -32,6 +33,8 @@ public class EnemyLife : MonoBehaviour
     {
         if (_alive)
         {
+            _health--;
+
             if (other.gameObject.TryGetComponent(out Arm arm))
             {
                 if (!arm.Attacking)
@@ -39,7 +42,10 @@ public class EnemyLife : MonoBehaviour
 
                 arm.TouchedTrigger();
 
-                if (_health == 1)
+                if (_health % _holeGap == 0 && _health != 0)
+                    MakeHall(arm);
+
+                if (_health == 0)
                 {
                     MakeHall(arm);
 
@@ -49,9 +55,7 @@ public class EnemyLife : MonoBehaviour
                 }
             }
 
-            _health--;
-
-            if (_health > 0)
+            if (_health > 0 && _health % _holeGap != 0)
             {
                 _animator.SetTrigger(_hit);
                 StartCoroutine(WaitHitAnim());
