@@ -75,7 +75,7 @@ public class ArmStretcher : MonoBehaviour
                     _right = false;
                 else
                     _right = true;
-                Debug.Log(_touched);
+
                 _startForStretch = false;
                 _touched = false;
                 arm.RewriteAttacking(false);
