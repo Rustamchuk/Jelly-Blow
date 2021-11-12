@@ -9,6 +9,6 @@ public class EnemyPart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _mainBody.CollisionEnter(other, _fatherObj);
+        //_mainBody.CollisionEnter(other, _fatherObj);
     }
 }
