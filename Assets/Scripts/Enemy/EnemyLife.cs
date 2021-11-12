@@ -9,10 +9,10 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private int _holeGap;
     [SerializeField] private GameObject _hall;
     [SerializeField] private Animator _animator;
-    [SerializeField] private GameObject _fatherObj;
 
     private float _hitDuration = 0.7f;
     private bool _alive = false;
+    private bool _coolDown = false;
     private const string _walk = "Walk";
     private const string _hit = "Hit";
     private const string _end = "End";
@@ -29,30 +29,29 @@ public class EnemyLife : MonoBehaviour
             _animator.SetTrigger(_walk);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void CollisionEnter(Collider other, GameObject father)
     {
-        if (_alive)
+        if (!_coolDown && _alive && other.gameObject.TryGetComponent(out Arm arm))
         {
+            StartCoroutine(WaitCoolDown());
+
+            if (!arm.Attacking)
+                return;
+
             _health--;
 
-            if (other.gameObject.TryGetComponent(out Arm arm))
+            arm.TouchedTrigger();
+
+            if (_health % _holeGap == 0 && _health != 0)
+                MakeHall(arm, father);
+
+            if (_health == 0)
             {
-                if (!arm.Attacking)
-                    return;
+                MakeHall(arm, father);
 
-                arm.TouchedTrigger();
-
-                if (_health % _holeGap == 0 && _health != 0)
-                    MakeHall(arm);
-
-                if (_health == 0)
-                {
-                    MakeHall(arm);
-
-                    _alive = false;
-                    _animator.SetTrigger(_end);
-                    Dead.Invoke();
-                }
+                _alive = false;
+                _animator.SetTrigger(_end);
+                Dead.Invoke();
             }
 
             if (_health > 0 && _health % _holeGap != 0)
@@ -60,14 +59,17 @@ public class EnemyLife : MonoBehaviour
                 _animator.SetTrigger(_hit);
                 StartCoroutine(WaitHitAnim());
             }
+
+            WaitCoolDown();
         }
     }
 
-    private void MakeHall(Arm arm)
+    private void MakeHall(Arm arm, GameObject father)
     {
         var hall = Instantiate(_hall);
         hall.transform.position = arm.transform.position;
-        hall.transform.parent = _fatherObj.transform;
+        hall.transform.parent = father.transform;
+        hall.transform.eulerAngles = new Vector3(90, 0, 0);
     }
 
     private IEnumerator WaitHitAnim()
@@ -77,5 +79,12 @@ public class EnemyLife : MonoBehaviour
         yield return new WaitForSeconds(_hitDuration);
 
         _alive = true;
+    }
+
+    private IEnumerator WaitCoolDown()
+    {
+        _coolDown = true;
+        yield return null;
+        _coolDown = false;
     }
 }

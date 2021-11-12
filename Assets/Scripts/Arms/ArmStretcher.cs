@@ -61,18 +61,15 @@ public class ArmStretcher : MonoBehaviour
                 //arm.transform.localScale = new Vector3(arm.transform.localScale.x + _speedStrecth / 10 * Time.deltaTime,
                 //arm.transform.localScale.y + _speedStrecth / 10 * Time.deltaTime, arm.transform.localScale.z + _speedStrecth * Time.deltaTime);
 
-                arm.ArmObject.transform.localScale = new Vector3(arm.ArmObject.transform.localScale.x, arm.ArmObject.transform.localScale.y, 
+                arm.ArmObject.transform.localScale = new Vector3(arm.ArmObject.transform.localScale.x, arm.ArmObject.transform.localScale.y,
                     arm.ArmObject.transform.localScale.z + _speedStrecth * Time.deltaTime);
 
                 arm.transform.position += arm.transform.forward * _speedMove * Time.deltaTime;
             }
             else
             {
-                _armL.ArmObject.transform.localScale = _armL.StartSize;
-                _armL.transform.position = _armL.StartPos.position;
-
-                _armR.ArmObject.transform.localScale = _armR.StartSize;
-                _armR.transform.position = _armR.StartPos.position;
+                ReturnPos(_armL);
+                ReturnPos(_armR);
 
                 if (_right)
                     _right = false;
@@ -86,6 +83,13 @@ public class ArmStretcher : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    private void ReturnPos(Arm arm)
+    {
+        arm.ArmObject.transform.localScale = arm.StartSize;
+        arm.transform.position = arm.StartPos.position;
+        arm.transform.rotation = arm.StartPos.rotation;
     }
 
     private void ArmTouched() { StartCoroutine(StopStretch()); }
