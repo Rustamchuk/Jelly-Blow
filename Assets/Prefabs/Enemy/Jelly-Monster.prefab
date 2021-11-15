@@ -543,6 +543,7 @@ MonoBehaviour:
   _health: 4
   _animator: {fileID: 1731192319473427063}
   _destroy: {fileID: 1597142835408661117, guid: da136944218515d48a707290f2e02252, type: 3}
+  _boomBody: {fileID: 5942854584539224578, guid: b7295e7347ec5614ca63372116ca3740, type: 3}
 --- !u!114 &5290880292303249370
 MonoBehaviour:
   m_ObjectHideFlags: 0

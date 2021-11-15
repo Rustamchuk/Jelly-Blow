@@ -8,6 +8,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private int _health;
     [SerializeField] private Animator _animator;
     [SerializeField] private ParticleSystem _destroy;
+    [SerializeField] private BoomMaker _boomBody;
 
     //[SerializeField] private GameObject _hall;
     //[SerializeField] private int _holeGap;
@@ -92,6 +93,8 @@ public class EnemyLife : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
 
+        var boom = Instantiate(_boomBody);
+        boom.Boom(transform.position);
         Destroy(gameObject);
     }
 }
