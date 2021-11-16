@@ -15,10 +15,10 @@ public class BoomMaker : MonoBehaviour
 
     private IEnumerator BoomWait()
     {
-        //Time.timeScale = 0.05f;
+        Time.timeScale = 0.05f;
         yield return new WaitForSeconds(_duration);
 
         Destroy(gameObject);
-        //Time.timeScale = 1;
+        Time.timeScale = 1;
     }
 }
