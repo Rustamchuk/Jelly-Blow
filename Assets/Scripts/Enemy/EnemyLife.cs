@@ -20,7 +20,6 @@ public class EnemyLife : MonoBehaviour
     public bool Alive => _alive;
     public event Action Dead;
 
-
     public void StartLife()
     {
         _alive = true;
@@ -29,7 +28,7 @@ public class EnemyLife : MonoBehaviour
             _animator.SetTrigger(_walk);
     }
 
-    public void CollisionEnter(Collider other, GameObject father)
+    public void CollisionEnter(Collider other, GameObject father, Transform holePoint = null)
     {
         if (!_coolDown && _alive && other.gameObject.TryGetComponent(out Arm arm))
         {
@@ -43,11 +42,11 @@ public class EnemyLife : MonoBehaviour
             arm.TouchedTrigger();
 
             if (_health % _holeGap == 0 && _health != 0)
-                MakeHall(arm, father);
+                MakeHall(arm, father, holePoint);
 
             if (_health == 0)
             {
-                MakeHall(arm, father);
+                MakeHall(arm, father, holePoint);
 
                 _alive = false;
                 _animator.SetTrigger(_end);
@@ -57,26 +56,29 @@ public class EnemyLife : MonoBehaviour
             if (_health > 0 && _health % _holeGap != 0)
             {
                 _animator.SetTrigger(_hit);
-                StartCoroutine(WaitHitAnim());
+                //StartCoroutine(WaitHitAnim());
             }
 
             WaitCoolDown();
         }
     }
 
-    private void MakeHall(Arm arm, GameObject father)
+    private void MakeHall(Arm arm, GameObject father, Transform hallPoint = null)
     {
         var hall = Instantiate(_hall);
+        //hall.transform.eulerAngles = new Vector3(90, 0, 0);
         hall.transform.position = arm.transform.position;
         hall.transform.parent = father.transform;
-        hall.transform.eulerAngles = new Vector3(90, 0, 0);
+
+        if (hallPoint != null)
+            hall.transform.position = new Vector3(hall.transform.position.x, hall.transform.position.y, hallPoint.position.z);
     }
 
     private IEnumerator WaitHitAnim()
     {
         _alive = false;
 
-        yield return new WaitForSeconds(_hitDuration);
+        yield return null;
 
         _alive = true;
     }

@@ -17,6 +17,9 @@ public class ArmStretcher : MonoBehaviour
     private bool _startForStretch = false;
     private bool _touched = false;
 
+    public Arm ArmR => _armR;
+    public Arm ArmL => _armL;
+
     private void Awake()
     {
         _armL.Touched += ArmTouched;
@@ -47,6 +50,9 @@ public class ArmStretcher : MonoBehaviour
             else
                 StartCoroutine(StretchArm(_armL));
         }
+
+        _armL.transform.rotation = _armL.StartPos.rotation;
+        _armR.transform.rotation = _armR.StartPos.rotation;
     }
 
     private IEnumerator StretchArm(Arm arm)
@@ -75,7 +81,7 @@ public class ArmStretcher : MonoBehaviour
                     _right = false;
                 else
                     _right = true;
-                Debug.Log(_touched);
+
                 _startForStretch = false;
                 _touched = false;
                 arm.RewriteAttacking(false);
@@ -85,7 +91,7 @@ public class ArmStretcher : MonoBehaviour
         }
     }
 
-    private void ReturnPos(Arm arm)
+    public void ReturnPos(Arm arm)
     {
         arm.ArmObject.transform.localScale = arm.StartSize;
         arm.transform.position = arm.StartPos.position;
