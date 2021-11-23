@@ -10,7 +10,7 @@ public class LevelChanger : MonoBehaviour
     [SerializeField] private Scenes _currentScene;
 
     //private enum Scenes { Level_1, Level_2, Level_3, Level_4, Level_5, Level_6, Level_7 }
-    private enum Scenes { Demo, Demo_2 }
+    private enum Scenes { Demo, Level_1 }
 
     public event Action StartedGame;
     public event Action StartedLevel;
@@ -47,7 +47,7 @@ public class LevelChanger : MonoBehaviour
                 DemoLevel.Load((int)_currentScene);
                 break;
             case 1:
-                DemoLevel_2.Load((int)_currentScene);
+                Level_1.Load((int)_currentScene);
                 break;
 
                 #region FutureLevels
