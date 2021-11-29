@@ -85,7 +85,7 @@ public class EnemyLife : MonoBehaviour
     private void MakeHall(Arm arm, GameObject father, Transform hallPoint, bool xChange, bool yChange)
     {
         var hall = Instantiate(_hall);
-        //hall.transform.LookAt(Vector3.up * 100);
+        hall.transform.LookAt(Vector3.up * 100);
         hall.transform.position = arm.transform.position;
         hall.transform.parent = father.transform;
 
