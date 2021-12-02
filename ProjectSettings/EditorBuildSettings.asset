@@ -62,4 +62,79 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/DemoLevel___\u043A\u043E\u043F\u0438\u044F.unity"
     guid: 04b8b48352aee7d4695e10361f6b9237
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Little_Planet__Y_.unity
+    guid: 1b2063dba26188541a5ee9b28d90d3b0
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__4___Multiple_Bends.unity
+    guid: 7c6eb87350ef75c4496d59e13acb5e30
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Twisted_Spiral__Highway_Hills_.unity
+    guid: 2afc0a104845e1b4a92f73643aec85fb
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Twisted_Spiral__Highway_.unity
+    guid: 86d11393c74c497408667c65ee5b4f44
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__2___Little_Planet__part_1_.unity
+    guid: 29bbca773ac91f94a9e0d7b176d874c2
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__3___Little_Planet__part_2__Finished.unity
+    guid: fb43e84bd3689274aaa9255a992fd006
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Cylindrical_Tower__X_.unity
+    guid: 9e7c90731b9e6e349bcf3cd607343e17
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Non___Shader_Bending__Scene_1_.unity
+    guid: d3e111ff32bf5cf4aa49bb6a8d9590ec
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Non___Shader_Bending__Scene_2_.unity
+    guid: 0c27fa6980743df42b8cf2f8216801ea
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Spiral_Horizontal_Double__X_.unity
+    guid: c5210fa731f3db24285ae702f9ee85a8
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Classic_Runner__X_Positive_.unity
+    guid: 77d8c51ae660c3a4c9116691e1d772db
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__1___Introduction.unity
+    guid: 5f3773613bf2e3c40ae4d157f0ddda1c
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Cylindrical_Rolloff__Z_.unity
+    guid: b0e8948cde3a20741bee75b076cd1712
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__4___Multiple_Bends_Finished.unity
+    guid: 5dd793b2e52e3c549a7990447c31ada1
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Spiral_Vertical.unity
+    guid: 920826ebac42e5a46a462947bcba3ab8
+  - enabled: 1
+    path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Twisted_Spiral__Corridor_.unity
+    guid: cf4d6deb0341a334dabdab14515fafb8
+  - enabled: 1
+    path: Assets/Scenes/Level_2.unity
+    guid: f1699b3722bc10d46a3abee6e0c169dc
+  - enabled: 1
+    path: Assets/Scenes/Level_3.unity
+    guid: b23b28dc46d1fbd43b672ddb00c10b57
+  - enabled: 1
+    path: Assets/Scenes/Level_4.unity
+    guid: 84dfdb47b96a9c147b0088c6e1f6bb9f
+  - enabled: 1
+    path: Assets/Scenes/Level_5.unity
+    guid: 39960244fc21e074a82cd52e59368669
+  - enabled: 1
+    path: Assets/Scenes/Level_6.unity
+    guid: 5ac08862b82e1b948b05cd327c6e1d62
+  - enabled: 1
+    path: Assets/Scenes/Level_7.unity
+    guid: 1a43af4008030674199f8a6c78c641b2
+  - enabled: 1
+    path: Assets/Scenes/Level_10.unity
+    guid: 1c1fecd7fa1a2b64ea1de9bf82e76bee
+  - enabled: 1
+    path: Assets/Scenes/Level_9.unity
+    guid: 2d7aeabba1da77d4eb6a8efc61e19e90
+  - enabled: 1
+    path: Assets/Scenes/Level_8.unity
+    guid: 715b9a7cd279fd742ba252062fa40d0d
   m_configObjects: {}

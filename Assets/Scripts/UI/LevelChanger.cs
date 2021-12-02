@@ -9,8 +9,7 @@ public class LevelChanger : MonoBehaviour
     [SerializeField] private Scenes _nextLevelName;
     [SerializeField] private Scenes _currentScene;
 
-    //private enum Scenes { Level_1, Level_2, Level_3, Level_4, Level_5, Level_6, Level_7 }
-    private enum Scenes { Demo, Level_1 }
+    private enum Scenes { Level_1, Level_2, Level_3, Level_4, Level_5, Level_6, Level_7, Level_8, Level_9, Level_10 }
 
     public event Action StartedGame;
     public event Action StartedLevel;
@@ -32,7 +31,7 @@ public class LevelChanger : MonoBehaviour
         RestartedLevel.Invoke();
 
         if (_nextLevelName == 0)
-            _nextLevelName += 1;
+            _nextLevelName += 9;
         else
             _nextLevelName--;
 
@@ -44,37 +43,35 @@ public class LevelChanger : MonoBehaviour
         switch ((int)_nextLevelName)
         {
             case 0:
-                DemoLevel.Load((int)_currentScene);
-                break;
-            case 1:
                 Level_1.Load((int)_currentScene);
                 break;
-
-                #region FutureLevels
-                /*
-                case 0:
-                    Level_1.Load((int)_currentScene);
-                    break;
-                case 1:
-                    Level_2.Load((int)_currentScene);
-                    break;
-                case 2:
-                    Level_3.Load((int)_currentScene);
-                    break;
-                case 3:
-                    Level_4.Load((int)_currentScene);
-                    break;
-                case 4:
-                    Level_5.Load((int)_currentScene);
-                    break;
-                case 5:
-                    Level_6.Load((int)_currentScene);
-                    break;
-                case 6:
-                    Level_7.Load((int)_currentScene);
-                    break;
-                    */
-                #endregion
+            case 1:
+                Level_2.Load((int)_currentScene);
+                break;
+            case 2:
+                Level_3.Load((int)_currentScene);
+                break;
+            case 3:
+                Level_4.Load((int)_currentScene);
+                break;
+            case 4:
+                Level_5.Load((int)_currentScene);
+                break;
+            case 5:
+                Level_6.Load((int)_currentScene);
+                break;
+            case 6:
+                Level_7.Load((int)_currentScene);
+                break;
+            case 7:
+                Level_8.Load((int)_currentScene);
+                break;
+            case 8:
+                Level_9.Load((int)_currentScene);
+                break;
+            case 9:
+                Level_10.Load((int)_currentScene);
+                break;
         }
     }
 

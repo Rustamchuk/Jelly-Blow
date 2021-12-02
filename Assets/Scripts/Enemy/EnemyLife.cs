@@ -10,11 +10,13 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private List<int> _hitAnswer;
     [SerializeField] private GameObject _hall;
     [SerializeField] private Animator _animator;
+    [SerializeField] private float _multyValue;
 
     private int _curIndex;
     private float _hitDuration = 0.7f;
     private bool _alive = false;
     private bool _coolDown = false;
+    private bool _isLag = false;
     private const string _walk = "Walk";
     private const string _hit = "Hit";
     private const string _end = "End";
@@ -88,6 +90,13 @@ public class EnemyLife : MonoBehaviour
         hall.transform.LookAt(Vector3.up * 100);
         hall.transform.position = arm.transform.position;
         hall.transform.parent = father.transform;
+        hall.transform.localScale = hall.transform.localScale * _multyValue;
+
+        if (_isLag)
+        {
+            hall.transform.localScale = hall.transform.localScale - new Vector3(0, hall.transform.localScale.y / 2, 0);
+            _isLag = false;
+        }
 
         if (hallPoint != null)
         {
@@ -116,4 +125,6 @@ public class EnemyLife : MonoBehaviour
         yield return null;
         _coolDown = false;
     }
+
+    public void ChangeIsLag() { _isLag = true; }
 }

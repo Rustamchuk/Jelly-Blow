@@ -11,12 +11,15 @@ public class EnemyPart : MonoBehaviour
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private Transform _upBorder;
     [SerializeField] private Transform _downBorder;
+    [SerializeField] private bool _lag;
 
     private bool _xChange = false;
     private bool _yChange = false;
     private bool _upNull = false;
     private bool _downNull = false;
     private bool _nullRL = false;
+
+    public bool IsLag => _lag;
 
     private void Start()
     {
@@ -68,5 +71,8 @@ public class EnemyPart : MonoBehaviour
         }
 
         _mainBody.CollisionEnter(other, _fatherObj, _holePoint, _xChange, _yChange);
+
+        if (_lag)
+            _mainBody.ChangeIsLag();
     }
 }
