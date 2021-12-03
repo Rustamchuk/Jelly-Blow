@@ -17,7 +17,9 @@ public class EnemyPart : MonoBehaviour
     private bool _yChange = false;
     private bool _upNull = false;
     private bool _downNull = false;
-    private bool _nullRL = false;
+    private bool _nullR = false;
+    private bool _nullL = false;
+    private Vector3 _positionToHall = new Vector3(0, 0, 0);
 
     public bool IsLag => _lag;
 
@@ -29,8 +31,11 @@ public class EnemyPart : MonoBehaviour
         if (_downBorder == null)
             _downNull = true;
 
-        if (_rightBorder == null || _leftBorder == null)
-            _nullRL = true;
+        if (_rightBorder == null)
+            _nullR = true;
+
+        if (_leftBorder == null)
+            _nullL = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,39 +43,39 @@ public class EnemyPart : MonoBehaviour
         _xChange = false;
         _yChange = false;
 
-        if (!_nullRL)
+        if (other.transform.position.x > _rightBorder.position.x && !_nullR)
         {
-            if (other.transform.position.x > _rightBorder.position.x)
-            {
-                _holePoint.position = new Vector3(_rightBorder.position.x, _holePoint.position.y, _holePoint.position.z);
-                _xChange = true;
-            }
-            else if (other.transform.position.x < _leftBorder.position.x)
-            {
-                _holePoint.position = new Vector3(_leftBorder.position.x, _holePoint.position.y, _holePoint.position.z);
-                _xChange = true;
-            }
+            _positionToHall = new Vector3(_rightBorder.position.x, _positionToHall.y, _positionToHall.z);
+            _xChange = true;
+        }
+
+        if (other.transform.position.x < _leftBorder.position.x && !_nullL)
+        {
+            _positionToHall = new Vector3(_leftBorder.position.x, _positionToHall.y, _positionToHall.z);
+            _xChange = true;
         }
 
         if (!_upNull)
         {
             if (other.transform.position.y > _upBorder.position.y)
             {
-                _holePoint.position = new Vector3(_holePoint.position.x, _upBorder.position.y, _holePoint.position.z);
+                _positionToHall = new Vector3(_positionToHall.x, _upBorder.position.y, _positionToHall.z);
                 _yChange = true;
             }
         }
 
         if (!_downNull)
         {
-            if (other.transform.position.y < _downBorder.position.y && !_downNull)
+            if (other.transform.position.y < _downBorder.position.y )
             {
-                _holePoint.position = new Vector3(_holePoint.position.x, _downBorder.position.y, _holePoint.position.z);
+                _positionToHall = new Vector3(_positionToHall.x, _downBorder.position.y, _positionToHall.z);
                 _yChange = true;
             }
         }
 
-        _mainBody.CollisionEnter(other, _fatherObj, _holePoint, _xChange, _yChange);
+        _positionToHall = new Vector3(_positionToHall.x, _positionToHall.y, _holePoint.position.z);
+
+        _mainBody.CollisionEnter(other, _fatherObj, _positionToHall, _xChange, _yChange);
 
         if (_lag)
             _mainBody.ChangeIsLag();

@@ -1420,6 +1420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 634578649}
     m_Modifications:
+    - target: {fileID: 6816576766859207558, guid: 39885ebcd54d86c4db1f482aa323e4ee, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6816576766961961235, guid: 39885ebcd54d86c4db1f482aa323e4ee, type: 3}
       propertyPath: _maxScale
       value: 15
@@ -1475,6 +1479,10 @@ PrefabInstance:
     - target: {fileID: 6816576766961961245, guid: 39885ebcd54d86c4db1f482aa323e4ee, type: 3}
       propertyPath: m_Name
       value: ArmsRealistic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816576768039502875, guid: 39885ebcd54d86c4db1f482aa323e4ee, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39885ebcd54d86c4db1f482aa323e4ee, type: 3}

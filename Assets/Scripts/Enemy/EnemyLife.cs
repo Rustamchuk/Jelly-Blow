@@ -32,7 +32,7 @@ public class EnemyLife : MonoBehaviour
             _animator.SetTrigger(_walk);
     }
 
-    public void CollisionEnter(Collider other, GameObject father, Transform holePoint, bool xChange, bool yChange)
+    public void CollisionEnter(Collider other, GameObject father, Vector3 holePoint, bool xChange, bool yChange)
     {
         if (!_coolDown && _alive && other.gameObject.TryGetComponent(out Arm arm))
         {
@@ -84,7 +84,7 @@ public class EnemyLife : MonoBehaviour
         }
     }
 
-    private void MakeHall(Arm arm, GameObject father, Transform hallPoint, bool xChange, bool yChange)
+    private void MakeHall(Arm arm, GameObject father, Vector3 hallPoint, bool xChange, bool yChange)
     {
         var hall = Instantiate(_hall);
         hall.transform.LookAt(Vector3.up * 100);
@@ -100,13 +100,13 @@ public class EnemyLife : MonoBehaviour
 
         if (hallPoint != null)
         {
-            hall.transform.position = new Vector3(hall.transform.position.x, hall.transform.position.y, hallPoint.position.z);
+            hall.transform.position = new Vector3(hall.transform.position.x, hall.transform.position.y, hallPoint.z);
 
             if (xChange)
-                hall.transform.position = new Vector3(hallPoint.position.x, hall.transform.position.y, hall.transform.position.z);
+                hall.transform.position = new Vector3(hallPoint.x, hall.transform.position.y, hall.transform.position.z);
 
             if (yChange)
-                hall.transform.position = new Vector3(hall.transform.position.x, hallPoint.position.y, hall.transform.position.z);
+                hall.transform.position = new Vector3(hall.transform.position.x, hallPoint.y, hall.transform.position.z);
         }
     }
 

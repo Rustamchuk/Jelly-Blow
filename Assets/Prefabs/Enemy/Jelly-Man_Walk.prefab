@@ -93,7 +93,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097282970036136195}
   m_LocalRotation: {x: 0.08725618, y: -0.023536641, z: 0.013306899, w: 0.995819}
-  m_LocalPosition: {x: 0.00252, y: -0.00151, z: 0.00759}
+  m_LocalPosition: {x: 0.00208, y: -0.00245, z: 0.0051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6683907981718658305}
@@ -217,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833777141966245391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00536, y: 0.00049, z: 0.0011}
+  m_LocalPosition: {x: -0.0056, y: 0.0005, z: 0.0011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7015578381947829381}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840294873378693555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00013, y: 0.00085, z: 0.0016}
+  m_LocalPosition: {x: 0.00011, y: 0.00077, z: 0.0009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2128944209105881197}
@@ -277,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050139519216139686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0018, y: 0.0031, z: 0.0033}
+  m_LocalPosition: {x: 0.00172, y: 0.0033, z: 0.0032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2128944209105881197}
@@ -462,7 +462,7 @@ MonoBehaviour:
   _holePoint: {fileID: 3771305123469117375}
   _rightBorder: {fileID: 3771305123469117375}
   _leftBorder: {fileID: 3771305123469117375}
-  _upBorder: {fileID: 0}
+  _upBorder: {fileID: 3771305123469117375}
   _downBorder: {fileID: 3771305123469117375}
   _lag: 1
 --- !u!1 &2537812693045121062
@@ -592,7 +592,7 @@ MonoBehaviour:
   _rightBorder: {fileID: 525376457772242029}
   _leftBorder: {fileID: 6172844966426692019}
   _upBorder: {fileID: 6639060563957370910}
-  _downBorder: {fileID: 0}
+  _downBorder: {fileID: 1585787442950119703}
   _lag: 0
 --- !u!1 &3421871648830519729
 GameObject:
@@ -814,7 +814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4028261083308080678}
   m_LocalRotation: {x: -0.000000014901156, y: 0.000000014901156, z: 0.0000000018626445, w: 1}
-  m_LocalPosition: {x: 0.00116, y: 0.00348, z: 0.00305}
+  m_LocalPosition: {x: -0.0015, y: 0.00333, z: 0.00313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2128944209105881197}
@@ -1196,10 +1196,10 @@ MonoBehaviour:
   _mainBody: {fileID: 5507248070160153864}
   _fatherObj: {fileID: 5498114362126119932}
   _holePoint: {fileID: 7015578381947829381}
-  _rightBorder: {fileID: 0}
-  _leftBorder: {fileID: 0}
+  _rightBorder: {fileID: 8070153774149765293}
+  _leftBorder: {fileID: 5294340425035132266}
   _upBorder: {fileID: 7917676074495237103}
-  _downBorder: {fileID: 0}
+  _downBorder: {fileID: 5294340425035132266}
   _lag: 0
 --- !u!1 &5623076516285420071
 GameObject:
@@ -1225,7 +1225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5623076516285420071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0066, y: -0.01109, z: 0.00461}
+  m_LocalPosition: {x: 0.0059, y: -0.0111, z: 0.0048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7015578381947829381}
@@ -1724,10 +1724,10 @@ MonoBehaviour:
   _mainBody: {fileID: 5507248070160153864}
   _fatherObj: {fileID: 196056654519665624}
   _holePoint: {fileID: 7015578381947829381}
-  _rightBorder: {fileID: 0}
-  _leftBorder: {fileID: 0}
+  _rightBorder: {fileID: 3079033443036414972}
+  _leftBorder: {fileID: 5294340425035132266}
   _upBorder: {fileID: 7917676074495237103}
-  _downBorder: {fileID: 0}
+  _downBorder: {fileID: 5294340425035132266}
   _lag: 0
 --- !u!1 &7792612750805266631
 GameObject:
@@ -2088,8 +2088,8 @@ MonoBehaviour:
   _holePoint: {fileID: 7852382700043886865}
   _rightBorder: {fileID: 6639060563957370910}
   _leftBorder: {fileID: 6639060563957370910}
-  _upBorder: {fileID: 0}
-  _downBorder: {fileID: 0}
+  _upBorder: {fileID: 2128944209105881197}
+  _downBorder: {fileID: 5294340425035132266}
   _lag: 0
 --- !u!1 &9132398052006043026
 GameObject:

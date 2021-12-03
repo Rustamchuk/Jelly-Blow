@@ -146,6 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce52ca78e6571f41b9931cfbda0c996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _holeDel: {fileID: 8423595493270709484, guid: 799563b0f2ac49b4da1927b4fc3b9871, type: 3}
+  _holePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &3172330118137166748
 PrefabInstance:
   m_ObjectHideFlags: 0
