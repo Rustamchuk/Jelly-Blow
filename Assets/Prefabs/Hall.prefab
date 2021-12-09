@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989062553914430204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.396, z: 4.4e-14}
-  m_LocalScale: {x: 1, y: 11.283347, z: 1}
+  m_LocalPosition: {x: -0, y: -0.2, z: -0}
+  m_LocalScale: {x: 0.8631909, y: 11.283347, z: 0.7992024}
   m_Children: []
   m_Father: {fileID: 1232897403012211008}
   m_RootOrder: 0
@@ -95,7 +95,7 @@ GameObject:
   m_Layer: 0
   m_Name: Hall
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce52ca78e6571f41b9931cfbda0c996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _holeDel: {fileID: 8423595493270709484, guid: 799563b0f2ac49b4da1927b4fc3b9871, type: 3}
 --- !u!1001 &5350529092852206248
 PrefabInstance:
   m_ObjectHideFlags: 0
