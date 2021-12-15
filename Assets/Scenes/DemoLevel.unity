@@ -462,6 +462,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &462376117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462376119}
+  - component: {fileID: 462376118}
+  m_Layer: 0
+  m_Name: RMObject (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &462376118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462376117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.11
+  rmParamB: -0.01
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 0, b: 0.8700414, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj5
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -12950
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &462376119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462376117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.469, y: -0.344, z: -26.456}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &473431021
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +906,9 @@ GameObject:
   - component: {fileID: 634578650}
   - component: {fileID: 634578651}
   - component: {fileID: 634578652}
+  - component: {fileID: 634578655}
+  - component: {fileID: 634578654}
+  - component: {fileID: 634578653}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -886,7 +956,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -960,6 +1030,275 @@ MonoBehaviour:
   - {fileID: 823968811}
   - {fileID: 571405342}
   _cameraMover: {fileID: 634578651}
+--- !u!114 &634578653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634578646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1c2eac9fe4944459d9faa97a77ad39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapRmMaster: {fileID: 634578655}
+  mapMaximumObjects: 30
+  mapCurrentMaximumObjects: 30
+  mapCurrentObjectsCount: 8
+  mapSetForTheCurrentScene: 1
+  mapCurrentSceneName: DemoLevel
+  mapObjectsContainer:
+  - mapVirtualObject: {fileID: 944361483}
+  - mapVirtualObject: {fileID: 1266539721}
+  - mapVirtualObject: {fileID: 1032693459}
+  - mapVirtualObject: {fileID: 1679721141}
+  - mapVirtualObject: {fileID: 1872373888}
+  - mapVirtualObject: {fileID: 462376118}
+  - mapVirtualObject: {fileID: 2083573899}
+  - mapVirtualObject: {fileID: 1776698639}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+  - mapVirtualObject: {fileID: 0}
+--- !u!114 &634578654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634578646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617c0fc40c9af1f47a4a4fdd8d4f33b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xxLoadedObjectBuffer: "//-----Registered Object Parameters\nfloat4x4 _obj0Model;\nfloat4x4
+    _obj1Model;\nfloat4x4 _obj2Model;\nfloat4x4 _obj3Model;\nfloat4x4 _obj4Model;\nfloat4x4
+    _obj5Model;\nfloat4x4 _obj6Model;\nfloat4x4 _obj7Model;\nfloat4x4 _obj8Model;\nfloat4x4
+    _obj9Model;\nfloat4x4 _obj10Model;\nfloat4x4 _obj11Model;\nfloat4x4 _obj12Model;\nfloat4x4
+    _obj13Model;\nfloat4x4 _obj14Model;\nfloat4x4 _obj15Model;\nfloat4x4 _obj16Model;\nfloat4x4
+    _obj17Model;\nfloat4x4 _obj18Model;\nfloat4x4 _obj19Model;\nfloat4x4 _obj20Model;\nfloat4x4
+    _obj21Model;\nfloat4x4 _obj22Model;\nfloat4x4 _obj23Model;\nfloat4x4 _obj24Model;\nfloat4x4
+    _obj25Model;\nfloat4x4 _obj26Model;\nfloat4x4 _obj27Model;\nfloat4x4 _obj28Model;\nfloat4x4
+    _obj29Model;\n\nfloat obj0sm,enabled0;\nfloat4 size0;\nfloat obj1sm,enabled1;\nfloat4
+    size1;\nfloat obj2sm,enabled2;\nfloat4 size2;\nfloat obj3sm,enabled3;\nfloat4
+    size3;\nfloat obj4sm,enabled4;\nfloat4 size4;\nfloat obj5sm,enabled5;\nfloat4
+    size5;\nfloat obj6sm,enabled6;\nfloat4 size6;\nfloat obj7sm,enabled7;\nfloat4
+    size7;\nfloat obj8sm,enabled8;\nfloat4 size8;\nfloat obj9sm,enabled9;\nfloat4
+    size9;\nfloat obj10sm,enabled10;\nfloat4 size10;\nfloat obj11sm,enabled11;\nfloat4
+    size11;\nfloat obj12sm,enabled12;\nfloat4 size12;\nfloat obj13sm,enabled13;\nfloat4
+    size13;\nfloat obj14sm,enabled14;\nfloat4 size14;\nfloat obj15sm,enabled15;\nfloat4
+    size15;\nfloat obj16sm,enabled16;\nfloat4 size16;\nfloat obj17sm,enabled17;\nfloat4
+    size17;\nfloat obj18sm,enabled18;\nfloat4 size18;\nfloat obj19sm,enabled19;\nfloat4
+    size19;\nfloat obj20sm,enabled20;\nfloat4 size20;\nfloat obj21sm,enabled21;\nfloat4
+    size21;\nfloat obj22sm,enabled22;\nfloat4 size22;\nfloat obj23sm,enabled23;\nfloat4
+    size23;\nfloat obj24sm,enabled24;\nfloat4 size24;\nfloat obj25sm,enabled25;\nfloat4
+    size25;\nfloat obj26sm,enabled26;\nfloat4 size26;\nfloat obj27sm,enabled27;\nfloat4
+    size27;\nfloat obj28sm,enabled28;\nfloat4 size28;\nfloat obj29sm,enabled29;\nfloat4
+    size29;\n\nfloat3 color0;\nfloat3 color1;\nfloat3 color2;\nfloat3 color3;\nfloat3
+    color4;\nfloat3 color5;\nfloat3 color6;\nfloat3 color7;\nfloat3 color8;\nfloat3
+    color9;\nfloat3 color10;\nfloat3 color11;\nfloat3 color12;\nfloat3 color13;\nfloat3
+    color14;\nfloat3 color15;\nfloat3 color16;\nfloat3 color17;\nfloat3 color18;\nfloat3
+    color19;\nfloat3 color20;\nfloat3 color21;\nfloat3 color22;\nfloat3 color23;\nfloat3
+    color24;\nfloat3 color25;\nfloat3 color26;\nfloat3 color27;\nfloat3 color28;\nfloat3
+    color29;\n\nfloat4 fragSize0;\nfloat3 DirfragSize0;\nfloat fragEnabled0;\nfloat4
+    fragSize1;\nfloat3 DirfragSize1;\nfloat fragEnabled1;\nfloat4 fragSize2;\nfloat3
+    DirfragSize2;\nfloat fragEnabled2;\nfloat4 fragSize3;\nfloat3 DirfragSize3;\nfloat
+    fragEnabled3;\nfloat4 fragSize4;\nfloat3 DirfragSize4;\nfloat fragEnabled4;\nfloat4
+    fragSize5;\nfloat3 DirfragSize5;\nfloat fragEnabled5;\nfloat4 fragSize6;\nfloat3
+    DirfragSize6;\nfloat fragEnabled6;\nfloat4 fragSize7;\nfloat3 DirfragSize7;\nfloat
+    fragEnabled7;\nfloat4 fragSize8;\nfloat3 DirfragSize8;\nfloat fragEnabled8;\nfloat4
+    fragSize9;\nfloat3 DirfragSize9;\nfloat fragEnabled9;\nfloat4 fragSize10;\nfloat3
+    DirfragSize10;\nfloat fragEnabled10;\nfloat4 fragSize11;\nfloat3 DirfragSize11;\nfloat
+    fragEnabled11;\nfloat4 fragSize12;\nfloat3 DirfragSize12;\nfloat fragEnabled12;\nfloat4
+    fragSize13;\nfloat3 DirfragSize13;\nfloat fragEnabled13;\nfloat4 fragSize14;\nfloat3
+    DirfragSize14;\nfloat fragEnabled14;\nfloat4 fragSize15;\nfloat3 DirfragSize15;\nfloat
+    fragEnabled15;\nfloat4 fragSize16;\nfloat3 DirfragSize16;\nfloat fragEnabled16;\nfloat4
+    fragSize17;\nfloat3 DirfragSize17;\nfloat fragEnabled17;\nfloat4 fragSize18;\nfloat3
+    DirfragSize18;\nfloat fragEnabled18;\nfloat4 fragSize19;\nfloat3 DirfragSize19;\nfloat
+    fragEnabled19;\nfloat4 fragSize20;\nfloat3 DirfragSize20;\nfloat fragEnabled20;\nfloat4
+    fragSize21;\nfloat3 DirfragSize21;\nfloat fragEnabled21;\nfloat4 fragSize22;\nfloat3
+    DirfragSize22;\nfloat fragEnabled22;\nfloat4 fragSize23;\nfloat3 DirfragSize23;\nfloat
+    fragEnabled23;\nfloat4 fragSize24;\nfloat3 DirfragSize24;\nfloat fragEnabled24;\nfloat4
+    fragSize25;\nfloat3 DirfragSize25;\nfloat fragEnabled25;\nfloat4 fragSize26;\nfloat3
+    DirfragSize26;\nfloat fragEnabled26;\nfloat4 fragSize27;\nfloat3 DirfragSize27;\nfloat
+    fragEnabled27;\nfloat4 fragSize28;\nfloat3 DirfragSize28;\nfloat fragEnabled28;\nfloat4
+    fragSize29;\nfloat3 DirfragSize29;\nfloat fragEnabled29;\n\n//-----Registered
+    Shape Branches\nfloat4 MAS_ShapeGenerator(float3 center)\n{\n   float4 result;\n\n  
+    float4 obj0 = GENERATOR_SHAPE(center,color0,size0 * enabled0,_obj0Model);\n  
+    obj0 = OP_Fragment(obj0,fragSize0,DirfragSize0,center,fragEnabled0);\n\n   float4
+    obj1 = GENERATOR_SHAPE(center,color1,size1 * enabled1,_obj1Model);\n   obj1 =
+    OP_Fragment(obj1,fragSize1,DirfragSize1,center,fragEnabled1);\n\n   float4 obj2
+    = GENERATOR_SHAPE(center,color2,size2 * enabled2,_obj2Model);\n   obj2 = OP_Fragment(obj2,fragSize2,DirfragSize2,center,fragEnabled2);\n\n  
+    float4 obj3 = GENERATOR_SHAPE(center,color3,size3 * enabled3,_obj3Model);\n  
+    obj3 = OP_Fragment(obj3,fragSize3,DirfragSize3,center,fragEnabled3);\n\n   float4
+    obj4 = GENERATOR_SHAPE(center,color4,size4 * enabled4,_obj4Model);\n   obj4 =
+    OP_Fragment(obj4,fragSize4,DirfragSize4,center,fragEnabled4);\n\n   float4 obj5
+    = GENERATOR_SHAPE(center,color5,size5 * enabled5,_obj5Model);\n   obj5 = OP_Fragment(obj5,fragSize5,DirfragSize5,center,fragEnabled5);\n\n  
+    float4 obj6 = GENERATOR_SHAPE(center,color6,size6 * enabled6,_obj6Model);\n  
+    obj6 = OP_Fragment(obj6,fragSize6,DirfragSize6,center,fragEnabled6);\n\n   float4
+    obj7 = GENERATOR_SHAPE(center,color7,size7 * enabled7,_obj7Model);\n   obj7 =
+    OP_Fragment(obj7,fragSize7,DirfragSize7,center,fragEnabled7);\n\n   float4 obj8
+    = GENERATOR_SHAPE(center,color8,size8 * enabled8,_obj8Model);\n   obj8 = OP_Fragment(obj8,fragSize8,DirfragSize8,center,fragEnabled8);\n\n  
+    float4 obj9 = GENERATOR_SHAPE(center,color9,size9 * enabled9,_obj9Model);\n  
+    obj9 = OP_Fragment(obj9,fragSize9,DirfragSize9,center,fragEnabled9);\n\n   float4
+    obj10 = GENERATOR_SHAPE(center,color10,size10 * enabled10,_obj10Model);\n   obj10
+    = OP_Fragment(obj10,fragSize10,DirfragSize10,center,fragEnabled10);\n\n   float4
+    obj11 = GENERATOR_SHAPE(center,color11,size11 * enabled11,_obj11Model);\n   obj11
+    = OP_Fragment(obj11,fragSize11,DirfragSize11,center,fragEnabled11);\n\n   float4
+    obj12 = GENERATOR_SHAPE(center,color12,size12 * enabled12,_obj12Model);\n   obj12
+    = OP_Fragment(obj12,fragSize12,DirfragSize12,center,fragEnabled12);\n\n   float4
+    obj13 = GENERATOR_SHAPE(center,color13,size13 * enabled13,_obj13Model);\n   obj13
+    = OP_Fragment(obj13,fragSize13,DirfragSize13,center,fragEnabled13);\n\n   float4
+    obj14 = GENERATOR_SHAPE(center,color14,size14 * enabled14,_obj14Model);\n   obj14
+    = OP_Fragment(obj14,fragSize14,DirfragSize14,center,fragEnabled14);\n\n   float4
+    obj15 = GENERATOR_SHAPE(center,color15,size15 * enabled15,_obj15Model);\n   obj15
+    = OP_Fragment(obj15,fragSize15,DirfragSize15,center,fragEnabled15);\n\n   float4
+    obj16 = GENERATOR_SHAPE(center,color16,size16 * enabled16,_obj16Model);\n   obj16
+    = OP_Fragment(obj16,fragSize16,DirfragSize16,center,fragEnabled16);\n\n   float4
+    obj17 = GENERATOR_SHAPE(center,color17,size17 * enabled17,_obj17Model);\n   obj17
+    = OP_Fragment(obj17,fragSize17,DirfragSize17,center,fragEnabled17);\n\n   float4
+    obj18 = GENERATOR_SHAPE(center,color18,size18 * enabled18,_obj18Model);\n   obj18
+    = OP_Fragment(obj18,fragSize18,DirfragSize18,center,fragEnabled18);\n\n   float4
+    obj19 = GENERATOR_SHAPE(center,color19,size19 * enabled19,_obj19Model);\n   obj19
+    = OP_Fragment(obj19,fragSize19,DirfragSize19,center,fragEnabled19);\n\n   float4
+    obj20 = GENERATOR_SHAPE(center,color20,size20 * enabled20,_obj20Model);\n   obj20
+    = OP_Fragment(obj20,fragSize20,DirfragSize20,center,fragEnabled20);\n\n   float4
+    obj21 = GENERATOR_SHAPE(center,color21,size21 * enabled21,_obj21Model);\n   obj21
+    = OP_Fragment(obj21,fragSize21,DirfragSize21,center,fragEnabled21);\n\n   float4
+    obj22 = GENERATOR_SHAPE(center,color22,size22 * enabled22,_obj22Model);\n   obj22
+    = OP_Fragment(obj22,fragSize22,DirfragSize22,center,fragEnabled22);\n\n   float4
+    obj23 = GENERATOR_SHAPE(center,color23,size23 * enabled23,_obj23Model);\n   obj23
+    = OP_Fragment(obj23,fragSize23,DirfragSize23,center,fragEnabled23);\n\n   float4
+    obj24 = GENERATOR_SHAPE(center,color24,size24 * enabled24,_obj24Model);\n   obj24
+    = OP_Fragment(obj24,fragSize24,DirfragSize24,center,fragEnabled24);\n\n   float4
+    obj25 = GENERATOR_SHAPE(center,color25,size25 * enabled25,_obj25Model);\n   obj25
+    = OP_Fragment(obj25,fragSize25,DirfragSize25,center,fragEnabled25);\n\n   float4
+    obj26 = GENERATOR_SHAPE(center,color26,size26 * enabled26,_obj26Model);\n   obj26
+    = OP_Fragment(obj26,fragSize26,DirfragSize26,center,fragEnabled26);\n\n   float4
+    obj27 = GENERATOR_SHAPE(center,color27,size27 * enabled27,_obj27Model);\n   obj27
+    = OP_Fragment(obj27,fragSize27,DirfragSize27,center,fragEnabled27);\n\n   float4
+    obj28 = GENERATOR_SHAPE(center,color28,size28 * enabled28,_obj28Model);\n   obj28
+    = OP_Fragment(obj28,fragSize28,DirfragSize28,center,fragEnabled28);\n\n   float4
+    obj29 = GENERATOR_SHAPE(center,color29,size29 * enabled29,_obj29Model);\n   obj29
+    = OP_Fragment(obj29,fragSize29,DirfragSize29,center,fragEnabled29);\n\n//-----Registered
+    Advanced Operators\n//Groups of obj0\n   float4 group0 = OP_SmoothSubtraction(obj1,obj0,obj1sm);\n\n//-----Connected
+    Advanced Operators - Straight Unions\n\n//-----Connected Advanced Operators -
+    Smooth Unions\n\n\n//-----Registered Final Groups & Single Objects\n   float4
+    group1 = OP_SmoothUnion(group0,obj2,_MASrenderSmoothness);\n   float4 group2
+    = OP_SmoothUnion(group1,obj3,_MASrenderSmoothness);\n   float4 group3 = OP_SmoothUnion(group2,obj4,_MASrenderSmoothness);\n  
+    float4 group4 = OP_SmoothUnion(group3,obj5,_MASrenderSmoothness);\n   float4
+    group5 = OP_SmoothUnion(group4,obj6,_MASrenderSmoothness);\n   float4 group6
+    = OP_SmoothUnion(group5,obj7,_MASrenderSmoothness);\n   float4 group7 = OP_SmoothUnion(group6,obj8,_MASrenderSmoothness);\n  
+    float4 group8 = OP_SmoothUnion(group7,obj9,_MASrenderSmoothness);\n   float4
+    group9 = OP_SmoothUnion(group8,obj10,_MASrenderSmoothness);\n   float4 group10
+    = OP_SmoothUnion(group9,obj11,_MASrenderSmoothness);\n   float4 group11 = OP_SmoothUnion(group10,obj12,_MASrenderSmoothness);\n  
+    float4 group12 = OP_SmoothUnion(group11,obj13,_MASrenderSmoothness);\n   float4
+    group13 = OP_SmoothUnion(group12,obj14,_MASrenderSmoothness);\n   float4 group14
+    = OP_SmoothUnion(group13,obj15,_MASrenderSmoothness);\n   float4 group15 = OP_SmoothUnion(group14,obj16,_MASrenderSmoothness);\n  
+    float4 group16 = OP_SmoothUnion(group15,obj17,_MASrenderSmoothness);\n   float4
+    group17 = OP_SmoothUnion(group16,obj18,_MASrenderSmoothness);\n   float4 group18
+    = OP_SmoothUnion(group17,obj19,_MASrenderSmoothness);\n   float4 group19 = OP_SmoothUnion(group18,obj20,_MASrenderSmoothness);\n  
+    float4 group20 = OP_SmoothUnion(group19,obj21,_MASrenderSmoothness);\n   float4
+    group21 = OP_SmoothUnion(group20,obj22,_MASrenderSmoothness);\n   float4 group22
+    = OP_SmoothUnion(group21,obj23,_MASrenderSmoothness);\n   float4 group23 = OP_SmoothUnion(group22,obj24,_MASrenderSmoothness);\n  
+    float4 group24 = OP_SmoothUnion(group23,obj25,_MASrenderSmoothness);\n   float4
+    group25 = OP_SmoothUnion(group24,obj26,_MASrenderSmoothness);\n   float4 group26
+    = OP_SmoothUnion(group25,obj27,_MASrenderSmoothness);\n   float4 group27 = OP_SmoothUnion(group26,obj28,_MASrenderSmoothness);\n  
+    float4 group28 = OP_SmoothUnion(group27,obj29,_MASrenderSmoothness);\n   result
+    = group28;\n   return result;\n}"
+  xxLoadedShapesSource: 
+  xxShowObjectBuffer: 0
+  xxShowShapesSource: 0
+  xxRMmaster: {fileID: 634578655}
+  xxMappingMaster: {fileID: 634578653}
+  xxInternalTextEditorHeight: 350
+--- !u!114 &634578655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634578646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038760705395e2548b161aefc6718a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmDirectionalLightSource: {fileID: 2115998016}
+  rmMaterialSource: {fileID: 1662860365}
+  rmVRMode: 0
+  rmMobileMode: 0
+  rmWebGL: 0
+  SHADER_MASrenderMainColor: {r: 1, g: 1, b: 1, a: 1}
+  SHADER_MASrenderSecondColor: {r: 1, g: 0.5, b: 0, a: 1}
+  SHADER_MASrenderMainEmission: 1
+  SHADER_MASrenderSpecularA: 0.01
+  SHADER_MASrenderSpecularB: 42
+  SHADER_MASrenderSpecularIntens: 0.5
+  SHADER_MASrenderPrimaryTexture: {fileID: 0}
+  SHADER_MASrenderPrimaryTextureTile: 1
+  SHADER_MASfog: 0
+  SHADER_MASfogDensity: 0.25
+  SHADER_MASfogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  SHADER_MASrenderMaxDistance: 25
+  SHADER_MASrenderQualitySetting: 1
+  SHADER_MASrenderQuality: 0.0005
+  SHADER_MASrenderQuality_E: 4
+  inSHADER_Render_Lambert: 1
+  inSHADER_Render_Flat: 0
+  inSHADER_Render_Toon: 0
+  inSHADER_Render_Outline: 0
+  SHADER_MASrenderToonThresh: 0.05
+  SHADER_MASrenderToonDens: 0.125
+  SHADER_MASrenderFresnel: 1
+  SHADER_MASrenderFresnelMultiplier: 1
+  SHADER_MASrenderSmoothness: 0.2
+  SHADER_MASrenderColorSmoothness: 0.8
+  SHADER_LIGHTintens: 0.5
+  SHADER_LIGHTjitter: 0.01
+  SHADER_SHADEenabled: 1
+  SHADER_SHADEdistance: {x: 0.01, y: 15}
+  SHADER_SHADEintens: 1
+  SHADER_SHADEsoft: 1
+  SHADER_SHADEsoftness: 7
+  SHADER_REFLECTenabled: 1
+  SHADER_REFLECTintensity: 0.6
+  SHADER_REFLECTcubemapEnabled: 1
+  SHADER_REFLECTcubemap: {fileID: 0}
+  SHADER_REFLECTphysX: 0
+  SHADER_REFLECTphysXemiss: 0
+  SHADER_REFLECTphysXintens: 1
+  SHADER_REFLECTphysXSampleCount: 1
+  SHADER_OPloopEnabled: 0
+  SHADER_OPloopTilling: {x: 10, y: 10, z: 10}
+  SHADER_MAScolorRamp: {fileID: 0}
+  SHADER_MASrenderSpecularIntensMob: 0.5
+  SHADER_MASrenderSpecularSize: 1
+  SHADER_MASrenderOutlineSoft: 2
+  SHADER_MASrenderOutlineDens: 3
+  SHADER_MASrenderShadowUmbraIntens: 0.1
+  SHADER_OPfragmentSize: {x: 0, y: 0, z: 0}
+  SHADER_OPfragmentDirect: {x: 1, y: 1, z: 1}
 --- !u!1 &635160566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +2072,73 @@ RectTransform:
   m_AnchoredPosition: {x: 4.215, y: -36.438}
   m_SizeDelta: {x: 1135.436, y: 2329.327}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &944361482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944361484}
+  - component: {fileID: 944361483}
+  m_Layer: 0
+  m_Name: RMObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &944361483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944361482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.5
+  rmParamB: 0.24
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 0, b: 0.8700414, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj0
+  rmMappingMaster: {fileID: 634578653}
+  bornID: 32622
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &944361484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944361482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03999996, y: -0.092, z: -26.727999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027633608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +2273,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027633608}
   m_CullTransparentMesh: 1
+--- !u!1 &1032693458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032693460}
+  - component: {fileID: 1032693459}
+  m_Layer: 0
+  m_Name: RMObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1032693459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032693458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.11
+  rmParamB: -0.01
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 0, b: 0.8700414, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj2
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -11384
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &1032693460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032693458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.423, y: -0.344, z: -27.178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1185409134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1928,6 +2401,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 796153a5c198f244999dd0fd9a992237, type: 3}
+--- !u!1 &1266539720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266539722}
+  - component: {fileID: 1266539721}
+  m_Layer: 0
+  m_Name: RMObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1266539721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266539720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.33
+  rmParamB: 1.07
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 0, b: 0.8700414, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 1
+  rmOPOperator_Target: {fileID: 944361483}
+  rmOPBeingOperated: 0
+  rmMyBornName: obj1
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -9108
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 1
+  eHist_OPTarget: {fileID: 944361483}
+--- !u!4 &1266539722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266539720}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.04, y: 0.094, z: -27.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1328542424 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3601521356966876465, guid: 796153a5c198f244999dd0fd9a992237, type: 3}
@@ -2447,6 +2987,292 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570663477}
   m_CullTransparentMesh: 1
+--- !u!1 &1643027979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643027980}
+  - component: {fileID: 1643027982}
+  - component: {fileID: 1643027981}
+  m_Layer: 0
+  m_Name: Sphere (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643027980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643027979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.592, y: 0, z: -0.037}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 2083573900}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1643027981
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643027979}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1fa8cee55c8d82d4d8ba68435e2b3dd9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1643027982
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643027979}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1662860365
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Matej Vanco/RayMarcher/PC/RM Master_DemoLevel
+  m_Shader: {fileID: 4800000, guid: e6e95ed13127e484a9f3730533f7f19e, type: 3}
+  m_ShaderKeywords: _REFLECTCUBEMAPENABLED_ON _REFLECTENABLED_ON _SHADEENABLED_ON
+    _SHADESOFT_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MASrenderMainFilter:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MASrenderPrimaryTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _REFLECTcubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _LIGHTintens: 0.5
+    - _LIGHTjitter: 0.01
+    - _MASfogDensity: 0
+    - _MASrenderColorSmoothness: 0.8
+    - _MASrenderFresnel: 1
+    - _MASrenderFresnelMultiplier: 1
+    - _MASrenderMainEmission: 1
+    - _MASrenderMaxDistance: 25
+    - _MASrenderPrimaryTextureTile: 1
+    - _MASrenderQuality: 0.0005
+    - _MASrenderQualitySetting: 1
+    - _MASrenderSmoothness: 0.2
+    - _MASrenderSpecularA: 0.01
+    - _MASrenderSpecularB: 42
+    - _MASrenderSpecularIntens: 0.5
+    - _MASrenderToonDens: 0.125
+    - _MASrenderToonThresh: 0.05
+    - _OPloopEnabled: 0
+    - _OPloopTwoDimens: 0
+    - _REFLECTcubemapEnabled: 1
+    - _REFLECTenabled: 1
+    - _REFLECTintensity: 0.6
+    - _REFLECTphysX: 0
+    - _REFLECTphysXSampleCount: 1
+    - _REFLECTphysXemiss: 0
+    - _REFLECTphysXintens: 1
+    - _SHADEenabled: 1
+    - _SHADEintens: 1
+    - _SHADEsoft: 1
+    - _SHADEsoftness: 7
+    m_Colors:
+    - _LIGHTdirect: {r: -0.3213938, g: -0.76604444, b: 0.5566705, a: 0}
+    - _MASfogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _MASrenderMainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MASrenderSecondColor: {r: 1, g: 0.5, b: 0, a: 1}
+    - _OPloopTilling: {r: 10, g: 10, b: 10, a: 0}
+    - _SHADEdistance: {r: 0.01, g: 15, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!1 &1679721140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1679721142}
+  - component: {fileID: 1679721141}
+  m_Layer: 0
+  m_Name: RMObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1679721141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679721140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.11
+  rmParamB: -0.01
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 0, b: 0.8700414, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj3
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -12626
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &1679721142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679721140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: -0.344, z: -27.173}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1776698638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1776698640}
+  - component: {fileID: 1776698639}
+  m_Layer: 0
+  m_Name: RMObject (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1776698639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776698638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.11
+  rmParamB: -0.01
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 1, b: 1, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj7
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -13338
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &1776698640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776698638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.347, y: 0.693, z: -27.021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847633665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,6 +3434,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 370416164}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1872373887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872373889}
+  - component: {fileID: 1872373888}
+  m_Layer: 0
+  m_Name: RMObject (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1872373888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872373887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.11
+  rmParamB: -0.01
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 0, b: 0.8700414, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj4
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -12780
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &1872373889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872373887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.528, y: -0.344, z: -26.456}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887553878
 GameObject:
@@ -2852,6 +3745,87 @@ Transform:
   m_Father: {fileID: 370416164}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1983617766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983617767}
+  - component: {fileID: 1983617769}
+  - component: {fileID: 1983617768}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983617767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983617766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.037}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 2083573900}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1983617768
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983617766}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1fa8cee55c8d82d4d8ba68435e2b3dd9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1983617769
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983617766}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2048377633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2913,6 +3887,75 @@ PrefabInstance:
       objectReference: {fileID: 634578649}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86fdb0ff0fc63a8499945ae22a8a3c1c, type: 3}
+--- !u!1 &2083573898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2083573900}
+  - component: {fileID: 2083573899}
+  m_Layer: 0
+  m_Name: RMObject (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2083573899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083573898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19047f7eaf30dc043b240f4082ace26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmIsFractal: 0
+  rmFractalType: 0
+  rmShapeSmoothness: 0.2
+  rmParamA: 0.11
+  rmParamB: -0.01
+  rmParamC: 0
+  rmParamD: 0
+  rmColor: {r: 1, g: 1, b: 1, a: 1}
+  rmColorVal: 0
+  rmOPFragment: 0
+  rmOPFragmentPar_Size: {x: 4.32, y: 16.2, z: -0.47}
+  rmOPFragmentPar_Evolution: 0.33
+  rmOPFragmentPar_EnableAnim: 0
+  rmOPFragmentPar_AnimDirection: {x: 0, y: 0, z: 0}
+  rmExternalOperation: 0
+  rmOPOperator_Target: {fileID: 0}
+  rmOPBeingOperated: 1
+  rmMyBornName: obj6
+  rmMappingMaster: {fileID: 634578653}
+  bornID: -13068
+  eHist_WasFractal: 0
+  eHist_FractalType: 0
+  eHist_WasOperation: 0
+  eHist_OPTarget: {fileID: 0}
+--- !u!4 &2083573900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083573898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.241, y: 0.704, z: -27.021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1983617767}
+  - {fileID: 1643027980}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2115998014
 GameObject:
   m_ObjectHideFlags: 0

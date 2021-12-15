@@ -152,4 +152,70 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_7.unity
     guid: 16dfc665eac464c448a8258522533fa9
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Operations.unity
+    guid: 47c825a9ef76df5439b39c978dd7da2f
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Model.unity
+    guid: d946cbe3a06ed1f4488de984c59473a0
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Primitives.unity
+    guid: 69e630a7451d8244d95c8076eff2fcd7
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Cartoon.unity
+    guid: 48ef6fb01315dcf499e64e78299f284a
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_OrganicCity.unity
+    guid: fb06c87e54756c64baa6a8f8f58c5c17
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_MusicReaction.unity
+    guid: 2028c2c4993da49439aa156028e0a221
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_MusicReaction.unity
+    guid: d48c34334ed533c41abec50ea254696f
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_Planet.unity
+    guid: 4f80339accf072449917a7021e257752
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_Trip2.unity
+    guid: d254fec483d59fe41ac896a6c62c6691
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_Primitives.unity
+    guid: e206e750748d78c489a875f786cab404
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_Castle.unity
+    guid: 1b2d65c3fa61b6446a9eb5721c820de2
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Fractals.unity
+    guid: 63693bd8bef7adb42a787fbd2fd927b3
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_LoopRepetition.unity
+    guid: 3e66dac015ef2694f98379aaca2afbca
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_Centipede.unity
+    guid: 1e8409f6bdc0893488fe405994ffe204
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_MusicTrip.unity
+    guid: c3d7625575b45ee41b7228237c5e80d2
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_FractalTrip.unity
+    guid: 495699d7c02ac2349ada975913c05f47
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Planet.unity
+    guid: bbce72e404011254b9aaa8984530350c
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Playground.unity
+    guid: 9c5b8401b057b944ea0057c06daa21d0
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Fractals.unity
+    guid: d823329261302954c8a346aca08f076a
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_FractalTrip.unity
+    guid: 78535a454cda7e24e82eef49fde18771
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_Planet.unity
+    guid: 693ea3c1d110c7c46bd259dbc9ccdd92
+  - enabled: 1
+    path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Default.unity
+    guid: 0dbebc3903f3e304c9fdc1fef0bad1fa
   m_configObjects: {}

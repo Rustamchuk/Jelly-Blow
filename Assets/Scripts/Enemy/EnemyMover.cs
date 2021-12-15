@@ -14,8 +14,10 @@ public class EnemyMover : MonoBehaviour
     private void Update()
     {
         if (_life.Alive)
+        {
             transform.position = Vector3.MoveTowards(transform.position,
                 new Vector3(_target.position.x, transform.position.y, _target.position.z), Time.deltaTime * _speed);
+        }
 
         if (new Vector3(_target.position.x, transform.position.y, _target.position.z) == transform.position)
             Finished.Invoke();
