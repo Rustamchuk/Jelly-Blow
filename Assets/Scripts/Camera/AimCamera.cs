@@ -31,8 +31,8 @@ public class AimCamera : MonoBehaviour
     {
         if (_cameraMover.Moving)
         {
-            _rotationX = 0;
-            _rotationY = 0;
+            //_rotationX = 0;
+            //_rotationY = 0;
             return;
         }
 

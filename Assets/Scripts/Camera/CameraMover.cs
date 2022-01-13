@@ -13,21 +13,26 @@ public class CameraMover : MonoBehaviour
     public bool Moving => _moving;
     public event Action StopMove;
 
-    public IEnumerator Move(Transform point)
+    public IEnumerator Move(CameraPointSpeeder[] point)
     {
+        int index = 0;
         _moving = true;
         while (_moving)
         {
-            transform.LookAt(point);
-            transform.position = Vector3.MoveTowards(transform.position, point.position, Time.deltaTime * _speed);
+            transform.position = Vector3.MoveTowards(transform.position, point[index].transform.position, Time.deltaTime * point[index].Speed);
 
             _arms.ReturnPos(_arms.ArmL);
             _arms.ReturnPos(_arms.ArmR);
 
             yield return null;
 
-            if (transform.position == point.position)
-                _moving = false;
+            if (transform.position == point[index].transform.position)
+            {
+                if (index == point.Length - 1)
+                    _moving = false;
+                else
+                    index++;
+            }
         }
 
         StopMove.Invoke();

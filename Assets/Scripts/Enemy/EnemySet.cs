@@ -7,16 +7,19 @@ public class EnemySet : MonoBehaviour
 {
     [SerializeField] private EnemyLife[] _enemiesLife;
     [SerializeField] private EnemyMover[] _enemiesMover;
-    [SerializeField] private Transform _cameraPoint;
+    [SerializeField] private CameraPointSpeeder[] _cameraPoint;
 
     public event Action FinishedSet;
     public event Action FailSet;
-    public Transform CameraPoint => _cameraPoint;
+    public CameraPointSpeeder[] CameraPoint => _cameraPoint;
 
     private int _currentEnemyCount;
 
     private void Start()
     {
+        if (_enemiesLife[0] == null)
+            return;
+
         foreach (var enemy in _enemiesLife)
         {
             enemy.Dead += RemoveEnemy;
@@ -30,6 +33,12 @@ public class EnemySet : MonoBehaviour
 
     public void StartSet()
     {
+        if (_enemiesLife[0] == null)
+        {
+            FinishedSet.Invoke();
+            return;
+        }
+
         foreach (var enemy in _enemiesLife)
         {
             enemy.StartLife();
