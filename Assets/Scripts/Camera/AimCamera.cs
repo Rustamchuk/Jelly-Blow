@@ -41,7 +41,7 @@ public class AimCamera : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
             _clicking = false;
 
-        Aim();
+        //Aim();    // - Отключил, чтоб после приземления на платформу руки не выравнивались.
     }
 
     private void Aim()

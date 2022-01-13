@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySet : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class EnemySet : MonoBehaviour
 
     public event Action FinishedSet;
     public event Action FailSet;
+    public event UnityAction<Transform> NextTargetChoosed;
     public CameraPointSpeeder[] CameraPoint => _cameraPoint;
+
+    public Transform NearestEnemy { get; private set; }
 
     private int _currentEnemyCount;
 
@@ -19,6 +23,8 @@ public class EnemySet : MonoBehaviour
     {
         if (_enemiesLife[0] == null)
             return;
+
+        NearestEnemy = _enemiesLife[0].LookPoint.transform;
 
         foreach (var enemy in _enemiesLife)
         {
@@ -51,6 +57,13 @@ public class EnemySet : MonoBehaviour
 
         if (_currentEnemyCount == _enemiesLife.Length)
             FinishedSet.Invoke();
+        else
+            SetNextTargetEnemy(_enemiesLife[_currentEnemyCount].LookPoint);
+    }
+
+    private void SetNextTargetEnemy(Transform target)
+    {
+        NextTargetChoosed?.Invoke(target);
     }
 
     private void Lose() { FailSet.Invoke(); }

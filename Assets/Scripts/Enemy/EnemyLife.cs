@@ -11,6 +11,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private GameObject _hall;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _multyValue;
+    [SerializeField] private Transform _lookPoint;
 
     private int _curIndex;
     private float _hitDuration = 0.7f;
@@ -21,6 +22,7 @@ public class EnemyLife : MonoBehaviour
     private const string _hit = "Hit";
     private const string _end = "End";
 
+    public Transform LookPoint => _lookPoint;
     public bool Alive => _alive;
     public event Action Dead;
 
