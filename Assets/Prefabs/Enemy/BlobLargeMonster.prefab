@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 196056654519665624}
   _holePoint: {fileID: 7015578381947829381}
   _rightBorder: {fileID: 7917676074495237103}
@@ -69,6 +69,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.021848042, y: 0.022489354, z: 0.012674701}
   m_Center: {x: -0.00009032296, y: -0.0030263842, z: 0.000055908684}
+--- !u!1 &685759044467023431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5993065072464033938}
+  m_Layer: 0
+  m_Name: LookPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5993065072464033938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685759044467023431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0.0065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5469363970238618350}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097282970036136195
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 7487422463711246120}
   _holePoint: {fileID: 3771305123469117375}
   _rightBorder: {fileID: 3771305123469117375}
@@ -586,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 3110568340240121441}
   _holePoint: {fileID: 7852382700043886865}
   _rightBorder: {fileID: 525376457772242029}
@@ -684,7 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 3550645865266745602}
   _holePoint: {fileID: 8317995208924973885}
   _rightBorder: {fileID: 7917676074495237103}
@@ -782,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 196056654519665624}
   _holePoint: {fileID: 8317995208924973885}
   _rightBorder: {fileID: 7917676074495237103}
@@ -861,10 +891,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5469363970238618350}
   - component: {fileID: 5507248070160153867}
-  - component: {fileID: 5507248070160153865}
-  - component: {fileID: 5507248070160153864}
+  - component: {fileID: 5737110498237237017}
   m_Layer: 0
-  m_Name: Jelly-Man_Walk
+  m_Name: BlobLargeMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,6 +912,7 @@ Transform:
   m_Children:
   - {fileID: 555991424217840250}
   - {fileID: 476861927096718046}
+  - {fileID: 5993065072464033938}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -905,7 +935,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5507248070160153865
+--- !u!114 &5737110498237237017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -914,30 +944,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4660316460144705620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6e3ab132d3f0948b7998523919d9db, type: 3}
+  m_Script: {fileID: 11500000, guid: 750085d81ca2793428badcb2da5df6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
-  _speed: 0.5
-  _life: {fileID: 5507248070160153864}
---- !u!114 &5507248070160153864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4660316460144705620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0433ccf3ea3916a4ea01c0aa4395cfbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 5
-  _hitAnswer: 0200000003000000
-  _hall: {fileID: 1232897403012211015, guid: a29a178605135634e8498dbac505697c, type: 3}
-  _animator: {fileID: 5507248070160153867}
-  _multyValue: 1
-  _lookPoint: {fileID: 0}
+  _lookPoint: {fileID: 5993065072464033938}
 --- !u!1 &4754194697163273511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 5498114362126119932}
   _holePoint: {fileID: 7015578381947829381}
   _rightBorder: {fileID: 8070153774149765293}
@@ -1447,7 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 1821541331967068558}
   _holePoint: {fileID: 286342230394549886}
   _rightBorder: {fileID: 286342230394549886}
@@ -1722,7 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 196056654519665624}
   _holePoint: {fileID: 7015578381947829381}
   _rightBorder: {fileID: 3079033443036414972}
@@ -2017,7 +2027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 196056654519665624}
   _holePoint: {fileID: 8317995208924973885}
   _rightBorder: {fileID: 7917676074495237103}
@@ -2084,7 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc903630d7162c46b7ec57a43e0d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainBody: {fileID: 5507248070160153864}
+  _mainBody: {fileID: 0}
   _fatherObj: {fileID: 8902163321597053053}
   _holePoint: {fileID: 7852382700043886865}
   _rightBorder: {fileID: 6639060563957370910}

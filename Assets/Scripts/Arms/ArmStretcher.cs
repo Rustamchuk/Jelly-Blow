@@ -10,6 +10,7 @@ public class ArmStretcher : MonoBehaviour
     [SerializeField] private float _speedMove;
     [SerializeField] private float _maxScale = 10;
     [SerializeField] private CameraMover _cameraMover;
+    [SerializeField] private PlayerMover _playerMover;
 
     private bool _right = true;
     private bool _stretchAccess = false;
@@ -28,6 +29,9 @@ public class ArmStretcher : MonoBehaviour
 
     private void Update()
     {
+        if (_playerMover.CanMove == true)
+            return;
+
         if (_cameraMover.Moving)
             return;
 
