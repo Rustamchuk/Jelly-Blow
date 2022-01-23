@@ -16,13 +16,17 @@ public class EnemySet : MonoBehaviour
     public CameraPointSpeeder[] CameraPoint => _cameraPoint;
 
     public Transform NearestEnemy { get; private set; }
+    public bool Empty { get; private set; } = false;
 
     private int _currentEnemyCount;
 
     private void Start()
     {
         if (_enemiesLife[0] == null)
+        {
+            Empty = true;
             return;
+        }
 
         NearestEnemy = _enemiesLife[0].LookPoint.transform;
 

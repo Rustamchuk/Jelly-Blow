@@ -13,6 +13,14 @@ public class CameraMover : MonoBehaviour
     public bool Moving => _moving;
     public event Action StopMove;
 
+    public void ChangeMovingState(bool state) 
+    {
+        _moving = state;
+
+        if (_moving == false)
+            StopMove.Invoke();
+    }
+
     public IEnumerator Move(CameraPointSpeeder[] point)
     {
         int index = 0;

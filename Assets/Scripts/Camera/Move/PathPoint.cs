@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,11 +13,11 @@ public class PathPoint : MonoBehaviour
     [SerializeField] private Transform _guidePoint2;
     [SerializeField] private Transform _endPoint;
     [SerializeField] private bool _battlePoint;
-    [SerializeField] private Enemy[] _enemies;
+    [SerializeField] private EnemyLife[] _enemies;
     [SerializeField] private bool _lastPoint;
 
     private int _deadEnemiesCount = 0;
-
+   
     public MovingPoints PointType => _pointType;
     public Transform LookDirection => _lookDirection;
     public Transform StartPoint => _startPoint;
@@ -26,6 +27,8 @@ public class PathPoint : MonoBehaviour
     public bool BattlePoint => _battlePoint;
     public bool LastPoint => _lastPoint;
     public event UnityAction<PathPoint> PlatformCleared;
+    public event UnityAction<Transform> DeadJelly;
+    public event Action LastDead;
 
     private void Awake()
     {
@@ -60,7 +63,15 @@ public class PathPoint : MonoBehaviour
 
         if(_deadEnemiesCount == _enemies.Length)
         {
+            if (_enemies.Length > 1)
+                LastDead.Invoke();
+
             PlatformCleared?.Invoke(this);
+        }
+        else
+        {
+            _lookDirection.position = _enemies[_deadEnemiesCount].LookPoint.position;
+            DeadJelly.Invoke(_lookDirection);
         }
     }
 }

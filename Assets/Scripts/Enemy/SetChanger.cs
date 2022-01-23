@@ -8,6 +8,7 @@ public class SetChanger : MonoBehaviour
     [SerializeField] private EnemySet[] _enemySets;
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private SmoothCameraRotate _cameraRotate;
+    [SerializeField] private PlayerMover _playerMover;
 
     private int _currentSet;
 
@@ -30,7 +31,7 @@ public class SetChanger : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         foreach (var set in _enemySets)
         {
@@ -58,12 +59,16 @@ public class SetChanger : MonoBehaviour
 
         _currentSet++;
 
-        StartCoroutine(_cameraMover.Move(_enemySets[_currentSet].CameraPoint));
+        _playerMover.MoveToPoint();
+        //StartCoroutine(_cameraMover.Move(_enemySets[_currentSet].CameraPoint));
 
         if (_cameraRotate.RotateCoroutineIsActive == true)
             _cameraRotate.StopRotate();
-        
-        _cameraRotate.StartRotate(_enemySets[_currentSet].NearestEnemy);
+
+        if (_enemySets[_currentSet].NearestEnemy != null)
+            _cameraRotate.StartRotate(_enemySets[_currentSet].NearestEnemy);
+        else
+            _cameraRotate.StopRotate();
     }
 
     private void OnNextTargetChoosed(Transform target)

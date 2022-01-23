@@ -17,6 +17,11 @@ public class EnemyMover : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position,
                 new Vector3(_target.position.x, transform.position.y, _target.position.z), Time.deltaTime * _speed);
+
+            Vector3 direction = _target.position - transform.position;
+            direction.y = 0;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * _speed);
         }
 
         if (new Vector3(_target.position.x, transform.position.y, _target.position.z) == transform.position)

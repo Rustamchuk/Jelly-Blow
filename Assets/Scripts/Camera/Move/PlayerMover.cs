@@ -6,7 +6,9 @@ using UnityEngine.Events;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private PlayerRotate _playerRotate;
+    [SerializeField] private SmoothCameraRotate _cameraRotate;
     [SerializeField] private PathPoint[] _pathPoints;
+    [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _decelerationJumpSpeed;
     [SerializeField] private float _delayBeforeMovement;
@@ -20,17 +22,26 @@ public class PlayerMover : MonoBehaviour
     public event UnityAction Jumped;
     public event UnityAction Landed;
 
+    private void Awake()
+    {
+        foreach (var path in _pathPoints)
+        {
+            path.DeadJelly += TurnOnRotate;
+
+            path.LastDead += StopRotate;
+        }
+    }
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            _canMove = true;
-
         if (_canMove == true)
             MoveToPoint();
     }
 
-    private void MoveToPoint()
+    public void MoveToPoint()
     {
+        _cameraMover.ChangeMovingState(true);
+
         if(_pathPoints[_index].PointType == MovingPoints.Walk)
             ActivateMovementCoroutine(Move(_pathPoints[_index]));
         else if(_pathPoints[_index].PointType == MovingPoints.Jump)
@@ -63,6 +74,9 @@ public class PlayerMover : MonoBehaviour
 
         if (point.LastPoint == false)
             _canMove = true;
+        
+        if (point.BattlePoint == true || point.LastPoint == true)
+            _cameraMover.ChangeMovingState(false);
     }
 
     private IEnumerator Jump(PathPoint point)
@@ -92,6 +106,9 @@ public class PlayerMover : MonoBehaviour
         {
             _canMove = true;
         }
+
+        if (point.BattlePoint == true || point.LastPoint == true)
+            _cameraMover.ChangeMovingState(false);
     }
 
     private Vector3 GetPoint(PathPoint point, float t)
@@ -106,6 +123,15 @@ public class PlayerMover : MonoBehaviour
         pathPoint.PlatformCleared -= OnPlatformCleared;
         _canMove = true;
     }
+
+    private void TurnOnRotate(Transform point)
+    {
+        _playerRotate.StartRotate(point);
+        _cameraRotate.StopRotate();
+        _cameraRotate.StartRotate(point);
+    }
+
+    private void StopRotate() { _cameraRotate.StopRotate(); }
 
     public void ChangeMovingState(bool state)
     {
