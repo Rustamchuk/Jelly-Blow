@@ -227,4 +227,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pieces_1_CameraTest.unity
     guid: 3cf11204507ef9d4092aeae384e8ae57
+  - enabled: 1
+    path: Assets/Scenes/SliceTest.unity
+    guid: a8f4412f38d652846b08910e8eee4d8a
   m_configObjects: {}
