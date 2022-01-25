@@ -3240,7 +3240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f8106952c85cc46ba8a0a2faba56fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _monsterBodyMaterial: {fileID: 2100000, guid: 0b112fc920dddd348963b76a591e76b9, type: 2}
+  _monsterBodyMaterial: {fileID: 2100000, guid: 4c4b97b071a44184e82ee98432b1e51c, type: 2}
   _bodyMeshRenderers:
   - {fileID: 1304274892}
   - {fileID: 116355675}
