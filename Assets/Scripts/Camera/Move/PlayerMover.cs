@@ -72,9 +72,16 @@ public class PlayerMover : MonoBehaviour
             yield return null;
         }
 
-        if (point.LastPoint == false)
+        if (point.BattlePoint == true)
+        {
+            _canMove = false;
+            point.PlatformCleared += OnPlatformCleared;
+        }
+        else if (point.LastPoint == false)
+        {
             _canMove = true;
-        
+        }
+
         if (point.BattlePoint == true || point.LastPoint == true)
             _cameraMover.ChangeMovingState(false);
     }

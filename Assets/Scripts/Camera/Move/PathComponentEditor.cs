@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(PathPoint))]
 [CanEditMultipleObjects]
 public class PathComponentEditor : Editor
@@ -65,3 +66,4 @@ public class PathComponentEditor : Editor
 		serializedObject.ApplyModifiedProperties();
 	}
 }
+#endif
