@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d92c71103f2d4f44846c5ae1bae95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _monsterBodyMaterial: {fileID: 2100000, guid: 7491bb19c7641e94ca75dadb6168790a, type: 2}
+  _monsterBodyMaterial: {fileID: 2100000, guid: e8eeac11ef662e741acf24a3c1d63a2f, type: 2}
   _bodyMeshRenderers:
   - {fileID: 1622279051677651021}
   - {fileID: 5148973008054469298}
@@ -317,7 +317,7 @@ MonoBehaviour:
   - {fileID: 8964051827876378233}
   - {fileID: 6878242852887945163}
   - {fileID: 311493974262813687}
-  _monsterEyeMaterial: {fileID: 2100000, guid: 7491bb19c7641e94ca75dadb6168790a, type: 2}
+  _monsterEyeMaterial: {fileID: 2100000, guid: c5b86d9a342b3004696b675421c45e37, type: 2}
   _eyeMeshRenderers:
   - {fileID: 372155853301575283}
   - {fileID: 7971447747019650080}

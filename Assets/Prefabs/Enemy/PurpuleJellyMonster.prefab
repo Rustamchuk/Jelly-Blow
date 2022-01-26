@@ -3543,7 +3543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d92c71103f2d4f44846c5ae1bae95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _monsterBodyMaterial: {fileID: 2100000, guid: 4c4b97b071a44184e82ee98432b1e51c, type: 2}
+  _monsterBodyMaterial: {fileID: 2100000, guid: 433d3f8ff53bdfe48a98962f58c31638, type: 2}
   _bodyMeshRenderers:
   - {fileID: 4694325147288133372}
   - {fileID: 1212095304452028072}
@@ -3560,7 +3560,7 @@ MonoBehaviour:
   - {fileID: 3152621233522602901}
   - {fileID: 635716203921128724}
   - {fileID: 6049548112638297686}
-  _monsterEyeMaterial: {fileID: 2100000, guid: 4c4b97b071a44184e82ee98432b1e51c, type: 2}
+  _monsterEyeMaterial: {fileID: 2100000, guid: 4227263986c116246b3f2fc9a97f3b3b, type: 2}
   _eyeMeshRenderers:
   - {fileID: 5948340505285255362}
   - {fileID: 4109161477953739862}
