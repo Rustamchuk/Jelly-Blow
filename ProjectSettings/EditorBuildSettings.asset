@@ -230,4 +230,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonsterCut.unity
     guid: 4204791415b491c4b98e90fb172d81cf
+  - enabled: 1
+    path: Assets/Scenes/Pieces_1_ArmTest.unity
+    guid: 803d25149981200498da677cd39c85ec
   m_configObjects: {}

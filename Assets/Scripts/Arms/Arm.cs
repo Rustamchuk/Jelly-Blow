@@ -7,6 +7,7 @@ public class Arm : MonoBehaviour
 {
     [SerializeField] private Transform _startPos;
     [SerializeField] private GameObject _armObject;
+    [SerializeField] private Animator _animator;
 
     private Vector3 _startSize;
     private bool _attacking = false;
@@ -22,7 +23,17 @@ public class Arm : MonoBehaviour
         _startSize = _armObject.transform.localScale;
     }
 
-    public void RewriteAttacking(bool state) { _attacking = state; }
+    public void RewriteAttacking(bool state)
+    {
+        _attacking = state;
 
-    public void TouchedTrigger() { Touched.Invoke(); }
+        if (_attacking)
+            _animator.SetTrigger("Hit");
+    }
+
+    public void TouchedTrigger()
+    {
+        Touched.Invoke();
+        _animator.SetTrigger("Break");
+    }
 }

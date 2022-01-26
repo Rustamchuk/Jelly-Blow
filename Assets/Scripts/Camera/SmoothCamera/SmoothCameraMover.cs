@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class SmoothCameraMover : MonoBehaviour
 {
-    [SerializeField] private ArmStretcher _arms;
+    [SerializeField] private ArmTrajectoryStretch _arms;
 
     private bool _moving = false;
 
