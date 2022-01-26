@@ -9,5 +9,13 @@ public class Bullet : MonoBehaviour
     public void ChangeBrokedState()
     {
         CanBrokeBodyPart = false;
+
+        StartCoroutine(ActivateBrokable());
+    }
+
+    private IEnumerator ActivateBrokable()
+    {
+        yield return new WaitForSeconds(1f);
+        CanBrokeBodyPart = true;
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class EnemySet : MonoBehaviour
 {
-    [SerializeField] private EnemyLife[] _enemiesLife;
+    [SerializeField] private MonsterLife[] _enemiesLife;
     [SerializeField] private EnemyMover[] _enemiesMover;
     [SerializeField] private CameraPointSpeeder[] _cameraPoint;
 

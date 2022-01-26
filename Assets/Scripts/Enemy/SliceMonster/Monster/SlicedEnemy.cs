@@ -23,7 +23,7 @@ public class SlicedEnemy : JellyEnemy
     {
         _animator.enabled = false;
         BodyPartOff(_remainingBodyMeshRenderer, _remainingBodyMainRigidbody);
-        Killed?.Invoke();
+        Killed.Invoke();
     }
 
     private void BodyPartOff(SkinnedMeshRenderer meshRenderer, Rigidbody cutedRigidbody)

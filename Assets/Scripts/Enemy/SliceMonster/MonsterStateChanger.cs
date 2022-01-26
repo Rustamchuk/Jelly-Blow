@@ -39,6 +39,7 @@ public class MonsterStateChanger : MonoBehaviour
         _jellyMonsterWithoutRightLeg.Killed += OnKilled;
         _jellyMonsterWithoutLeftLeg.Killed += OnKilled;
         _jellyMonsterWithoutBottomBody.Killed += OnKilled;
+        _jellyMonsterWithoutTopBody.Killed += OnKilled;
     }
 
     private void OnDisable()
@@ -56,6 +57,7 @@ public class MonsterStateChanger : MonoBehaviour
         _jellyMonsterWithoutRightLeg.Killed -= OnKilled;
         _jellyMonsterWithoutLeftLeg.Killed -= OnKilled;
         _jellyMonsterWithoutBottomBody.Killed -= OnKilled;
+        _jellyMonsterWithoutTopBody.Killed -= OnKilled;
     }
 
     private void OnLostHead()
@@ -95,7 +97,7 @@ public class MonsterStateChanger : MonoBehaviour
 
     private void OnKilled()
     {
-        Debug.Log("Dead");
+        Dead.Invoke();
     }
 
     private void IncludeSlicedMonster(SlicedEnemy slicedMonster)

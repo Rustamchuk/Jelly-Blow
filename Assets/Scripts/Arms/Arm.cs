@@ -28,12 +28,23 @@ public class Arm : MonoBehaviour
         _attacking = state;
 
         if (_attacking)
+        {
             _animator.SetTrigger("Hit");
+            StartCoroutine(ResetTrigger("Hit"));
+        }
     }
 
     public void TouchedTrigger()
     {
         Touched.Invoke();
         _animator.SetTrigger("Break");
+
+        StartCoroutine(ResetTrigger("Break"));
+    }
+
+    private IEnumerator ResetTrigger(string trigger)
+    {
+        yield return new WaitForSeconds(0.1f);
+        _animator.ResetTrigger(trigger);
     }
 }

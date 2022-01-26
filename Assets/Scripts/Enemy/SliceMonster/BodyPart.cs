@@ -9,16 +9,20 @@ public class BodyPart : MonoBehaviour
 
     public event UnityAction<BodyPartName> Brokened;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.TryGetComponent(out Bullet bullet))
+        if (other.TryGetComponent(out Bullet bullet))
         {
-            if(bullet.CanBrokeBodyPart == true)
+            if (bullet.CanBrokeBodyPart == true)
             {
                 Brokened?.Invoke(_bodyPartName);
                 bullet.ChangeBrokedState();
-                Destroy(bullet.gameObject);
             }
+        }
+
+        if (other.TryGetComponent(out Arm arm))
+        {
+            arm.TouchedTrigger();
         }
     }
 }

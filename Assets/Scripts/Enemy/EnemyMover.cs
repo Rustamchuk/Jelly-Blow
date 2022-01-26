@@ -7,7 +7,7 @@ public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private Transform _target;
     [SerializeField] private float _speed;
-    [SerializeField] private EnemyLife _life;
+    [SerializeField] private MonsterLife _life;
 
     public event Action Finished;
 

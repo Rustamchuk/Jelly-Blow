@@ -13,7 +13,7 @@ public class PathPoint : MonoBehaviour
     [SerializeField] private Transform _guidePoint2;
     [SerializeField] private Transform _endPoint;
     [SerializeField] private bool _battlePoint;
-    [SerializeField] private EnemyLife[] _enemies;
+    [SerializeField] private MonsterLife[] _enemies;
     [SerializeField] private bool _lastPoint;
 
     private int _deadEnemiesCount = 0;
