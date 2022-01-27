@@ -8,10 +8,12 @@ public class Arm : MonoBehaviour
     [SerializeField] private Transform _startPos;
     [SerializeField] private GameObject _armObject;
     [SerializeField] private Animator _animator;
+    [SerializeField] private GameObject _boxGlove;
 
     private Vector3 _startSize;
     private bool _attacking = false;
 
+    public GameObject BoxGlove => _boxGlove;
     public Vector3 StartSize => _startSize;
     public Transform StartPos => _startPos;
     public bool Attacking => _attacking;

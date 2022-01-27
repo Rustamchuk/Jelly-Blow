@@ -644,6 +644,7 @@ MonoBehaviour:
   _startPos: {fileID: 6146133910525856309}
   _armObject: {fileID: 4962382732155173595}
   _animator: {fileID: 731412067176567760}
+  _boxGlove: {fileID: 6036477154074125490}
 --- !u!95 &731412067176567760
 Animator:
   serializedVersion: 3
@@ -3362,6 +3363,7 @@ MonoBehaviour:
   _startPos: {fileID: 3821184048957822114}
   _armObject: {fileID: 1164991489508213163}
   _animator: {fileID: 285654722435310989}
+  _boxGlove: {fileID: 5179580921009716397}
 --- !u!95 &285654722435310989
 Animator:
   serializedVersion: 3

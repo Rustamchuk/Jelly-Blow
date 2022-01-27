@@ -24,6 +24,32 @@ public class MonsterStateChanger : MonoBehaviour
 
     public event UnityAction Dead;
 
+    private List<BodyPart> _bodyParts = new List<BodyPart>();
+
+    public List<BodyPart> ReturnParts()
+    {
+        AddParts(_completeJellyMonster.BodyParts);
+        AddParts(_jellyMonsterWithoutHead.BodyParts);
+        AddParts(_jellyMonsterWithoutRightArm.BodyParts);
+        AddParts(_jellyMonsterWithoutLeftArm.BodyParts);
+        AddParts(_jellyMonsterWithoutRightLeg.BodyParts);
+        AddParts(_jellyMonsterWithoutLeftLeg.BodyParts);
+        AddParts(_jellyMonsterWithoutBottomBody.BodyParts);
+        AddParts(_jellyMonsterWithoutTopBody.BodyParts);
+
+        return _bodyParts;
+    }
+
+    private List<BodyPart> AddParts(BodyPart[] parts)
+    {
+        foreach (var part in parts)
+        {
+            _bodyParts.Add(part);
+        }
+
+        return _bodyParts;
+    }
+
     private void OnEnable()
     {
         _completeJellyMonster.LostHead += OnLostHead;
@@ -98,6 +124,11 @@ public class MonsterStateChanger : MonoBehaviour
     private void OnKilled()
     {
         Dead.Invoke();
+
+        foreach (var part in _bodyParts)
+        {
+            part.DeadPart();
+        }
     }
 
     private void IncludeSlicedMonster(SlicedEnemy slicedMonster)

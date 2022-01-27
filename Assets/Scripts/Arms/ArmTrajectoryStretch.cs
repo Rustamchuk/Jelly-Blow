@@ -63,7 +63,7 @@ public class ArmTrajectoryStretch : MonoBehaviour
 
         int i = 0;
 
-        while (!_touched && i != 10)
+        while (!_touched && i != 20)
         {
             i++;
             yield return new WaitForSeconds(0.02f);

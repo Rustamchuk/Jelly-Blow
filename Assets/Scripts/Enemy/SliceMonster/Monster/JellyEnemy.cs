@@ -6,6 +6,8 @@ public abstract class JellyEnemy : MonoBehaviour
 {
     [SerializeField] private BodyPart[] _bodyParts;
 
+    public BodyPart[] BodyParts => _bodyParts;
+
     private void OnEnable()
     {
         foreach (var bodyPart in _bodyParts)
