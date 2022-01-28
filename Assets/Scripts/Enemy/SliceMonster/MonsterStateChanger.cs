@@ -76,7 +76,7 @@ public class MonsterStateChanger : MonoBehaviour
         _completeJellyMonster.LostRightLeg -= OnLostRightLeg;
         _completeJellyMonster.LostLeftLeg -= OnLostLeftLeg;
         _completeJellyMonster.LostBelly -= OnLostBelly;
-        _completeJellyMonster.LostBreast += OnLostBreast;
+        _completeJellyMonster.LostBreast -= OnLostBreast;
         _jellyMonsterWithoutHead.Killed -= OnKilled;
         _jellyMonsterWithoutRightArm.Killed -= OnKilled;
         _jellyMonsterWithoutLeftArm.Killed -= OnKilled;

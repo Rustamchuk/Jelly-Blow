@@ -19,6 +19,8 @@ public class PlayerMover : MonoBehaviour
     private IEnumerator _coroutine;
 
     public bool CanMove => _canMove;
+    public event UnityAction Moving;
+    public event UnityAction StopMoving;
     public event UnityAction Jumped;
     public event UnityAction Landed;
 
@@ -61,6 +63,7 @@ public class PlayerMover : MonoBehaviour
 
     private IEnumerator Move(PathPoint point)
     {
+        Moving?.Invoke();
         _canMove = false;
         _index++;
         yield return new WaitForSeconds(_delayBeforeMovement);
@@ -84,10 +87,13 @@ public class PlayerMover : MonoBehaviour
 
         if (point.BattlePoint == true || point.LastPoint == true)
             _cameraMover.ChangeMovingState(false);
+
+        StopMoving?.Invoke();
     }
 
     private IEnumerator Jump(PathPoint point)
     {
+        Moving?.Invoke();
         _canMove = false;
         _index++;
         Jumped?.Invoke();
@@ -116,6 +122,8 @@ public class PlayerMover : MonoBehaviour
 
         if (point.BattlePoint == true || point.LastPoint == true)
             _cameraMover.ChangeMovingState(false);
+
+        StopMoving?.Invoke();
     }
 
     private Vector3 GetPoint(PathPoint point, float t)

@@ -15,6 +15,7 @@ public class ResultMaker : MonoBehaviour
 
     public event Action WonLevel;
     public event Action FailLevel;
+    public event Action Clicked;
 
     public int SpentTime => _spentTime;
 
@@ -77,6 +78,7 @@ public class ResultMaker : MonoBehaviour
         while (!Input.GetMouseButtonDown(0)) { yield return null; }
 
         _click.SetActive(false);
+        Clicked?.Invoke();
 
         _setChanger.ChangeSet();
     }
