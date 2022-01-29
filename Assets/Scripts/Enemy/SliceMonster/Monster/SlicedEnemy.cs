@@ -11,6 +11,10 @@ public class SlicedEnemy : JellyEnemy
     [SerializeField] private SkinnedMeshRenderer _cuttedObjectMeshRenderer;
     [SerializeField] private Rigidbody _cuttedObjectRigidbody;
     [SerializeField] private Material _deadMaterial;
+    [Header("Параметры силы отлетания частей")]
+    [SerializeField] private float _horizontalSpread;
+    [SerializeField] private float _verticalForce;
+    [SerializeField] private float _pushForce;
 
     public event UnityAction Killed;
 
@@ -29,6 +33,6 @@ public class SlicedEnemy : JellyEnemy
     private void BodyPartOff(SkinnedMeshRenderer meshRenderer, Rigidbody cutedRigidbody)
     {
         meshRenderer.material = _deadMaterial;
-        cutedRigidbody.velocity = new Vector3(Random.RandomRange(-1, 1), Random.RandomRange(0.5f, 1f), Random.RandomRange(2, 4));       //убрать магические числа
+        cutedRigidbody.velocity = new Vector3(Random.RandomRange(-_horizontalSpread, _horizontalSpread), _verticalForce, _pushForce);
     }
 }

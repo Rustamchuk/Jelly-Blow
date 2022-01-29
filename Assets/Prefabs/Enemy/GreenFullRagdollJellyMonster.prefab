@@ -3657,6 +3657,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 8799953546465016430}
   _cuttedObjectRigidbody: {fileID: 1127708728}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 2
+  _verticalForce: 2
+  _pushForce: 10
 --- !u!114 &4975051352206671517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,6 +3738,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 913598824099279047}
   _cuttedObjectRigidbody: {fileID: 176232224}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 5
+  _verticalForce: 2
+  _pushForce: 5
 --- !u!1 &4975051352512426732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,7 +3807,7 @@ GameObject:
   - component: {fileID: 7328474443456321682}
   - component: {fileID: 9112670668484540763}
   m_Layer: 0
-  m_Name: FullRagdollJellyMonster
+  m_Name: GreenFullRagdollJellyMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3980,6 +3986,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 4718234840111266546}
   _cuttedObjectRigidbody: {fileID: 816693203}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 2
+  _verticalForce: 2
+  _pushForce: 20
 --- !u!114 &4975051352630094065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4060,6 +4069,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 3575523424968170012}
   _cuttedObjectRigidbody: {fileID: 4975051352937630287}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 5
+  _verticalForce: 2
+  _pushForce: 5
 --- !u!1 &4975051353212290342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,6 +4131,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 1007321077382796209}
   _cuttedObjectRigidbody: {fileID: 4975051352333372339}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 1
+  _verticalForce: 2
+  _pushForce: 3
 --- !u!1 &4975051353678908371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,6 +4194,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 6041439525646674078}
   _cuttedObjectRigidbody: {fileID: 4975051353001634507}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 1
+  _verticalForce: 0
+  _pushForce: 10
 --- !u!1 &4975051353930468432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,6 +4257,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 7148090309793500084}
   _cuttedObjectRigidbody: {fileID: 421921074}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 1
+  _verticalForce: 0
+  _pushForce: 10
 --- !u!54 &1456023817
 Rigidbody:
   m_ObjectHideFlags: 0

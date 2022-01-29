@@ -4944,6 +4944,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 1717503129126999752}
   _cuttedObjectRigidbody: {fileID: 6856057571472477898}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 1
+  _verticalForce: 2
+  _pushForce: 3
 --- !u!1 &6856057570919762217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,6 +5007,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 8726969553897230029}
   _cuttedObjectRigidbody: {fileID: 1886853014106457163}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 1
+  _verticalForce: 0
+  _pushForce: 10
 --- !u!1 &6856057571205009066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5064,6 +5070,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 5330278356115680743}
   _cuttedObjectRigidbody: {fileID: 6856057571869716402}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 1
+  _verticalForce: 0
+  _pushForce: 10
 --- !u!1 &6856057571380475797
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,6 +5185,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 1622056296686564798}
   _cuttedObjectRigidbody: {fileID: 1886853014398423641}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 5
+  _verticalForce: 2
+  _pushForce: 5
 --- !u!1 &6856057571611786217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5234,6 +5246,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 6931257467563851543}
   _cuttedObjectRigidbody: {fileID: 1886853013467938113}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 2
+  _verticalForce: 2
+  _pushForce: 10
 --- !u!114 &6856057571611786212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5445,6 +5460,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 6581442714504724363}
   _cuttedObjectRigidbody: {fileID: 1886853014769859242}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 2
+  _verticalForce: 2
+  _pushForce: 20
 --- !u!114 &6856057572303121800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5525,6 +5543,9 @@ MonoBehaviour:
   _cuttedObjectMeshRenderer: {fileID: 3148505755993644901}
   _cuttedObjectRigidbody: {fileID: 6856057572076179254}
   _deadMaterial: {fileID: 2100000, guid: 1f0d5d97d8777e249b458bc6a969b1f9, type: 2}
+  _horizontalSpread: 5
+  _verticalForce: 2
+  _pushForce: 5
 --- !u!54 &1886853014912018552
 Rigidbody:
   m_ObjectHideFlags: 0
