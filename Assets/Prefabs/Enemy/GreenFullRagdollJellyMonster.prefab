@@ -3651,6 +3651,7 @@ MonoBehaviour:
   - {fileID: 4975051353943205910}
   - {fileID: 4975051352992046290}
   - {fileID: 4975051354117030920}
+  _punchesToKill: 2
   _animator: {fileID: 1468309205667876746}
   _remainingBodyMainRigidbody: {fileID: 4975051352077051409}
   _remainingBodyMeshRenderer: {fileID: 4129407424361956749}
@@ -3732,6 +3733,7 @@ MonoBehaviour:
   - {fileID: 4975051353415178575}
   - {fileID: 4975051353169811307}
   - {fileID: 4975051352905201605}
+  _punchesToKill: 2
   _animator: {fileID: 1468309204729306332}
   _remainingBodyMainRigidbody: {fileID: 4975051352444271970}
   _remainingBodyMeshRenderer: {fileID: 2165923036753522269}
@@ -3980,6 +3982,7 @@ MonoBehaviour:
   - {fileID: 4975051353824189762}
   - {fileID: 4975051352709032490}
   - {fileID: 4975051353375567708}
+  _punchesToKill: 2
   _animator: {fileID: 1468309204604372292}
   _remainingBodyMainRigidbody: {fileID: 4975051353375567711}
   _remainingBodyMeshRenderer: {fileID: 1899466702697344678}
@@ -4063,6 +4066,7 @@ MonoBehaviour:
   - {fileID: 4975051353043692555}
   - {fileID: 4975051353864069607}
   - {fileID: 4975051353430033238}
+  _punchesToKill: 2
   _animator: {fileID: 1468309205070014368}
   _remainingBodyMainRigidbody: {fileID: 4975051352494354630}
   _remainingBodyMeshRenderer: {fileID: 6407656503694138008}
@@ -4125,6 +4129,7 @@ MonoBehaviour:
   - {fileID: 4975051352574466590}
   - {fileID: 4975051353817899955}
   - {fileID: 4975051352877679897}
+  _punchesToKill: 2
   _animator: {fileID: 1468309204070999346}
   _remainingBodyMainRigidbody: {fileID: 4975051352209139344}
   _remainingBodyMeshRenderer: {fileID: 170288117385638905}
@@ -4188,6 +4193,7 @@ MonoBehaviour:
   - {fileID: 4975051352191993741}
   - {fileID: 4975051352911232005}
   - {fileID: 4975051353977090313}
+  _punchesToKill: 2
   _animator: {fileID: 1468309205020350879}
   _remainingBodyMainRigidbody: {fileID: 4975051352665007455}
   _remainingBodyMeshRenderer: {fileID: 3697838292934600523}
@@ -4251,6 +4257,7 @@ MonoBehaviour:
   - {fileID: 4975051353548204515}
   - {fileID: 4975051353216172709}
   - {fileID: 4975051352935282378}
+  _punchesToKill: 2
   _animator: {fileID: 1468309205429938142}
   _remainingBodyMainRigidbody: {fileID: 4975051353445778883}
   _remainingBodyMeshRenderer: {fileID: 6427138477971898832}

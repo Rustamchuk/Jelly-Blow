@@ -5075,6 +5075,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.7124217
       objectReference: {fileID: 0}
+    - target: {fileID: 4975051352206671518, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975051352294406874, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4975051352577007368, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
       propertyPath: m_Name
       value: GreenFullRagdollJellyMonster
@@ -5134,6 +5142,26 @@ PrefabInstance:
     - target: {fileID: 4975051352577007383, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975051352630094066, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975051352661964338, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975051353212290340, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975051353678908369, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975051353930468446, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
+      propertyPath: _punchesToKill
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5295271978074118407, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
       propertyPath: m_LocalPosition.x

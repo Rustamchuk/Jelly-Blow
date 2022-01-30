@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class SlicedEnemy : JellyEnemy
 {
-    [Space(15), SerializeField] private Animator _animator;
+    [Space(15), SerializeField] private int _punchesToKill;
+    [Space(20), SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody _remainingBodyMainRigidbody;
     [SerializeField] private SkinnedMeshRenderer _remainingBodyMeshRenderer;
     [SerializeField] private SkinnedMeshRenderer _cuttedObjectMeshRenderer;
@@ -16,6 +17,8 @@ public class SlicedEnemy : JellyEnemy
     [SerializeField] private float _verticalForce;
     [SerializeField] private float _pushForce;
 
+    private int _punchesCount = 0;
+
     public event UnityAction Killed;
 
     private void Start()
@@ -25,9 +28,14 @@ public class SlicedEnemy : JellyEnemy
 
     public override void OnBrokened(BodyPartName bodyPartName)
     {
-        _animator.enabled = false;
-        BodyPartOff(_remainingBodyMeshRenderer, _remainingBodyMainRigidbody);
-        Killed.Invoke();
+        _punchesCount++;
+
+        if (_punchesCount == _punchesToKill)
+        {
+            _animator.enabled = false;
+            Killed?.Invoke();
+            BodyPartOff(_remainingBodyMeshRenderer, _remainingBodyMainRigidbody);
+        }
     }
 
     private void BodyPartOff(SkinnedMeshRenderer meshRenderer, Rigidbody cutedRigidbody)
