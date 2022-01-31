@@ -5,340 +5,340 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/DemoLevel.unity
     guid: 2c7d4596d83d92540b65c7e3fc206fe0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/AccessTokenMenu.unity
     guid: 67cb5b2387b8e4ec9b2fa69ad9510e9b
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/AppLinks.unity
     guid: 4ac12dfde6570493291366d0ab3eb20d
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/Pay.unity
     guid: 3ee189cdb21ea4bdb9d7022a0780c44c
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/LogView.unity
     guid: c07ff0bf6bea74c2eb681ac0cae44265
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/DialogShare.unity
     guid: 190c345841ecc464e9a122f04369757e
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/MainMenu.unity
     guid: 7c38a8c9adc9d5c4b869612e4033ead8
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/AppEvents.unity
     guid: 68ab940fa15e34433bff18301686b080
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/AppRequests.unity
     guid: c2250c9c5cf00425384401321f8dffb4
-  - enabled: 1
+  - enabled: 0
     path: Assets/FacebookSDK/Examples/GraphRequest.unity
     guid: 444ae7ddf432b457a97bfe42021075e3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_1.unity
     guid: c7edc3990b12bea4a834716bc3aba221
-  - enabled: 1
+  - enabled: 0
     path: Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Demo_TCP2_ShaderGenerator_2.unity
     guid: 63a26462dc98b3e489a96c5c9d965cb5
-  - enabled: 1
+  - enabled: 0
     path: Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Demo_TCP2_Cat.unity
     guid: 3a69b0bb145af8445b29bf1d9cff52a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Demo_TCP2_PBS.unity
     guid: b82d572d2e9eeed40b7a732ed0c6883d
-  - enabled: 1
+  - enabled: 0
     path: Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Demo_TCP2_Hybrid_Shader.unity
     guid: f22695d0661adda45aa28ed5a953dcca
-  - enabled: 1
+  - enabled: 0
     path: Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Demo_TCP2_ShaderGenerator.unity
     guid: 4fc61768bf255e948a212b0f80b5d87c
-  - enabled: 1
+  - enabled: 0
     path: Assets/AssetStoreObj/Shapes/RaymarchingToolkit-master/Scenes/Demo.unity
     guid: 07645f8ec15592d43b444d54f505378c
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/HoleGame/DemoLevel___\u043A\u043E\u043F\u0438\u044F.unity"
     guid: 04b8b48352aee7d4695e10361f6b9237
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Little_Planet__Y_.unity
     guid: 1b2063dba26188541a5ee9b28d90d3b0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__4___Multiple_Bends.unity
     guid: 7c6eb87350ef75c4496d59e13acb5e30
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Twisted_Spiral__Highway_Hills_.unity
     guid: 2afc0a104845e1b4a92f73643aec85fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Twisted_Spiral__Highway_.unity
     guid: 86d11393c74c497408667c65ee5b4f44
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__2___Little_Planet__part_1_.unity
     guid: 29bbca773ac91f94a9e0d7b176d874c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__3___Little_Planet__part_2__Finished.unity
     guid: fb43e84bd3689274aaa9255a992fd006
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Cylindrical_Tower__X_.unity
     guid: 9e7c90731b9e6e349bcf3cd607343e17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Non___Shader_Bending__Scene_1_.unity
     guid: d3e111ff32bf5cf4aa49bb6a8d9590ec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Non___Shader_Bending__Scene_2_.unity
     guid: 0c27fa6980743df42b8cf2f8216801ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Spiral_Horizontal_Double__X_.unity
     guid: c5210fa731f3db24285ae702f9ee85a8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Classic_Runner__X_Positive_.unity
     guid: 77d8c51ae660c3a4c9116691e1d772db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__1___Introduction.unity
     guid: 5f3773613bf2e3c40ae4d157f0ddda1c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Cylindrical_Rolloff__Z_.unity
     guid: b0e8948cde3a20741bee75b076cd1712
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Tutorial__4___Multiple_Bends_Finished.unity
     guid: 5dd793b2e52e3c549a7990447c31ada1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Spiral_Vertical.unity
     guid: 920826ebac42e5a46a462947bcba3ab8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Amazing Assets/Curved World/Example Scenes/Bend___Twisted_Spiral__Corridor_.unity
     guid: cf4d6deb0341a334dabdab14515fafb8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_2.unity
     guid: f1699b3722bc10d46a3abee6e0c169dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_3.unity
     guid: b23b28dc46d1fbd43b672ddb00c10b57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_4.unity
     guid: 84dfdb47b96a9c147b0088c6e1f6bb9f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_5.unity
     guid: 39960244fc21e074a82cd52e59368669
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Curved/Level_6_C.unity
     guid: 5ac08862b82e1b948b05cd327c6e1d62
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Curved/Level_7_C.unity
     guid: 1a43af4008030674199f8a6c78c641b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Curved/Level_10_C.unity
     guid: 1c1fecd7fa1a2b64ea1de9bf82e76bee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Curved/Level_9_C.unity
     guid: 2d7aeabba1da77d4eb6a8efc61e19e90
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Curved/Level_8_C.unity
     guid: 715b9a7cd279fd742ba252062fa40d0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_6.unity
     guid: 8ed767c3cd99643459f74ddc519609c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_9.unity
     guid: e2d3216465806ea4abb91ba9fab96c7a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_10.unity
     guid: 59656c701036835428fe75d471398e6b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_8.unity
     guid: 3a169ff92a95a834f9d1bbb921c19a40
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HoleGame/Level_7.unity
     guid: 16dfc665eac464c448a8258522533fa9
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Operations.unity
     guid: 47c825a9ef76df5439b39c978dd7da2f
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Model.unity
     guid: d946cbe3a06ed1f4488de984c59473a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Primitives.unity
     guid: 69e630a7451d8244d95c8076eff2fcd7
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Cartoon.unity
     guid: 48ef6fb01315dcf499e64e78299f284a
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_OrganicCity.unity
     guid: fb06c87e54756c64baa6a8f8f58c5c17
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_MusicReaction.unity
     guid: 2028c2c4993da49439aa156028e0a221
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_MusicReaction.unity
     guid: d48c34334ed533c41abec50ea254696f
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_Planet.unity
     guid: 4f80339accf072449917a7021e257752
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_Trip2.unity
     guid: d254fec483d59fe41ac896a6c62c6691
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_Primitives.unity
     guid: e206e750748d78c489a875f786cab404
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_Castle.unity
     guid: 1b2d65c3fa61b6446a9eb5721c820de2
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_Fractals.unity
     guid: 63693bd8bef7adb42a787fbd2fd927b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_LoopRepetition.unity
     guid: 3e66dac015ef2694f98379aaca2afbca
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_Centipede.unity
     guid: 1e8409f6bdc0893488fe405994ffe204
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_MusicTrip.unity
     guid: c3d7625575b45ee41b7228237c5e80d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_NonVR/Example_Mobile_FractalTrip.unity
     guid: 495699d7c02ac2349ada975913c05f47
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Planet.unity
     guid: bbce72e404011254b9aaa8984530350c
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Playground.unity
     guid: 9c5b8401b057b944ea0057c06daa21d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Fractals.unity
     guid: d823329261302954c8a346aca08f076a
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_Consoles/Example_FractalTrip.unity
     guid: 78535a454cda7e24e82eef49fde18771
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/Mobile/Mobile_VR/Example_MobileVR_Planet.unity
     guid: 693ea3c1d110c7c46bd259dbc9ccdd92
-  - enabled: 1
+  - enabled: 0
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Default.unity
     guid: 0dbebc3903f3e304c9fdc1fef0bad1fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Pieces_1.unity
     guid: 640a9a85d00744e4da1f58fd08ef2d28
-  - enabled: 1
+  - enabled: 0
     path: Assets/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees_Scene.unity
     guid: 3a4fae92ae58cfe4f95d68acf78912a2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Pieces_1_CameraTest.unity
     guid: 3cf11204507ef9d4092aeae384e8ae57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MonsterCut.unity
     guid: 4204791415b491c4b98e90fb172d81cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Pieces_1_ArmTest.unity
     guid: 803d25149981200498da677cd39c85ec
   - enabled: 1
     path: Assets/Scenes/Pieces_1_JellyTest.unity
     guid: 87c8c61950c0b1b45aea158a50fcd49c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_2ddemo.unity
     guid: 0ef9b490e5d6bad4ea1935d07d1c2ea9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/Extras/etfx_library.unity
     guid: f77fdd1cb420863488bbb63715acab9f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/Extras/etfx_videopreview.unity
     guid: 455fd77e8f405b04c810d29ad2dff2db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/Extras/etfx_singleeffect.unity
     guid: 501ab33a8d23850479846415355a12b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_explosions.unity
     guid: f91c322868183cc4a96eb6242e73deac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/Extras/etfx_decal_test.unity
     guid: 6dad6ea22f37cdc4783ddb9f84d5fd4a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_cards.unity
     guid: 855bb038b5077e74082152830a86f4fe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_portals2.unity
     guid: 86778e72f0ca2294eb01df38043aa08e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/Extras/etfx_singleeffect_render.unity
     guid: adcbb5e4c81028041bc317f42b44bc5a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_fire3.unity
     guid: 237fa454a1c11d24d8a92ad2acf18735
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_healing.unity
     guid: 5dc0fb5f1c3c34d47baefa2a3c5f19e1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_swordcombat2.unity
     guid: 644eb321da943bd49b68667f53e4e1f1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_wind.unity
     guid: 565750a970c487a4280f95fd0ed4f9fc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/Extras/etfx_flatground.unity
     guid: 3da32ea929cfbcb4da2d97a5fecdf286
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_magic3.unity
     guid: d70a7dcb427d83b48bd82c3e982e09b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_missiles.unity
     guid: b1d44d13576492049bc14b200e0d90cc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_fire2.unity
     guid: cf6c88659dbe5ea41951465b278d4578
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_explosions2.unity
     guid: 23b30f55479243746a484e7a7ba74b29
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_emojis2.unity
     guid: 974d088231a9ea440bca66d339389cbc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_magic.unity
     guid: 1e1bb871721d63e4f92474359db37b3d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_emojis.unity
     guid: b0de468b5dc93da4d8ee716d4782d2ba
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_fire.unity
     guid: 88a9ddda0ca72bb488c72771c26caba4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_decals.unity
     guid: 5b495297bbe0d2549aa87a2ef68dd6f5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_fireworks.unity
     guid: 32ddbd81248ad9c43a2fc3edfba6e326
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_sparkles.unity
     guid: b88a7726175acbc42a72541f3777eab3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_maindemo.unity
     guid: 8bd1bda334a6f2440817b9493f9d7703
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_magic2.unity
     guid: c5094e256f2a7a04b913a7b17313517a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_swordcombat.unity
     guid: e53e0f8c5f9e7eb40ae3f709aabd435f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_portals.unity
     guid: dc955c3e9f407e245a0d2d03086ef10c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_powerups2.unity
     guid: 3fa05937c0d498e4688b6eb2ba76e5da
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_money.unity
     guid: da2a3050d66c3624884fce0e239e2ba6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_decals2.unity
     guid: beb66570ff0561047abfb8082eaa8e70
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_combat.unity
     guid: 49c44520099ebe541a86e958bb498f24
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_flares.unity
     guid: e2bb5f0193a596246b4de5a53732a695
-  - enabled: 1
+  - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_powerups.unity
     guid: 2c56ab0803e494e4d83581cfca9f47f2
   m_configObjects: {}

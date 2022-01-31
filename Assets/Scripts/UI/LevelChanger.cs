@@ -40,6 +40,7 @@ public class LevelChanger : MonoBehaviour
 
     public void ChooseNextScene()
     {
+        /*
         switch ((int)_nextLevelName)
         {
             case 0:
@@ -72,7 +73,7 @@ public class LevelChanger : MonoBehaviour
             case 9:
                 Level_10.Load((int)_currentScene);
                 break;
-        }
+        }*/
     }
 
     public void ChangeStartedGame() { _gameStarted = true; }

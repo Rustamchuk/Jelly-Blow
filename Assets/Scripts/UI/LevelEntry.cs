@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using IJunior.TypedScenes;
 
-public class LevelEntry : MonoBehaviour, ISceneLoadHandler<int>
+public class LevelEntry : MonoBehaviour//, ISceneLoadHandler<int>
 {
     [SerializeField] private LevelChanger _levelChanger;
 
