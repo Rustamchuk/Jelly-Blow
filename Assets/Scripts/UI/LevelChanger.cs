@@ -9,7 +9,7 @@ public class LevelChanger : MonoBehaviour
     [SerializeField] private Scenes _nextLevelName;
     [SerializeField] private Scenes _currentScene;
 
-    private enum Scenes { Level_1, Level_2, Level_3, Level_4, Level_5, Level_6, Level_7, Level_8, Level_9, Level_10 }
+    private enum Scenes { JellyTest, BoxGloves }
 
     public event Action StartedGame;
     public event Action StartedLevel;
@@ -31,7 +31,7 @@ public class LevelChanger : MonoBehaviour
         RestartedLevel.Invoke();
 
         if (_nextLevelName == 0)
-            _nextLevelName += 9;
+            _nextLevelName += 1;
         else
             _nextLevelName--;
 
@@ -40,40 +40,15 @@ public class LevelChanger : MonoBehaviour
 
     public void ChooseNextScene()
     {
-        /*
         switch ((int)_nextLevelName)
         {
             case 0:
-                Level_1.Load((int)_currentScene);
+                Pieces_1_JellyTest.Load((int)_currentScene);
                 break;
             case 1:
-                Level_2.Load((int)_currentScene);
+                Pieces_1_BoxGloves.Load((int)_currentScene);
                 break;
-            case 2:
-                Level_3.Load((int)_currentScene);
-                break;
-            case 3:
-                Level_4.Load((int)_currentScene);
-                break;
-            case 4:
-                Level_5.Load((int)_currentScene);
-                break;
-            case 5:
-                Level_6.Load((int)_currentScene);
-                break;
-            case 6:
-                Level_7.Load((int)_currentScene);
-                break;
-            case 7:
-                Level_8.Load((int)_currentScene);
-                break;
-            case 8:
-                Level_9.Load((int)_currentScene);
-                break;
-            case 9:
-                Level_10.Load((int)_currentScene);
-                break;
-        }*/
+        }
     }
 
     public void ChangeStartedGame() { _gameStarted = true; }
