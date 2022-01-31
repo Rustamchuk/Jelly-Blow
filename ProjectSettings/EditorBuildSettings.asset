@@ -344,4 +344,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pieces_1_BoxGloves.unity
     guid: 1b6c71b446a4e1645a281833d0d06ede
+  - enabled: 1
+    path: Assets/Scenes/Pieces_1_AimedArmTest.unity
+    guid: a56a216b16068734e858f354d4e66be6
   m_configObjects: {}

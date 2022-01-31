@@ -34,6 +34,12 @@ public class BodyPart : MonoBehaviour
                 Touched.Invoke(arm.BoxGlove.transform.position);
             }
         }
+        else if (other.TryGetComponent(out BoxArm boxArm))
+        {
+            Brokened?.Invoke(_bodyPartName);
+            boxArm.ReturnStartPosition();
+            Touched.Invoke(boxArm.transform.position);
+        }
     }
 
     public void DeadPart() { _alive = false; }
