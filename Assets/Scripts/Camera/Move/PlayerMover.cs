@@ -10,19 +10,25 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private PathPoint[] _pathPoints;
     [SerializeField] private CameraMover _cameraMover;
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _battleMoveSpeed;
+    [SerializeField] private float _timeValue;
     [SerializeField] private float _decelerationJumpSpeed;
     [SerializeField] private float _delayBeforeMovement;
 
     private int _index = 0;
     private bool _canMove = false;
     private bool _coroutineIsActive = false;
+    private bool _battleCoroutineIsActive = false;
+    private bool _finishedLevel = false;
     private IEnumerator _coroutine;
+    private IEnumerator _battleCoroutine;
 
     public bool CanMove => _canMove;
     public event UnityAction Moving;
     public event UnityAction StopMoving;
     public event UnityAction Jumped;
     public event UnityAction Landed;
+    public event UnityAction Finished;
 
     private void Awake()
     {
@@ -31,6 +37,8 @@ public class PlayerMover : MonoBehaviour
             path.DeadJelly += TurnOnRotate;
 
             path.LastDead += StopRotate;
+
+            path.FinishLevel += StopBattle;
         }
     }
 
@@ -40,8 +48,25 @@ public class PlayerMover : MonoBehaviour
             MoveToPoint();
     }
 
-    public void MoveToPoint()
+    public void MoveToPoint(bool battle = false)
     {
+        if (_finishedLevel)
+            return;
+
+        if (battle)
+        {
+            _battleCoroutine = BattleMove();
+            StartCoroutine(_battleCoroutine);
+            return;
+        }
+
+        if (_battleCoroutineIsActive)
+        {
+            _battleCoroutineIsActive = false;
+            StopCoroutine(_battleCoroutine);
+            Time.timeScale = 1;
+        }
+
         _cameraMover.ChangeMovingState(true);
 
         if(_pathPoints[_index].PointType == MovingPoints.Walk)
@@ -126,6 +151,18 @@ public class PlayerMover : MonoBehaviour
         StopMoving?.Invoke();
     }
 
+    private IEnumerator BattleMove()
+    {
+        Time.timeScale = _timeValue;
+        _battleCoroutineIsActive = true;
+        while (true)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(0, 0, 50), Time.deltaTime * _battleMoveSpeed);
+
+            yield return null;
+        }
+    }
+
     private Vector3 GetPoint(PathPoint point, float t)
     {
         t = Mathf.Clamp01(t);
@@ -147,6 +184,14 @@ public class PlayerMover : MonoBehaviour
     }
 
     private void StopRotate() { _cameraRotate.StopRotate(); }
+
+    public void StopBattle() 
+    { 
+        StopCoroutine(_battleCoroutine);
+        Finished.Invoke();
+        _finishedLevel = true;
+        Time.timeScale = 1;
+    }
 
     public void ChangeMovingState(bool state)
     {

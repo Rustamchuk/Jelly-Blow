@@ -14,7 +14,7 @@ public class BoxArm : MonoBehaviour
 	private bool _coroutineIsActive = false;
 	private bool _inAction = false;
 
-	public bool CanBrokeBodyPart { get; private set; } = true;
+	public bool CanBrokeBodyPart { get; private set; } = false;
 	public bool InAction => _inAction;
 
 
@@ -34,6 +34,7 @@ public class BoxArm : MonoBehaviour
 
 	private IEnumerator StartArmMovement(Vector3 target, bool simpleHit = true, bool needOnCollider = false)
     {
+		CanBrokeBodyPart = true;
 		_inAction = true;
 		_coroutineIsActive = true;
 
@@ -44,7 +45,7 @@ public class BoxArm : MonoBehaviour
         }
 
 		Debug.Log("Doleteli");
-
+		CanBrokeBodyPart = false;
 
 		if (needOnCollider == true)
 			_collider.enabled = true;

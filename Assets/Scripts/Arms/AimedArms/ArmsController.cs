@@ -9,22 +9,28 @@ public class ArmsController : MonoBehaviour
     [SerializeField] private float _hitDistance;
     
     private bool _canAttack;
+    private bool _stopFight = false;
     private int _activeArmIndex = 0;
 
     private void OnEnable()
     {
         _playerMover.Moving += OnMoving;
         _playerMover.StopMoving += OnStopMoving;
+        _playerMover.Finished += StopAttack;
     }
 
     private void OnDisable()
     {
         _playerMover.Moving -= OnMoving;
         _playerMover.StopMoving -= OnStopMoving;
+        _playerMover.Finished -= StopAttack;
     }
 
     private void Update()
     {
+        if (_stopFight)
+            return;
+
         if (_canAttack == false)
             return;
 
@@ -62,4 +68,6 @@ public class ArmsController : MonoBehaviour
     private void OnMoving() => _canAttack = false;
 
     private void OnStopMoving() => _canAttack = true;
+
+    private void StopAttack() => _stopFight = true;
 }

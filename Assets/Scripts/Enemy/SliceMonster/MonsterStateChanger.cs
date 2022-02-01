@@ -23,6 +23,7 @@ public class MonsterStateChanger : MonoBehaviour
     [SerializeField] private SlicedEnemy _jellyMonsterWithoutTopBody;
 
     public event UnityAction Dead;
+    public event UnityAction<float> WaitToGo;
 
     private List<BodyPart> _bodyParts = new List<BodyPart>();
 
@@ -89,6 +90,7 @@ public class MonsterStateChanger : MonoBehaviour
     private void OnLostHead()
     {
         IncludeSlicedMonster(_jellyMonsterWithoutHead);
+        WaitToGo.Invoke(3.2f);
     }
 
     private void OnLostRightArm()

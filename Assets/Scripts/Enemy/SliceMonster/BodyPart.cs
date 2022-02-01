@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class BodyPart : MonoBehaviour
 
     public event UnityAction<BodyPartName> Brokened;
     public event UnityAction<Vector3> Touched;
+    public event Action Finished;
 
     private bool _alive = true;
 
@@ -36,9 +38,16 @@ public class BodyPart : MonoBehaviour
         }
         else if (other.TryGetComponent(out BoxArm boxArm))
         {
-            Brokened?.Invoke(_bodyPartName);
-            boxArm.ReturnStartPosition();
-            Touched.Invoke(boxArm.transform.position);
+            if (boxArm.CanBrokeBodyPart)
+            {
+                Brokened?.Invoke(_bodyPartName);
+                boxArm.ReturnStartPosition();
+                Touched.Invoke(boxArm.transform.position);
+            }
+        }
+        else if (other.TryGetComponent(out PlayerMover player))
+        {
+            Finished.Invoke();
         }
     }
 

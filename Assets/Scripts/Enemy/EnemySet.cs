@@ -33,6 +33,7 @@ public class EnemySet : MonoBehaviour
         foreach (var enemy in _enemiesLife)
         {
             enemy.Dead += RemoveEnemy;
+            enemy.Finished += Lose;
         }
 
         foreach (var enemy in _enemiesMover)

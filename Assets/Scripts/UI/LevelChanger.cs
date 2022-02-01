@@ -9,7 +9,7 @@ public class LevelChanger : MonoBehaviour
     [SerializeField] private Scenes _nextLevelName;
     [SerializeField] private Scenes _currentScene;
 
-    private enum Scenes { JellyTest, BoxGloves }
+    private enum Scenes { Platforms, AimBox }
 
     public event Action StartedGame;
     public event Action StartedLevel;
@@ -43,10 +43,10 @@ public class LevelChanger : MonoBehaviour
         switch ((int)_nextLevelName)
         {
             case 0:
-                Pieces_1_JellyTest.Load((int)_currentScene);
+                Pieces_1_platform.Load((int)_currentScene);
                 break;
             case 1:
-                Pieces_1_BoxGloves.Load((int)_currentScene);
+                Pieces_1_AimedArmTest.Load((int)_currentScene);
                 break;
         }
     }

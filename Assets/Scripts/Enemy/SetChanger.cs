@@ -41,6 +41,7 @@ public class SetChanger : MonoBehaviour
 
         //_cameraMover.StopMove += ChangeSet;
         _cameraMover.StopMove += ChangeSet;
+        _cameraMover.StopMove += BattleStart;
     }
 
     public void ChangeSet()
@@ -48,11 +49,14 @@ public class SetChanger : MonoBehaviour
         _enemySets[_currentSet].StartSet();
     }
 
+    public void BattleStart() { _playerMover.MoveToPoint(true); }
+
     private void StartMove()
     {
         if (_currentSet == _enemySets.Length - 1)
         {
             WinLevel.Invoke();
+            _playerMover.StopBattle();
             _cameraMover.RewriteMoving(true);
             return;
         }

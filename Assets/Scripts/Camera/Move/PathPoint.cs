@@ -29,6 +29,7 @@ public class PathPoint : MonoBehaviour
     public event UnityAction<PathPoint> PlatformCleared;
     public event UnityAction<Transform> DeadJelly;
     public event Action LastDead;
+    public event Action FinishLevel;
 
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class PathPoint : MonoBehaviour
             foreach (var enemy in _enemies)
             {
                 enemy.Dead += OnDead;
+                enemy.Finished += FinishPath;
             }
         }
     }
@@ -74,6 +76,8 @@ public class PathPoint : MonoBehaviour
             DeadJelly.Invoke(_lookDirection);
         }
     }
+    
+    private void FinishPath() { FinishLevel.Invoke(); }
 }
 
 public enum MovingPoints

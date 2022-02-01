@@ -347,4 +347,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pieces_1_AimedArmTest.unity
     guid: a56a216b16068734e858f354d4e66be6
+  - enabled: 1
+    path: Assets/Scenes/Pieces_1_platform.unity
+    guid: 28643830341aea94698a12cdcacfdaf8
   m_configObjects: {}
