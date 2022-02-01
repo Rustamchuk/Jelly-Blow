@@ -3,15 +3,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MonsterStateChanger))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private Transform _target;
     [SerializeField] private float _speed;
     [SerializeField] private MonsterLife _life;
+    [SerializeField] private float _stoppingTime;
+
+    private MonsterStateChanger _monsterStateChanger;
+    private float _lastSpeed = 0;
+    private bool _wait;
 
     public event Action Finished;
 
-    private bool _wait;
+    private void Awake()
+    {
+        _monsterStateChanger = GetComponent<MonsterStateChanger>();
+        _lastSpeed = _speed;
+    }
+
+    private void OnEnable()
+    {
+        _monsterStateChanger.Stoped += OnStoped;
+    }
+
+    private void OnDisable()
+    {
+        _monsterStateChanger.Stoped -= OnStoped;
+    }
 
     private void Start()
     {
@@ -25,12 +45,12 @@ public class EnemyMover : MonoBehaviour
             if (_life.Alive)
             {
                 transform.position = Vector3.MoveTowards(transform.position,
-                    new Vector3(_target.position.x, transform.position.y, _target.position.z), Time.deltaTime * _speed);
+                    new Vector3(_target.position.x, transform.position.y, _target.position.z), Time.deltaTime * _lastSpeed);
 
                 Vector3 direction = _target.position - transform.position;
                 direction.y = 0;
                 Quaternion rotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * _speed);
+                transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * _lastSpeed);
             }
 
             if (new Vector3(_target.position.x, transform.position.y, _target.position.z) == transform.position)
@@ -48,5 +68,19 @@ public class EnemyMover : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         _wait = false;
+    }
+
+    private void OnStoped()
+    {
+        StartCoroutine(SuspendMoving());
+    }
+
+    private IEnumerator SuspendMoving()
+    {
+        _lastSpeed = 0;
+
+        yield return new WaitForSeconds(_stoppingTime);
+
+        _lastSpeed = _speed;
     }
 }

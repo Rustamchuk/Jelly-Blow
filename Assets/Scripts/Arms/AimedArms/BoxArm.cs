@@ -7,7 +7,8 @@ public class BoxArm : MonoBehaviour
 {
 	[SerializeField] private Animator _animator;
 	[SerializeField] private float _speed;
-	
+	[SerializeField] private ParticleSystem _trailEffect;
+
 	private SphereCollider _collider;
 	private Vector3 _startPosition;
 	private IEnumerator _coroutine;
@@ -29,6 +30,7 @@ public class BoxArm : MonoBehaviour
     {
 		_coroutine = StartArmMovement(target);
 		StartCoroutine(_coroutine);
+		_trailEffect.Play();
 		_animator.SetTrigger("Hit");
 	}
 
@@ -44,7 +46,6 @@ public class BoxArm : MonoBehaviour
 			yield return null;
         }
 
-		Debug.Log("Doleteli");
 		CanBrokeBodyPart = false;
 
 		if (needOnCollider == true)
@@ -53,7 +54,6 @@ public class BoxArm : MonoBehaviour
 		if (simpleHit == true)
         {
 			ReturnStartPosition();
-			Debug.Log("Vozvrat");
 		}
 		else
         {
@@ -64,6 +64,7 @@ public class BoxArm : MonoBehaviour
 
 	public void ReturnStartPosition()
     {
+		_trailEffect.Stop();
 		_collider.enabled = false;
 
 		if (_coroutineIsActive == true)
