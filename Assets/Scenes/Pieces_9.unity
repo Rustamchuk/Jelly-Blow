@@ -4013,7 +4013,7 @@ MonoBehaviour:
   _moveSpeed: 6
   _battleMoveSpeed: 2
   _timeValue: 0.6
-  _decelerationJumpSpeed: 2
+  _decelerationJumpSpeed: 1.7
   _delayBeforeMovement: 0.01
 --- !u!65 &910480171
 BoxCollider:
@@ -11993,8 +11993,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 560988218}
   - {fileID: 1864354615}
+  - {fileID: 560988218}
   m_Father: {fileID: 7702066793895803614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12968,7 +12968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 1
+  _levelNumber: 9
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}

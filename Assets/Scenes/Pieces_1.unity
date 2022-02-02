@@ -2858,10 +2858,10 @@ MonoBehaviour:
   - {fileID: 7702066794060450786}
   - {fileID: 1676456442}
   _cameraMover: {fileID: 634578651}
-  _moveSpeed: 5
+  _moveSpeed: 6
   _battleMoveSpeed: 1
   _timeValue: 0.6
-  _decelerationJumpSpeed: 2
+  _decelerationJumpSpeed: 1.7
   _delayBeforeMovement: 0.01
 --- !u!65 &910480171
 BoxCollider:

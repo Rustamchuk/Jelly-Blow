@@ -4143,10 +4143,10 @@ MonoBehaviour:
   - {fileID: 7702066795112107549}
   - {fileID: 1676456442}
   _cameraMover: {fileID: 634578651}
-  _moveSpeed: 5
+  _moveSpeed: 6
   _battleMoveSpeed: 1
   _timeValue: 0.6
-  _decelerationJumpSpeed: 2
+  _decelerationJumpSpeed: 1.7
   _delayBeforeMovement: 0.01
 --- !u!65 &910480171
 BoxCollider:
@@ -9128,7 +9128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 1
+  _levelNumber: 5
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}
