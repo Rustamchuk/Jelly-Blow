@@ -9,7 +9,7 @@ public class LevelChanger : MonoBehaviour
     [SerializeField] private Scenes _nextLevelName;
     [SerializeField] private Scenes _currentScene;
 
-    private enum Scenes { Platforms, AimBox }
+    private enum Scenes { Pieces_1, Pieces_2, Pieces_3, Pieces_4, Pieces_5, Pieces_6, Pieces_7, Pieces_8, Pieces_9, Pieces_10 }
 
     public event Action StartedGame;
     public event Action StartedLevel;
@@ -31,7 +31,7 @@ public class LevelChanger : MonoBehaviour
         RestartedLevel.Invoke();
 
         if (_nextLevelName == 0)
-            _nextLevelName += 1;
+            _nextLevelName += 9;
         else
             _nextLevelName--;
 
@@ -43,10 +43,34 @@ public class LevelChanger : MonoBehaviour
         switch ((int)_nextLevelName)
         {
             case 0:
-                Pieces_1_platform.Load((int)_currentScene);
+                Pieces_1.Load((int)_currentScene);
                 break;
             case 1:
-                Pieces_1_AimedArmTest.Load((int)_currentScene);
+                Pieces_2.Load((int)_currentScene);
+                break;
+            case 2:
+                Pieces_3.Load((int)_currentScene);
+                break;
+            case 3:
+                Pieces_4.Load((int)_currentScene);
+                break;
+            case 4:
+                Pieces_5.Load((int)_currentScene);
+                break;
+            case 5:
+                Pieces_6.Load((int)_currentScene);
+                break;
+            case 6:
+                Pieces_7.Load((int)_currentScene);
+                break;
+            case 7:
+                Pieces_8.Load((int)_currentScene);
+                break;
+            case 8:
+                Pieces_9.Load((int)_currentScene);
+                break;
+            case 9:
+                Pieces_10.Load((int)_currentScene);
                 break;
         }
     }

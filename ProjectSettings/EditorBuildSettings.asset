@@ -219,22 +219,19 @@ EditorBuildSettings:
     path: Assets/RaymarcherPackage/ExampleScenes/PC/PC_VR/Example_PCVR_Default.unity
     guid: 0dbebc3903f3e304c9fdc1fef0bad1fa
   - enabled: 0
-    path: Assets/Scenes/Pieces_1.unity
-    guid: 640a9a85d00744e4da1f58fd08ef2d28
-  - enabled: 0
     path: Assets/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees_Scene.unity
     guid: 3a4fae92ae58cfe4f95d68acf78912a2
   - enabled: 0
-    path: Assets/Scenes/Pieces_1_CameraTest.unity
+    path: Assets/Scenes/PiecesBetta/Pieces_1_CameraTest.unity
     guid: 3cf11204507ef9d4092aeae384e8ae57
   - enabled: 0
-    path: Assets/Scenes/MonsterCut.unity
+    path: Assets/Scenes/PiecesBetta/MonsterCut.unity
     guid: 4204791415b491c4b98e90fb172d81cf
   - enabled: 0
-    path: Assets/Scenes/Pieces_1_ArmTest.unity
+    path: Assets/Scenes/PiecesBetta/Pieces_1_ArmTest.unity
     guid: 803d25149981200498da677cd39c85ec
   - enabled: 1
-    path: Assets/Scenes/Pieces_1_JellyTest.unity
+    path: Assets/Scenes/PiecesBetta/Pieces_1_JellyTest.unity
     guid: 87c8c61950c0b1b45aea158a50fcd49c
   - enabled: 0
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_2ddemo.unity
@@ -342,12 +339,42 @@ EditorBuildSettings:
     path: Assets/Epic Toon FX/Demo/Scenes/etfx_powerups.unity
     guid: 2c56ab0803e494e4d83581cfca9f47f2
   - enabled: 1
-    path: Assets/Scenes/Pieces_1_BoxGloves.unity
+    path: Assets/Scenes/PiecesBetta/Pieces_1_BoxGloves.unity
     guid: 1b6c71b446a4e1645a281833d0d06ede
   - enabled: 1
-    path: Assets/Scenes/Pieces_1_AimedArmTest.unity
+    path: Assets/Scenes/PiecesBetta/Pieces_1_AimedArmTest.unity
     guid: a56a216b16068734e858f354d4e66be6
   - enabled: 1
-    path: Assets/Scenes/Pieces_1_platform.unity
+    path: Assets/Scenes/Pieces_4.unity
     guid: 28643830341aea94698a12cdcacfdaf8
+  - enabled: 1
+    path: Assets/Scenes/PiecesBetta/Pieces_1_Betta.unity
+    guid: f117a8ae46672144193d005e1c6393ec
+  - enabled: 1
+    path: Assets/Scenes/Pieces_1.unity
+    guid: e795525fe833e054c8ada6c181ff7c27
+  - enabled: 1
+    path: Assets/Scenes/Pieces_3.unity
+    guid: 5eb0035c90d35c34489e53f4aad90a6c
+  - enabled: 1
+    path: Assets/Scenes/Pieces_2.unity
+    guid: cab56d4d3e7915b4b9efffcbc2b46df3
+  - enabled: 1
+    path: Assets/Scenes/Pieces_7.unity
+    guid: 5b1c81043c87cc748b6f4fd0f03ff666
+  - enabled: 1
+    path: Assets/Scenes/Pieces_5.unity
+    guid: ce147f3fa11172d48b27e4a9b2b50930
+  - enabled: 1
+    path: Assets/Scenes/Pieces_6.unity
+    guid: 48316d3d02239a34b95b3af5df88e451
+  - enabled: 1
+    path: Assets/Scenes/Pieces_8.unity
+    guid: 032e7f18b99d9664f9aeebbc8c7f7a88
+  - enabled: 1
+    path: Assets/Scenes/Pieces_9.unity
+    guid: f86ac2ae0487b534bbffa6f745d23b2f
+  - enabled: 1
+    path: Assets/Scenes/Pieces_10.unity
+    guid: f13df346e945356499cc670502ab747d
   m_configObjects: {}
