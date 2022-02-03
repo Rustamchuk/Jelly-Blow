@@ -15,6 +15,7 @@ public class MonsterLife : MonoBehaviour
     public Transform LookPoint => _lookPoint;
     public event Action Dead;
     public event Action Finished;
+    public event Action Trapped;
     public event UnityAction<float> Wait;
     public bool Alive => _alive;
 
@@ -63,6 +64,7 @@ public class MonsterLife : MonoBehaviour
 
     private void TrapDie()
     {
+        Trapped.Invoke();
         _waterTrail.transform.SetParent(null);
         _boomEffect.transform.SetParent(null);
         _waterTrail.Play();

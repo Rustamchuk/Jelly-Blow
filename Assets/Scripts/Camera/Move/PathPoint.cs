@@ -17,6 +17,7 @@ public class PathPoint : MonoBehaviour
     [SerializeField] private bool _lastPoint;
 
     private int _deadEnemiesCount = 0;
+    private bool _trapped = false;
    
     public MovingPoints PointType => _pointType;
     public Transform LookDirection => _lookDirection;
@@ -44,6 +45,7 @@ public class PathPoint : MonoBehaviour
             {
                 enemy.Dead += OnDead;
                 enemy.Finished += FinishPath;
+                enemy.Trapped += TrapPoint;
             }
         }
     }
@@ -61,31 +63,54 @@ public class PathPoint : MonoBehaviour
 
     private void OnDead()
     {
+        bool continuing = true;
         _deadEnemiesCount++;
 
-        if (_deadEnemiesCount != _enemies.Length)
+        if (_deadEnemiesCount != _enemies.Length && _trapped)
         {
             if (_enemies[_deadEnemiesCount - 1].Alive == true)
+            {
                 _deadEnemiesCount--;
+            }
             else if (_enemies[_deadEnemiesCount].Alive == false)
-                _deadEnemiesCount++;
+            {
+                OnDead();
+                continuing = false;
+            }
         }
 
-        if(_deadEnemiesCount == _enemies.Length)
+        if (continuing)
         {
-            if (_enemies.Length > 1)
-                LastDead.Invoke();
+            if (_deadEnemiesCount == _enemies.Length)
+            {
+                for (int i = 0; i < _enemies.Length; i++)
+                {
+                    if (_enemies[i].Alive == true && continuing)
+                    {
+                        _deadEnemiesCount = i - 1;
+                        continuing = false;
+                    }
+                }
 
-            PlatformCleared?.Invoke(this);
-        }
-        else
-        {
-            _lookDirection.position = _enemies[_deadEnemiesCount].LookPoint.position;
-            DeadJelly.Invoke(_lookDirection);
+                if (continuing)
+                {
+                    if (_enemies.Length > 1)
+                        LastDead.Invoke();
+
+                    PlatformCleared?.Invoke(this);
+                }
+            }
+            else
+            {
+                _lookDirection.position = _enemies[_deadEnemiesCount].LookPoint.position;
+                DeadJelly.Invoke(_lookDirection);
+            }
         }
     }
     
     private void FinishPath() { FinishLevel.Invoke(); }
+
+    private void TrapPoint() { _trapped = true; }
 }
 
 public enum MovingPoints

@@ -58,20 +58,29 @@ public class EnemySet : MonoBehaviour
 
     private void RemoveEnemy()
     {
+        bool continuing = true;
         _currentEnemyCount++;
 
         if (_currentEnemyCount != _enemiesLife.Length)
         {
             if (_enemiesLife[_currentEnemyCount - 1].Alive == true)
+            {
                 _currentEnemyCount--;
+            }
             else if (_enemiesLife[_currentEnemyCount].Alive == false)
-                _currentEnemyCount++;
+            {
+                RemoveEnemy();
+                continuing = false;
+            }
         }
 
-        if (_currentEnemyCount == _enemiesLife.Length)
-            FinishedSet.Invoke();
-        else
-            SetNextTargetEnemy(_enemiesLife[_currentEnemyCount].LookPoint);
+        if (continuing)
+        {
+            if (_currentEnemyCount == _enemiesLife.Length)
+                FinishedSet.Invoke();
+            else
+                SetNextTargetEnemy(_enemiesLife[_currentEnemyCount].LookPoint);
+        }
     }
 
     private void SetNextTargetEnemy(Transform target)
