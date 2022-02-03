@@ -81,12 +81,12 @@ public class SFB_HumanDemoControl : MonoBehaviour {
 
 	public void UpdateHairStyleMale(int i)
 	{
-		hairButtonsMale[i].onClick.Invoke();
+		//hairButtonsMale[i].onClick.Invoke();
 	}
 	
 	public void UpdateHairStyleFemale(int i)
 	{
-		hairButtonsFemale[i].onClick.Invoke();
+		//hairButtonsFemale[i].onClick.Invoke();
 	}
 	
 	public void Follow(Transform target)

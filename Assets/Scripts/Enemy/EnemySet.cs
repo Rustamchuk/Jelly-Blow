@@ -60,6 +60,14 @@ public class EnemySet : MonoBehaviour
     {
         _currentEnemyCount++;
 
+        if (_currentEnemyCount != _enemiesLife.Length)
+        {
+            if (_enemiesLife[_currentEnemyCount - 1].Alive == true)
+                _currentEnemyCount--;
+            else if (_enemiesLife[_currentEnemyCount].Alive == false)
+                _currentEnemyCount++;
+        }
+
         if (_currentEnemyCount == _enemiesLife.Length)
             FinishedSet.Invoke();
         else

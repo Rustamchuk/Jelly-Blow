@@ -377,4 +377,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pieces_10.unity
     guid: f13df346e945356499cc670502ab747d
+  - enabled: 1
+    path: Assets/PACKAGES/TRAPS AND OBSTACLES/Traps-Obstacles/DemoScenes/DemoScenes.unity
+    guid: e396ff6afd77bb144b796c5381fedf31
   m_configObjects: {}

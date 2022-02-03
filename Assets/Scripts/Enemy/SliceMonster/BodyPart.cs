@@ -11,6 +11,7 @@ public class BodyPart : MonoBehaviour
     public event UnityAction<BodyPartName> Brokened;
     public event UnityAction<Vector3> Touched;
     public event Action Finished;
+    public event Action TrapAttack;
 
     private bool _alive = true;
 
@@ -48,6 +49,12 @@ public class BodyPart : MonoBehaviour
         else if (other.TryGetComponent(out PlayerMover player))
         {
             Finished.Invoke();
+        }
+        
+        if (other.TryGetComponent(out Trap trap))
+        {
+            if (trap.Attacking)
+                TrapAttack.Invoke();
         }
     }
 

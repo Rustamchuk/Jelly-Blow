@@ -10,6 +10,7 @@ public class MonsterLife : MonoBehaviour
     [SerializeField] private Transform _lookPoint;
     [SerializeField] private Animator _animator;
     [SerializeField] private ParticleSystem _boomEffect;
+    [SerializeField] private ParticleSystem _waterTrail;
 
     public Transform LookPoint => _lookPoint;
     public event Action Dead;
@@ -28,6 +29,7 @@ public class MonsterLife : MonoBehaviour
         {
             part.Touched += ActivateParticle;
             part.Finished += FinishAttack;
+            part.TrapAttack += TrapDie;
         }
     }
 
@@ -47,6 +49,16 @@ public class MonsterLife : MonoBehaviour
     {
         _alive = false;
         Dead.Invoke();
+    }
+
+    private void TrapDie()
+    {
+        _waterTrail.transform.SetParent(null);
+        _boomEffect.transform.SetParent(null);
+        _waterTrail.Play();
+        _boomEffect.Play();
+        Die();
+        gameObject.SetActive(false);
     }
 
     public void StartLife()
