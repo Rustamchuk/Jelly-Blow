@@ -7,6 +7,7 @@ public abstract class JellyEnemy : MonoBehaviour
     [SerializeField] private BodyPart[] _bodyParts;
 
     public BodyPart[] BodyParts => _bodyParts;
+    public bool Alive { get; protected set; } = true;
 
     private void OnEnable()
     {
@@ -24,5 +25,7 @@ public abstract class JellyEnemy : MonoBehaviour
         }
     }
 
-    public abstract void OnBrokened(BodyPartName bodyPartName);
+    protected abstract void OnBrokened(BodyPartName bodyPartName);
+
+    public abstract void Explosion(float force, Vector3 explosionPoint, float radius, float upwardsModifier, bool fullMonsterDiedOfExplosion = false);
 }

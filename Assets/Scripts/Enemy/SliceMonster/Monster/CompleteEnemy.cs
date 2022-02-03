@@ -12,8 +12,9 @@ public class CompleteEnemy : JellyEnemy
     public event UnityAction LostBelly;
     public event UnityAction LostBreast;
     public event UnityAction LostHead;
+    public event UnityAction<float, Vector3, float, float> Exploded;
 
-    public override void OnBrokened(BodyPartName bodyPartName)
+    protected override void OnBrokened(BodyPartName bodyPartName)
     {
         switch (bodyPartName)
         {
@@ -46,5 +47,10 @@ public class CompleteEnemy : JellyEnemy
                 LostRightLeg?.Invoke();
                 break;
         }
+    }
+
+    public override void Explosion(float force, Vector3 explosionPoint, float radius, float upwardsModifier, bool fullMonsterDiedOfExplosion = false)
+    {
+        Exploded?.Invoke(force, explosionPoint, radius, upwardsModifier);
     }
 }

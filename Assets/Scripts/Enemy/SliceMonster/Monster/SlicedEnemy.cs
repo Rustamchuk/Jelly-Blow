@@ -20,13 +20,9 @@ public class SlicedEnemy : JellyEnemy
     private int _punchesCount = 0;
 
     public event UnityAction Killed;
+    public event UnityAction Blowded;
 
-    private void Start()
-    {
-        BodyPartOff(_cuttedObjectMeshRenderer, _cuttedObjectRigidbody);
-    }
-
-    public override void OnBrokened(BodyPartName bodyPartName)
+    protected override void OnBrokened(BodyPartName bodyPartName)
     {
         _punchesCount++;
 
@@ -34,6 +30,7 @@ public class SlicedEnemy : JellyEnemy
         {
             _animator.enabled = false;
             Killed?.Invoke();
+            Alive = false;
             BodyPartOff(_remainingBodyMeshRenderer, _remainingBodyMainRigidbody);
         }
     }
@@ -42,5 +39,32 @@ public class SlicedEnemy : JellyEnemy
     {
         meshRenderer.material = _deadMaterial;
         cutedRigidbody.velocity = new Vector3(Random.RandomRange(-_horizontalSpread, _horizontalSpread), _verticalForce, _pushForce);
+    }
+
+    public void Init()
+    {
+        BodyPartOff(_cuttedObjectMeshRenderer, _cuttedObjectRigidbody);
+    }
+
+    public override void Explosion(float force, Vector3 explosionPoint, float radius, float upwardsModifier, bool fullMonsterDiedOfExplosion = false)
+    {
+        _animator.enabled = false;
+        Killed?.Invoke();
+        Alive = false;
+
+        if (fullMonsterDiedOfExplosion == false)
+        {
+            _remainingBodyMeshRenderer.material = _deadMaterial;
+            _remainingBodyMainRigidbody.AddExplosionForce(force, explosionPoint, radius, upwardsModifier, ForceMode.VelocityChange);
+        }
+        else
+        {
+            _remainingBodyMeshRenderer.material = _deadMaterial;
+            _remainingBodyMainRigidbody.AddExplosionForce(force, explosionPoint, radius, upwardsModifier, ForceMode.VelocityChange);
+            _cuttedObjectMeshRenderer.material = _deadMaterial;
+            _cuttedObjectRigidbody.AddExplosionForce(force, explosionPoint, radius, upwardsModifier, ForceMode.VelocityChange);
+        }
+
+        Blowded?.Invoke();
     }
 }

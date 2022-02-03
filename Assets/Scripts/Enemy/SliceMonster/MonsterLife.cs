@@ -33,6 +33,16 @@ public class MonsterLife : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        _monsterState.Exploding += OnExploding;
+    }
+
+    private void OnDisable()
+    {
+        _monsterState.Exploding -= OnExploding;
+    }
+
     private void ActivateParticle(Vector3 position)
     {
         _boomEffect.transform.position = new Vector3(position.x, position.y, _boomEffect.transform.position.z);
@@ -68,4 +78,10 @@ public class MonsterLife : MonoBehaviour
     }
 
     private void StopGo(float time) { Wait.Invoke(time); }
+
+    private void OnExploding()
+    {
+        _boomEffect.startSize = _boomEffect.startSize * _boomEffect.startSize;
+        _boomEffect.Play();
+    }
 }

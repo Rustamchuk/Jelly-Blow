@@ -21,10 +21,12 @@ public class MonsterStateChanger : MonoBehaviour
     [SerializeField] private SlicedEnemy _jellyMonsterWithoutBottomBody;
     [Space(10), Header("Монстр без верхней части тела")]
     [SerializeField] private SlicedEnemy _jellyMonsterWithoutTopBody;
+    [Space(20), SerializeField] private List<SlicedEnemy> _slicedEnemies;
 
     public event UnityAction Dead;
     public event UnityAction Stoped;
     public event UnityAction<float> WaitToGo;
+    public event UnityAction Exploding;
 
     private List<BodyPart> _bodyParts = new List<BodyPart>();
 
@@ -61,6 +63,7 @@ public class MonsterStateChanger : MonoBehaviour
         _completeJellyMonster.LostLeftLeg += OnLostLeftLeg;
         _completeJellyMonster.LostBelly += OnLostBelly;
         _completeJellyMonster.LostBreast += OnLostBreast;
+        _completeJellyMonster.Exploded += OnExploded;
         _jellyMonsterWithoutHead.Killed += OnKilled;
         _jellyMonsterWithoutRightArm.Killed += OnKilled;
         _jellyMonsterWithoutLeftArm.Killed += OnKilled;
@@ -68,6 +71,13 @@ public class MonsterStateChanger : MonoBehaviour
         _jellyMonsterWithoutLeftLeg.Killed += OnKilled;
         _jellyMonsterWithoutBottomBody.Killed += OnKilled;
         _jellyMonsterWithoutTopBody.Killed += OnKilled;
+        _jellyMonsterWithoutHead.Blowded += OnBlowded;
+        _jellyMonsterWithoutRightArm.Blowded += OnBlowded;
+        _jellyMonsterWithoutLeftArm.Blowded += OnBlowded;
+        _jellyMonsterWithoutRightLeg.Blowded += OnBlowded;
+        _jellyMonsterWithoutLeftLeg.Blowded += OnBlowded;
+        _jellyMonsterWithoutBottomBody.Blowded += OnBlowded;
+        _jellyMonsterWithoutTopBody.Blowded += OnBlowded;
     }
 
     private void OnDisable()
@@ -79,6 +89,7 @@ public class MonsterStateChanger : MonoBehaviour
         _completeJellyMonster.LostLeftLeg -= OnLostLeftLeg;
         _completeJellyMonster.LostBelly -= OnLostBelly;
         _completeJellyMonster.LostBreast -= OnLostBreast;
+        _completeJellyMonster.Exploded -= OnExploded;
         _jellyMonsterWithoutHead.Killed -= OnKilled;
         _jellyMonsterWithoutRightArm.Killed -= OnKilled;
         _jellyMonsterWithoutLeftArm.Killed -= OnKilled;
@@ -86,6 +97,13 @@ public class MonsterStateChanger : MonoBehaviour
         _jellyMonsterWithoutLeftLeg.Killed -= OnKilled;
         _jellyMonsterWithoutBottomBody.Killed -= OnKilled;
         _jellyMonsterWithoutTopBody.Killed -= OnKilled;
+        _jellyMonsterWithoutHead.Blowded -= OnBlowded;
+        _jellyMonsterWithoutRightArm.Blowded -= OnBlowded;
+        _jellyMonsterWithoutLeftArm.Blowded -= OnBlowded;
+        _jellyMonsterWithoutRightLeg.Blowded -= OnBlowded;
+        _jellyMonsterWithoutLeftLeg.Blowded -= OnBlowded;
+        _jellyMonsterWithoutBottomBody.Blowded -= OnBlowded;
+        _jellyMonsterWithoutTopBody.Blowded -= OnBlowded;
     }
 
     private void OnLostHead()
@@ -125,6 +143,20 @@ public class MonsterStateChanger : MonoBehaviour
         IncludeSlicedMonster(_jellyMonsterWithoutTopBody);
     }
 
+    private void OnExploded(float force, Vector3 explosionPoint, float radius, float upwardsModifier)
+    {
+        int randomIndex = Random.RandomRange(0, _slicedEnemies.Count);
+
+        IncludeSlicedMonster(_slicedEnemies[randomIndex]);
+        _slicedEnemies[randomIndex].Explosion(force, explosionPoint, radius, upwardsModifier, true);
+        Exploding?.Invoke();
+    }
+
+    private void OnBlowded()
+    {
+        Exploding?.Invoke();
+    }
+
     private void OnKilled()
     {
         Dead.Invoke();
@@ -139,5 +171,6 @@ public class MonsterStateChanger : MonoBehaviour
     {
         _completeJellyMonster.gameObject.SetActive(false);
         slicedMonster.gameObject.SetActive(true);
+        slicedMonster.Init();
     }
 }
