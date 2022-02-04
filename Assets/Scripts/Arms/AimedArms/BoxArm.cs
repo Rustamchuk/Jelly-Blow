@@ -22,19 +22,21 @@ public class BoxArm : MonoBehaviour
 	private void Awake()
     {
 		_collider = GetComponent<SphereCollider>();
+		_collider.enabled = false;
 		_startPosition = transform.localPosition;
 
 	}
 
 	public void Hit(Vector3 target)
     {
+		_collider.enabled = true;
 		_coroutine = StartArmMovement(target);
 		StartCoroutine(_coroutine);
 		_trailEffect.Play();
 		_animator.SetTrigger("Hit");
 	}
 
-	private IEnumerator StartArmMovement(Vector3 target, bool simpleHit = true, bool needOnCollider = false)
+	private IEnumerator StartArmMovement(Vector3 target, bool simpleHit = true)
     {
 		CanBrokeBodyPart = true;
 		_inAction = true;
@@ -47,9 +49,6 @@ public class BoxArm : MonoBehaviour
         }
 
 		CanBrokeBodyPart = false;
-
-		if (needOnCollider == true)
-			_collider.enabled = true;
 
 		if (simpleHit == true)
         {
@@ -70,7 +69,7 @@ public class BoxArm : MonoBehaviour
 		if (_coroutineIsActive == true)
 			StopCoroutine(_coroutine);
 
-		_coroutine = StartArmMovement(_startPosition, false, true);
+		_coroutine = StartArmMovement(_startPosition, false);
 		StartCoroutine(_coroutine);
 	}
 }
