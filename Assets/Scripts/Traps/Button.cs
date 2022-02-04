@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     [SerializeField] private Trap _trap;
+    [SerializeField] private Animator _animator;
 
     private bool _clicked = false;
 
@@ -16,6 +17,8 @@ public class Button : MonoBehaviour
             {
                 _trap.ActivateAttack();
                 _clicked = true;
+                _animator.SetTrigger("Click");
+                arm.ReturnStartPosition();
             }
         }
     }

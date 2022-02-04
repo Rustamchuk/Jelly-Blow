@@ -57,6 +57,8 @@ public class PathPoint : MonoBehaviour
             foreach (var enemy in _enemies)
             {
                 enemy.Dead -= OnDead;
+                enemy.Finished -= FinishPath;
+                enemy.Trapped -= TrapPoint;
             }
         }
     }
