@@ -3485,6 +3485,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaloonTrap (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Size.x
+      value: 1.118372
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Center.x
+      value: 0.16218886
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Center.z
+      value: -0.6769471
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 715cd70fc196ea94199f736463328d76, type: 3}
 --- !u!1 &674488069
@@ -7887,7 +7899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7924,6 +7936,18 @@ PrefabInstance:
     - target: {fileID: 3860835211018726311, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_Name
       value: BaloonTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2267514
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Center.x
+      value: 0.45560756
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Center.z
+      value: -0.6769471
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 715cd70fc196ea94199f736463328d76, type: 3}
@@ -7996,7 +8020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8033,6 +8057,14 @@ PrefabInstance:
     - target: {fileID: 3860835211018726311, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_Name
       value: BaloonTrap (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9866829
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936093045400218133, guid: 715cd70fc196ea94199f736463328d76, type: 3}
+      propertyPath: m_Center.x
+      value: 0.2900436
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 715cd70fc196ea94199f736463328d76, type: 3}

@@ -68,7 +68,7 @@ public class PathPoint : MonoBehaviour
         bool continuing = true;
         _deadEnemiesCount++;
 
-        if (_deadEnemiesCount != _enemies.Length && _trapped)
+        if (_deadEnemiesCount < _enemies.Length && _trapped)
         {
             if (_enemies[_deadEnemiesCount - 1].Alive == true)
             {

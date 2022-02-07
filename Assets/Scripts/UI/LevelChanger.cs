@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using IJunior.TypedScenes;
 
 public class LevelChanger : MonoBehaviour
@@ -24,6 +25,11 @@ public class LevelChanger : MonoBehaviour
     private void Start()
     {
         StartCoroutine(WaitActivate());
+
+        _lastScene = SceneManager.GetActiveScene().buildIndex;
+
+        if (_lastScene == 0)
+            _lastScene = 10;
     }
 
     public void Restart()

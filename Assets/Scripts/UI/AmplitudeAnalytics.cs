@@ -113,6 +113,6 @@ public class AmplitudeAnalytics : MonoBehaviour
     private void SettingUserProperties()
     {
         int level = _levelChanger.CurrentScene;
-        _amplitude.setUserProperty("level", level);
+        _amplitude.setUserProperty("level", level + 1);
     }
 }

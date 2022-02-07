@@ -11,7 +11,6 @@ public class ResultMaker : MonoBehaviour
     [SerializeField] private GameObject _victory;
     [SerializeField] private GameObject _fail;
     [SerializeField] private GameObject _click;
-    //[SerializeField] private float _waitSeconds = 2;
 
     public event Action WonLevel;
     public event Action FailLevel;
@@ -19,6 +18,7 @@ public class ResultMaker : MonoBehaviour
 
     public int SpentTime => _spentTime;
 
+    private float _waitSeconds = 1;
     private int _spentTime;
     private bool _won = false;
     private bool _lost = false;
@@ -41,8 +41,7 @@ public class ResultMaker : MonoBehaviour
         WonLevel.Invoke();
         _won = true;
 
-        _victory.SetActive(true);
-        //StartCoroutine(SetActiveResult(_victory, _waitSeconds));
+        StartCoroutine(SetActiveResult(_victory, _waitSeconds));
     }
 
     private void Lose()
@@ -55,8 +54,7 @@ public class ResultMaker : MonoBehaviour
         FailLevel.Invoke();
         _lost = true;
 
-        _fail.SetActive(true);
-        //StartCoroutine(SetActiveResult(_fail, 0));
+        StartCoroutine(SetActiveResult(_fail, 0));
     }
 
     private IEnumerator SetActiveResult(GameObject result, float seconds)
