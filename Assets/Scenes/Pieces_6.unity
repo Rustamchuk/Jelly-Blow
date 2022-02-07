@@ -1359,8 +1359,12 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.94947
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.61
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3853,7 +3857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3861,7 +3865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.47
+      value: -14.92
       objectReference: {fileID: 0}
     - target: {fileID: 3860835211018726310, guid: 715cd70fc196ea94199f736463328d76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11302,10 +11306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 6
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}
+  _levelChanger: {fileID: 793116722}
   _progressBar: {fileID: 1868946567209333391}
 --- !u!4 &9085463079387327875 stripped
 Transform:

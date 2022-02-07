@@ -4623,8 +4623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 2
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}
+  _levelChanger: {fileID: 793116722}
   _progressBar: {fileID: 1868946567209333391}

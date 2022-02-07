@@ -2120,7 +2120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4975051352577007383, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.20794994
+      value: -0.112
       objectReference: {fileID: 0}
     - target: {fileID: 4975051352577007383, guid: 693cf637255d23d45920138b3b5abb3c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5752,13 +5752,29 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4112436359499519352, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.6000009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112436359499519352, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112436359499519352, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.94998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.44
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 5990198412749149562, guid: af4bcf65c40ca6e4391d4217747e3b90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10992,10 +11008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 4
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}
+  _levelChanger: {fileID: 793116722}
   _progressBar: {fileID: 1868946567209333391}
 --- !u!4 &8062801958514688886 stripped
 Transform:

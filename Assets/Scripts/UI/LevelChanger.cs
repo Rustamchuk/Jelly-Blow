@@ -17,10 +17,12 @@ public class LevelChanger : MonoBehaviour
     public event Action RestartedLevel;
 
     public int LastScene => _lastScene;
-    public int CurrentScene => (int)_currentScene;
+    public int CircleNumber => _circleNumber;
+    public int CurrentScene => (int)_currentScene + 1;
 
     private bool _gameStarted = false;
     private int _lastScene;
+    private int _circleNumber;
 
     private void Start()
     {
@@ -46,37 +48,39 @@ public class LevelChanger : MonoBehaviour
 
     public void ChooseNextScene()
     {
+        List<int> arguments = new List<int> { (int)_currentScene, _circleNumber};
+
         switch ((int)_nextLevelName)
         {
             case 0:
-                Pieces_1.Load((int)_currentScene);
+                Pieces_1.Load(arguments);
                 break;
             case 1:
-                Pieces_2.Load((int)_currentScene);
+                Pieces_2.Load(arguments);
                 break;
             case 2:
-                Pieces_3.Load((int)_currentScene);
+                Pieces_3.Load(arguments);
                 break;
             case 3:
-                Pieces_4.Load((int)_currentScene);
+                Pieces_4.Load(arguments);
                 break;
             case 4:
-                Pieces_5.Load((int)_currentScene);
+                Pieces_5.Load(arguments);
                 break;
             case 5:
-                Pieces_6.Load((int)_currentScene);
+                Pieces_6.Load(arguments);
                 break;
             case 6:
-                Pieces_7.Load((int)_currentScene);
+                Pieces_7.Load(arguments);
                 break;
             case 7:
-                Pieces_8.Load((int)_currentScene);
+                Pieces_8.Load(arguments);
                 break;
             case 8:
-                Pieces_9.Load((int)_currentScene);
+                Pieces_9.Load(arguments);
                 break;
             case 9:
-                Pieces_10.Load((int)_currentScene);
+                Pieces_10.Load(arguments);
                 break;
         }
     }
@@ -84,6 +88,8 @@ public class LevelChanger : MonoBehaviour
     public void ChangeStartedGame() { _gameStarted = true; }
 
     public void SetLast(int i) { _lastScene = i; }
+
+    public void AddCircle(int value) { _circleNumber = value; }
 
     private IEnumerator WaitActivate()
     {

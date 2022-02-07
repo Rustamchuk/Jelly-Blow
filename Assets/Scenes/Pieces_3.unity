@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5521655114172990915, guid: afc4e2f3a8150014d9857f0db89f1308, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.31
+      value: -1.249
       objectReference: {fileID: 0}
     - target: {fileID: 5521655114172990915, guid: afc4e2f3a8150014d9857f0db89f1308, type: 3}
       propertyPath: m_LocalPosition.y
@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5521655114172990915, guid: afc4e2f3a8150014d9857f0db89f1308, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.01
+      value: -7.094
       objectReference: {fileID: 0}
     - target: {fileID: 5521655114172990915, guid: afc4e2f3a8150014d9857f0db89f1308, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1650,7 +1650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.66
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2308,6 +2308,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1328542423}
     m_Modifications:
+    - target: {fileID: 1485804303959673534, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.114
+      objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5233,8 +5237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 3
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}
+  _levelChanger: {fileID: 793116722}
   _progressBar: {fileID: 1868946567209333391}

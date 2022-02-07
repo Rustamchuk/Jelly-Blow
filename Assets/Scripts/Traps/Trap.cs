@@ -39,7 +39,7 @@ public class Trap : MonoBehaviour
 
     private IEnumerator WaitAttacking()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         Attacking = false;
     }
 }

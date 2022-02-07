@@ -1655,7 +1655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.13
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1663,7 +1663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.95
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: 2129579939506964352, guid: cdba878f7dcebd7419989b50e089defb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8234,7 +8234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5521655114172990915, guid: afc4e2f3a8150014d9857f0db89f1308, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.36
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 5521655114172990915, guid: afc4e2f3a8150014d9857f0db89f1308, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10095,7 +10095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6856057572252392046, guid: 862bb2377e4581c4fb7ce26268e14cfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.414
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6856057572252392046, guid: 862bb2377e4581c4fb7ce26268e14cfd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10103,7 +10103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6856057572252392046, guid: 862bb2377e4581c4fb7ce26268e14cfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.839
+      value: 6.53
       objectReference: {fileID: 0}
     - target: {fileID: 6856057572252392046, guid: 862bb2377e4581c4fb7ce26268e14cfd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12002,10 +12002,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869c03324547aa4eb7b79249a519f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 7
   _levelNumberText: {fileID: 1868946567804221111}
   _endLocation: {fileID: 1676456441}
   _player: {fileID: 910480170}
+  _levelChanger: {fileID: 793116722}
   _progressBar: {fileID: 1868946567209333391}
 --- !u!4 &9085463079387327875 stripped
 Transform:
