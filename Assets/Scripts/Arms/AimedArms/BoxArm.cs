@@ -14,6 +14,7 @@ public class BoxArm : MonoBehaviour
 	private IEnumerator _coroutine;
 	private bool _coroutineIsActive = false;
 	private bool _inAction = false;
+	private float _hitDistance = 0.02f;
 
 	public bool CanBrokeBodyPart { get; private set; } = false;
 	public bool InAction => _inAction;
@@ -33,7 +34,7 @@ public class BoxArm : MonoBehaviour
 		_coroutine = StartArmMovement(target);
 		StartCoroutine(_coroutine);
 		_trailEffect.Play();
-		_animator.SetTrigger("Hit");
+		_animator.SetTrigger(AnimatorBoxArmController.States.Hit);
 	}
 
 	private IEnumerator StartArmMovement(Vector3 target, bool simpleHit = true)
@@ -42,11 +43,15 @@ public class BoxArm : MonoBehaviour
 		_inAction = true;
 		_coroutineIsActive = true;
 
-		while (transform.localPosition != target)
-        {
-			transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, _speed * Time.deltaTime);
+		while (simpleHit == true ? (Vector3.Distance(transform.position, target) > _hitDistance) : transform.localPosition != target)
+		{
+			if (simpleHit == true)
+				transform.position = Vector3.MoveTowards(transform.position, target, _speed * Time.deltaTime);
+			else
+				transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, _speed * Time.deltaTime);
+
 			yield return null;
-        }
+		}
 
 		CanBrokeBodyPart = false;
 

@@ -39,19 +39,12 @@ public class ArmsController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 target;
 
-            if (Physics.Raycast(ray, out RaycastHit raycastHit))
-            {
-                if(Vector3.Distance(_boxArms[_activeArmIndex].transform.position, raycastHit.point) <= _hitDistance)
-                    target = raycastHit.point;
-                else
-                    target = ray.GetPoint(_hitDistance);
-            }
+            if(Physics.Raycast(ray, out RaycastHit raycastHit) && Vector3.Distance(_boxArms[_activeArmIndex].transform.position, raycastHit.point) <= _hitDistance)
+                target = raycastHit.point;
             else
-            {
                 target = ray.GetPoint(_hitDistance);
-            }
 
-            Hit(transform.InverseTransformPoint(target), _boxArms[_activeArmIndex]);
+            Hit(target, _boxArms[_activeArmIndex]);
 
             if (_activeArmIndex == 0)
                 _activeArmIndex++;

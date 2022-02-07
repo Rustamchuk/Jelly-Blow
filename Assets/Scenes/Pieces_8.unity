@@ -13610,7 +13610,7 @@ MonoBehaviour:
   _boxArms:
   - {fileID: 473643791710241884}
   - {fileID: 473643791716863932}
-  _hitDistance: 8
+  _hitDistance: 10
 --- !u!4 &473643791961258701
 Transform:
   m_ObjectHideFlags: 0
@@ -14511,8 +14511,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.11
-  m_Center: {x: 0.17815544, y: 0.058636483, z: 0.13478118}
+  m_Radius: 0.13
+  m_Center: {x: 0.21, y: 0.04, z: 0.22}
 --- !u!1001 &2392414714336770029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15540,8 +15540,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.11
-  m_Center: {x: 0.17815544, y: 0.058636483, z: 0.13478118}
+  m_Radius: 0.13
+  m_Center: {x: 0.21, y: 0.04, z: 0.22}
 --- !u!114 &4804268947002283169
 MonoBehaviour:
   m_ObjectHideFlags: 0
