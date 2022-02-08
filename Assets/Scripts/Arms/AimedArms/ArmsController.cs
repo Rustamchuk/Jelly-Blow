@@ -44,7 +44,8 @@ public class ArmsController : MonoBehaviour
             else
                 target = ray.GetPoint(_hitDistance);
 
-            Hit(transform.InverseTransformPoint(target), _boxArms[_activeArmIndex]);
+            //Hit(transform.InverseTransformPoint(target), _boxArms[_activeArmIndex]);
+            Hit(target, _boxArms[_activeArmIndex]);
 
             if (_activeArmIndex == 0)
                 _activeArmIndex++;

@@ -12,6 +12,7 @@ public class BoxArm : MonoBehaviour
 
 	private SphereCollider _collider;
 	private Vector3 _startPosition;
+	private Transform _parent;
 	private IEnumerator _coroutine;
 	private bool _coroutineIsActive = false;
 	private bool _inAction = false;
@@ -25,7 +26,7 @@ public class BoxArm : MonoBehaviour
 		_collider = GetComponent<SphereCollider>();
 		_collider.enabled = false;
 		_startPosition = transform.localPosition;
-
+		_parent = transform.parent;
 	}
 
     public void Hit(Vector3 target)
@@ -39,13 +40,24 @@ public class BoxArm : MonoBehaviour
 
 	private IEnumerator StartArmMovement(Vector3 target, bool simpleHit = true)
     {
+		ChooseParent(simpleHit);
 		CanBrokeBodyPart = true;
 		_inAction = true;
 		_coroutineIsActive = true;
 
-		while (transform.localPosition != target)
+		/*while (transform.localPosition != target)
 		{
 			transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, (simpleHit == true ? _speed : _returnRate) * Time.deltaTime);
+
+			yield return null;
+		}*/
+
+		while ((simpleHit == true ? transform.position : transform.localPosition) != target)
+		{
+			if (simpleHit == true)
+				transform.position = Vector3.MoveTowards(transform.position, target, _speed * Time.deltaTime);
+			else
+				transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, _returnRate * Time.deltaTime);
 
 			yield return null;
 		}
@@ -73,5 +85,18 @@ public class BoxArm : MonoBehaviour
 
 		_coroutine = StartArmMovement(_startPosition, false);
 		StartCoroutine(_coroutine);
+	}
+
+	private void ChooseParent(bool value)
+	{
+		if (value == true)
+		{
+			transform.parent = null;
+		}
+		else
+		{
+			transform.parent = _parent;
+			transform.localRotation = Quaternion.identity;
+		}
 	}
 }
