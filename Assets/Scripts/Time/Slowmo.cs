@@ -34,7 +34,7 @@ public class Slowmo : MonoBehaviour
         }
     }
 
-    private void OnDead()
+    private void OnDead(bool exploded)
     {
         _coroutine = StartNewCoroutine(SlowMotionTime());
         StartCoroutine(_coroutine);

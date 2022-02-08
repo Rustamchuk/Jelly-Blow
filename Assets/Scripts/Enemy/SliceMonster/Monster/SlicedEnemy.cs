@@ -18,8 +18,9 @@ public class SlicedEnemy : JellyEnemy
     [SerializeField] private float _pushForce;
 
     private int _punchesCount = 0;
+    private bool _exploded = false;
 
-    public event UnityAction Killed;
+    public event UnityAction<bool> Killed;
     public event UnityAction Blowded;
 
     protected override void OnBrokened(BodyPartName bodyPartName)
@@ -29,7 +30,7 @@ public class SlicedEnemy : JellyEnemy
         if (_punchesCount == _punchesToKill)
         {
             _animator.enabled = false;
-            Killed?.Invoke();
+            Killed?.Invoke(_exploded);
             Alive = false;
             BodyPartOff(_remainingBodyMeshRenderer, _remainingBodyMainRigidbody);
         }
@@ -49,7 +50,8 @@ public class SlicedEnemy : JellyEnemy
     public override void Explosion(float force, Vector3 explosionPoint, float radius, float upwardsModifier, bool fullMonsterDiedOfExplosion = false)
     {
         _animator.enabled = false;
-        Killed?.Invoke();
+        _exploded = true;
+        Killed?.Invoke(_exploded);
         Alive = false;
 
         if (fullMonsterDiedOfExplosion == false)

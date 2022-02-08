@@ -77,10 +77,28 @@ public class EnemySet : MonoBehaviour
         if (continuing)
         {
             if (_currentEnemyCount == _enemiesLife.Length)
-                FinishedSet.Invoke();
+            {
+                float wait = 0;
+                foreach (var enemy in _enemiesLife)
+                {
+                    if (enemy.Exploded)
+                        wait = 0.5f;
+
+                }
+
+                StartCoroutine(WaitToMove(wait));
+            }
             else
+            {
                 SetNextTargetEnemy(_enemiesLife[_currentEnemyCount].LookPoint);
+            }
         }
+    }
+    
+    private IEnumerator WaitToMove(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        FinishedSet.Invoke();
     }
 
     private void SetNextTargetEnemy(Transform target)

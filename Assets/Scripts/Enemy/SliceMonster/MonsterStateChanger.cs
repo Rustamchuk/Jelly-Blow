@@ -23,7 +23,7 @@ public class MonsterStateChanger : MonoBehaviour
     [SerializeField] private SlicedEnemy _jellyMonsterWithoutTopBody;
     [Space(20), SerializeField] private List<SlicedEnemy> _slicedEnemies;
 
-    public event UnityAction Dead;
+    public event UnityAction<bool> Dead;
     public event UnityAction Stoped;
     public event UnityAction<float> WaitToGo;
     public event UnityAction Exploding;
@@ -157,9 +157,9 @@ public class MonsterStateChanger : MonoBehaviour
         Exploding?.Invoke();
     }
 
-    private void OnKilled()
+    private void OnKilled(bool exploded)
     {
-        Dead.Invoke();
+        Dead.Invoke(exploded);
 
         foreach (var part in _bodyParts)
         {

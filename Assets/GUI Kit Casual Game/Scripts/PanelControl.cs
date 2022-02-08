@@ -21,8 +21,8 @@ namespace LayerLab
         private void Start()
         {
             textTitle = transform.GetComponentInChildren<TextMeshProUGUI>();
-            buttonPrev.onClick.AddListener(Click_Prev);
-            buttonNext.onClick.AddListener(Click_Next);
+            //buttonPrev.onClick.AddListener(Click_Prev);
+            //buttonNext.onClick.AddListener(Click_Next);
 
             foreach (Transform t in panelTransform)
             {

@@ -6,6 +6,6 @@ public class FlownAwayRagdoll : DeadBodyRagdoll
 {
     private void Start()
     {
-        OnKilled();
+        OnKilled(false);
     }
 }

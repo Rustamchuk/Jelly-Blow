@@ -18,8 +18,10 @@ public class MonsterLife : MonoBehaviour
     public event Action Trapped;
     public event UnityAction<float> Wait;
     public bool Alive => _alive;
+    public bool Exploded => _exploded;
 
     private bool _alive = false;
+    private bool _exploded = false;
 
     private void Start()
     {
@@ -56,9 +58,11 @@ public class MonsterLife : MonoBehaviour
         _alive = false;
     }
 
-    private void Die()
+    private void Die(bool exploded)
     {
+        _exploded = exploded;
         _alive = false;
+
         Dead.Invoke();
     }
 
@@ -69,7 +73,7 @@ public class MonsterLife : MonoBehaviour
         _boomEffect.transform.SetParent(null);
         _waterTrail.Play();
         _boomEffect.Play();
-        Die();
+        Die(false);
         gameObject.SetActive(false);
     }
 

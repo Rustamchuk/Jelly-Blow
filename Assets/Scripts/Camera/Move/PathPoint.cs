@@ -85,22 +85,15 @@ public class PathPoint : MonoBehaviour
         {
             if (_deadEnemiesCount == _enemies.Length)
             {
-                for (int i = 0; i < _enemies.Length; i++)
+                float wait = 0;
+                foreach (var enemy in _enemies)
                 {
-                    if (_enemies[i].Alive == true && continuing)
-                    {
-                        _deadEnemiesCount = i - 1;
-                        continuing = false;
-                    }
+                    if (enemy.Exploded)
+                        wait = 0.5f;
+
                 }
 
-                if (continuing)
-                {
-                    if (_enemies.Length > 1)
-                        LastDead.Invoke();
-
-                    PlatformCleared?.Invoke(this);
-                }
+                StartCoroutine(WaitToMove(wait));
             }
             else
             {
@@ -108,6 +101,16 @@ public class PathPoint : MonoBehaviour
                 DeadJelly.Invoke(_lookDirection);
             }
         }
+    }
+
+    private IEnumerator WaitToMove(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+
+        if (_enemies.Length > 1)
+            LastDead.Invoke();
+
+        PlatformCleared?.Invoke(this);
     }
     
     private void FinishPath() { FinishLevel.Invoke(); }

@@ -6,7 +6,7 @@ public abstract class DeadBodyRagdoll : MonoBehaviour
 {
     [SerializeField] private Rigidbody[] _rigidbodies;
 
-    protected void OnKilled()
+    protected void OnKilled(bool exploded)
     {
         foreach (var rigidbody in _rigidbodies)
         {

@@ -15,19 +15,22 @@ public class ExplosionBarrel : MonoBehaviour
     {
         if (other.TryGetComponent(out BoxArm boxArm))
         {
-            boxArm.ReturnStartPosition();
-            _colliders = Physics.OverlapSphere(transform.position, _radius);
-
-            foreach (var collider in _colliders)
+            if (boxArm.CanBrokeBodyPart)
             {
-                if (collider.TryGetComponent(out JellyEnemy jellyEnemy) && jellyEnemy.Alive == true)
-                {
-                    jellyEnemy.Explosion(_force, transform.position, _radius, _upwardsModifier);
-                }
-            }
+                boxArm.ReturnStartPosition();
+                _colliders = Physics.OverlapSphere(transform.position, _radius);
 
-            _explosionEffect.Play();
-            gameObject.SetActive(false);
+                foreach (var collider in _colliders)
+                {
+                    if (collider.TryGetComponent(out JellyEnemy jellyEnemy) && jellyEnemy.Alive == true)
+                    {
+                        jellyEnemy.Explosion(_force, transform.position, _radius, _upwardsModifier);
+                    }
+                }
+
+                _explosionEffect.Play();
+                gameObject.SetActive(false);
+            }
         }
     }
 }
