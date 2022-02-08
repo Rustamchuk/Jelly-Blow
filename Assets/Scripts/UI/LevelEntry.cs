@@ -10,7 +10,7 @@ public class LevelEntry : MonoBehaviour, ISceneLoadHandler<List<int>>
 
     public void OnSceneLoaded(List<int> argument)
     {
-        _levelChanger.SetLast(argument[0]);
+        //_levelChanger.SetLast(argument[0]);
         _levelChanger.ChangeStartedGame();
 
         if (argument[0] == 9 && SceneManager.GetActiveScene().buildIndex == 0)

@@ -22,13 +22,35 @@ public class LevelChanger : MonoBehaviour
 
     private bool _gameStarted = false;
     private int _lastScene;
-    private int _circleNumber;
+
+    private const string SAVED_SCENEID = "SceneID";
+    private const string SAVED_CIRCLE = "Circle";
+
+    private int _sceneNumber
+    {
+        get { return PlayerPrefs.GetInt(SAVED_SCENEID, 0); }
+        set { PlayerPrefs.SetInt(SAVED_SCENEID, value); }
+    }
+
+    private int _circleNumber
+    {
+        get { return PlayerPrefs.GetInt(SAVED_CIRCLE, 0); }
+        set { PlayerPrefs.SetInt(SAVED_CIRCLE, value); }
+    }
+
+    private void Awake()
+    {
+        _lastScene = SceneManager.GetActiveScene().buildIndex;
+
+        if (_lastScene != _sceneNumber)
+            SceneManager.LoadScene(_sceneNumber);
+        else
+            _sceneNumber = _lastScene;
+    }
 
     private void Start()
     {
         StartCoroutine(WaitActivate());
-
-        _lastScene = SceneManager.GetActiveScene().buildIndex;
 
         if (_lastScene == 0)
             _lastScene = 10;
@@ -49,6 +71,7 @@ public class LevelChanger : MonoBehaviour
     public void ChooseNextScene()
     {
         List<int> arguments = new List<int> { (int)_currentScene, _circleNumber};
+        _sceneNumber = (int)_nextLevelName;
 
         switch ((int)_nextLevelName)
         {
