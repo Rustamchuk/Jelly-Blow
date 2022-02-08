@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07c0dffb8c0f9a40ac58423b0bab5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 4
-  _force: 100
+  _radius: 7
+  _force: 60
   _upwardsModifier: 6
   _explosionEffect: {fileID: 5521655114253909203}
 --- !u!1 &5521655114172990916
