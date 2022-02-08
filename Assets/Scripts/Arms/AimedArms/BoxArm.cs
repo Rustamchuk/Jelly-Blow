@@ -7,6 +7,7 @@ public class BoxArm : MonoBehaviour
 {
 	[SerializeField] private Animator _animator;
 	[SerializeField] private float _speed;
+	[SerializeField] private float _returnRate;
 	[SerializeField] private ParticleSystem _trailEffect;
 
 	private SphereCollider _collider;
@@ -14,7 +15,6 @@ public class BoxArm : MonoBehaviour
 	private IEnumerator _coroutine;
 	private bool _coroutineIsActive = false;
 	private bool _inAction = false;
-	private float _hitDistance = 0.02f;
 
 	public bool CanBrokeBodyPart { get; private set; } = false;
 	public bool InAction => _inAction;
@@ -28,7 +28,7 @@ public class BoxArm : MonoBehaviour
 
 	}
 
-	public void Hit(Vector3 target)
+    public void Hit(Vector3 target)
     {
 		_collider.enabled = true;
 		_coroutine = StartArmMovement(target);
@@ -43,12 +43,9 @@ public class BoxArm : MonoBehaviour
 		_inAction = true;
 		_coroutineIsActive = true;
 
-		while (simpleHit == true ? (Vector3.Distance(transform.position, target) > _hitDistance) : transform.localPosition != target)
+		while (transform.localPosition != target)
 		{
-			if (simpleHit == true)
-				transform.position = Vector3.MoveTowards(transform.position, target, _speed * Time.deltaTime);
-			else
-				transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, _speed * Time.deltaTime);
+			transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, (simpleHit == true ? _speed : _returnRate) * Time.deltaTime);
 
 			yield return null;
 		}

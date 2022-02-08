@@ -380,4 +380,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PACKAGES/TRAPS AND OBSTACLES/Traps-Obstacles/DemoScenes/DemoScenes.unity
     guid: e396ff6afd77bb144b796c5381fedf31
+  - enabled: 1
+    path: Assets/GUI Kit Casual Game/Scenes/DemoScene.unity
+    guid: 78addc77d730f4f38a4a7d5e73530376
   m_configObjects: {}

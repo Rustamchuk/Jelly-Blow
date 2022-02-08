@@ -7173,6 +7173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 473643790273114729}
   _speed: 15
+  _returnRate: 20
   _trailEffect: {fileID: 775140912}
 --- !u!54 &473643791710241886
 Rigidbody:
@@ -7204,6 +7205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 473643791422343048}
   _speed: 15
+  _returnRate: 20
   _trailEffect: {fileID: 1912361273}
 --- !u!1 &473643791961258698
 GameObject:
